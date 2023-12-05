@@ -1,0 +1,156 @@
+.harmony-bottom {
+
+    // .harmony-bottom__container
+
+    &__container {
+        width: 192rem;
+    }
+
+    // .harmony-bottom__swiper-box
+
+    &__swiper-box {
+    }
+
+    // .harmony-bottom__swiper
+
+    &__swiper {
+    }
+
+    // .harmony-bottom__swiper-wrapper
+
+    &__swiper-wrapper {
+        margin: 11rem 0;
+    }
+
+    // .harmony-bottom__swiper-slide
+
+    &__swiper-slide.swiper-slide {
+        transition: transform 0.3s;
+        &.swiper-slide-active {
+            transform: rotate(-8deg) translateY(-8.3rem);
+        }
+        &.swiper-slide-next{
+            transform: rotate(8deg);
+        }
+        &.swiper-slide-next + .swiper-slide{
+            transform: rotate(-8deg) translateY(2.3rem);
+        }
+        &.swiper-slide-next + .swiper-slide + .swiper-slide{
+            transform: rotate(8deg) translateY(-7rem);
+        }
+        &.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide{
+            transform: rotate(-8deg);
+        }
+        &.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide{
+            transform: rotate(8deg) translateY(-3.8rem);
+        }
+    }
+
+    // .harmony-bottom__slide-inner
+
+    &__slide-inner {
+        width: 39.3rem;
+        height: 35.4rem;
+        border-radius: 3.2rem;
+        overflow: hidden;
+    }
+    		// .harmony-bottom__slide-inner--info
+
+		&__slide-inner--info {
+            padding: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+		}
+
+        // .harmony-bottom__slide-info
+
+		&__slide-info {
+            padding: 0 0.8rem;
+            border-radius: 3rem;
+        border: 1px solid $black;
+        width: fit-content;
+		}
+
+		// .harmony-bottom__slide-text
+
+		&__slide-text {
+		}
+
+
+
+
+
+            		// .harmony-bottom__slide-inner--black
+
+		&__slide-inner--black {
+            background-color: $black;
+            color: $white;
+             & .harmony-bottom__slide-info {
+        border: 1px solid $white;
+		}
+		}
+
+		// .harmony-bottom__slide-inner--gray
+
+		&__slide-inner--gray {
+            background-color: $light-grey;
+		}
+        		// .harmony-bottom__slide-inner--green
+
+		&__slide-inner--green {
+            background-color: $green;
+		}
+
+    // .harmony-bottom__slide-inner--img
+
+    &__slide-inner--img {
+    }
+
+
+    // .harmony-bottom__slide-img-box
+
+    &__slide-img-box {
+        width: 100%;
+        height: 100%;
+        & img {
+            object-fit: contain;
+        }
+    }
+
+    // .harmony-bottom__swiper-button-prev
+
+    &__swiper-button-prev {
+    }
+
+    // .harmony-bottom__swiper-button-next
+
+    &__swiper-button-next {
+    }
+
+
+
+
+    &__swiper-button-prev.swiper-button-prev,
+    &__swiper-button-next.swiper-button-next {
+      top: 23rem;
+    }
+    // .collections__swiper-button-prev
+  
+    &__swiper-button-prev.swiper-button-prev {
+        left: 4.5rem;
+    }
+  
+    // .collections__swiper-button-next
+  
+    &__swiper-button-next.swiper-button-next {
+      right: 4.5rem;
+    }
+
+
+
+		
+
+
+}
+

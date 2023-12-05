@@ -1,0 +1,56 @@
+.ribbon {
+  padding: 13rem 0;
+
+  // .ribbon__row
+
+  &__row {
+    transform: rotate(4deg) translateX(-2%);
+    background-color: $orange;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    // gap: 6rem;
+    color: $white;
+    width: 104%;
+  }
+
+  // .ribbon__list
+
+  &__list {
+    padding: 3.2rem;
+    &.swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  // .ribbon__list-item
+
+  &__list-item.swiper-slide {
+    width: fit-content !important;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  // .ribbon__svg-box
+
+  &__svg-box {
+    width: 3.2rem;
+    height: 3.2rem;
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  // .ribbon__text
+
+  &__text {
+    font-family: "CeraPro";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem; /* 75% */
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+  }
+}
