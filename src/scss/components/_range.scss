@@ -1,0 +1,90 @@
+.range {
+
+    // .range__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    // .range__header-box
+
+    &__header-box {
+    }
+
+    // .range__swiper-box
+
+    &__swiper-box {
+
+    }
+
+    // .range__swiper-nav-menu
+
+    &__swiper-nav-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        gap: 10rem;
+        padding-bottom: 3rem;
+    }
+
+    // .range__swiper-nav-item
+
+    &__swiper-nav-item {
+        cursor: pointer;
+        transition: background-color 0.3s;
+        color: $black-30;
+        transition: color 0.3s;
+        &:hover,
+        &.isActive {
+          color: $black;
+        }
+    }
+
+    // .range__swiper
+
+    &__swiper {
+    margin-top: 6rem;
+    }
+
+    // .range__swiper-wrapper
+
+    &__swiper-wrapper {
+    }
+
+    // .range__swiper-slide
+
+    &__swiper-slide {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        background-color: #f0f0f0;
+    }
+
+    // .range__swiper-scrollbar
+
+    &__swiper-scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $line;
+    
+      }
+
+    // .range__swiper-scrollbar-drag
+
+    &__swiper-scrollbar-drag.swiper-scrollbar-drag {
+        height: 4px;
+        background-color: $green;
+        transition: width 0.3s, transform 0.3s;
+    }
+}
+
+

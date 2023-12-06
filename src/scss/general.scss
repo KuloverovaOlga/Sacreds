@@ -7,7 +7,7 @@ $white: #FDFDFD;
 $light-grey: #F6F6F6;
 $black-50: rgba(18, 35, 26, 0.50);
 $black-30: rgba(18, 35, 26, 0.30);
-$line: rgba(18, 35, 26, 0.10);
+$line: rgba(17, 34, 25, 0.10);
 $grey: #848C88;
 
 
@@ -46,6 +46,9 @@ main {
   font-weight: 500;
   line-height: 120%; /* 57.6px */
   letter-spacing: 1.92px;
+
+ 
+
 }
 
 .title-h3 {
@@ -74,6 +77,24 @@ main {
   line-height: 135%; /* 27px */
   letter-spacing: 0.8px;
 }
+
+.title-span {
+  position: relative;
+  display: inline-block;
+  color: $black;
+  &::before {
+    position: absolute;
+    content: "";
+    border-radius: 3.2rem;
+    background: $light-green;
+    top: 50%;
+    transform: translateY(-40%);
+    left: -1.3rem;
+    right: -1.3rem;
+    z-index: -1;
+
+  }
+  }
 
 .text {
   font-family: 'CeraPro';
@@ -147,6 +168,8 @@ letter-spacing: 0.64px;
   & div {
     width: 5.4rem;
     height: 0.9rem;
+    display: flex;align-items: center;
+    justify-content: center;
 & svg {
   object-fit: contain;
 }
