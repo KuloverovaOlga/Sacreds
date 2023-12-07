@@ -141,6 +141,8 @@ padding: 11rem 0;
         & span::before {
             height: 3.8rem;
             z-index: -1;
+            transform: translateY(-50%
+            );
         }
     }
 

@@ -1,0 +1,49 @@
+.blog {
+padding: 11rem 0;
+    // .blog__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 11rem;
+    }
+
+    // .blog__header-box
+
+    &__header-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.2rem
+        ;
+    }
+
+    // .blog__header-title
+
+    &__header-title {
+    }
+
+    // .blog__header-btn
+
+    &__header-btn {
+        background-color: $green;
+    }
+
+    // .blog__header-btn-text
+
+    &__header-btn-text {
+    }
+
+    // .blog__header-btn-svg-box
+
+    &__header-btn-svg-box {
+        & svg {
+            fill: $black;
+        }
+    }
+
+    // .blog__swiper-box
+
+    &__swiper-box {
+    }
+}

@@ -1,90 +1,401 @@
 .range {
+    padding: 11rem 0;
+  // .range__inner
 
-    // .range__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
 
-    &__inner {
-        display: flex;
-        flex-direction: column;
-        gap: 10rem;
-    }
 
     // .range__header-box
 
     &__header-box {
-    }
-
-    // .range__swiper-box
-
-    &__swiper-box {
-
-    }
-
-    // .range__swiper-nav-menu
-
-    &__swiper-nav-menu {
-        position: relative;
-        top: 0;
-        left: 0;
         display: flex;
-        gap: 10rem;
-        padding-bottom: 3rem;
+        align-items: flex-start;
+        gap: 44.6rem;
     }
 
-    // .range__swiper-nav-item
+    // .range__header-title
 
-    &__swiper-nav-item {
-        cursor: pointer;
-        transition: background-color 0.3s;
-        color: $black-30;
-        transition: color 0.3s;
-        &:hover,
-        &.isActive {
-          color: $black;
-        }
+    &__header-title {
+        width: 77.6rem;
     }
 
-    // .range__swiper
+    // .range__header-btn-box
 
-    &__swiper {
-    margin-top: 6rem;
-    }
-
-    // .range__swiper-wrapper
-
-    &__swiper-wrapper {
-    }
-
-    // .range__swiper-slide
-
-    &__swiper-slide {
-        flex: 0 0 100%;
+    &__header-btn-box {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2em;
-        background-color: #f0f0f0;
+        flex-direction: column;
+        gap: 3.2rem;
+        width: 60rem;
     }
 
-    // .range__swiper-scrollbar
+    // .range__btn
 
-    &__swiper-scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        width: 100%;
-        background-color: $line;
-    
-      }
-
-    // .range__swiper-scrollbar-drag
-
-    &__swiper-scrollbar-drag.swiper-scrollbar-drag {
-        height: 4px;
+    &__btn {
         background-color: $green;
-        transition: width 0.3s, transform 0.3s;
     }
+
+    // .range__btn-text
+
+    &__btn-text {
+    }
+
+    // .range__btn-svg-box
+
+    &__btn-svg-box {
+
+        & svg {
+            fill: $black;
+        }
+     
+    }
+
+    // .range__header-text
+
+    &__header-text {
+    }
+
+
+
+
+
+
+
+
+
+
+  // .range__swiper-box
+
+  &__swiper-box {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 6.2rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $line;
+    }
+  }
+
+  // .range__swiper-nav-menu
+
+  &__swiper-nav-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10rem;
+    padding-bottom: 3rem;
+    width: fit-content;
+  }
+
+  // .range__swiper-nav-item
+
+  &__swiper-nav-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: $black-30;
+    transition: color 0.3s;
+    &:hover,
+    &.isActive {
+      color: $black;
+    }
+  }
+
+  // .range__swiper
+
+  &__swiper {
+    margin-top: 6rem;
+  }
+
+  // .range__swiper-wrapper
+
+  &__swiper-wrapper {
+  }
+
+  // .range__swiper-slide
+
+  &__swiper-slide {
+    flex: 0 0 100%;
+  }
+
+  // .range__swiper-slide
+
+  &__swiper-slide {
+  }
+
+  &__swiper-slide.swiper-slide-active {
+  }
+
+  // .range__swiper-slide-list
+
+  &__swiper-slide-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  // .range__swiper-slide-item
+
+  &__swiper-slide-item {
+  }
+
+  // .range__swiper-slide-link
+
+  &__swiper-slide-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    border-radius: 3.2rem;
+    background: $light-grey;
+    gap: 1.2rem;
+
+    &--discount {
+      .range__swiper-slide-discount-box {
+        display: flex;
+      }
+      .range__swiper-slide-old-price {
+        display: flex;
+      }
+    }
+
+    &--coin {
+      .range__swiper-slide-coin-box {
+        display: flex;
+      }
+    }
+
+    &:hover {
+      & .range__swiper-slide-like-box {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  // .range__swiper-slide-header-box
+
+  &__swiper-slide-header-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.8rem 0.8rem 0;
+    position: relative;
+  }
+
+  // .range__swiper-slide-title
+
+  &__swiper-slide-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Максимальное количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 24.5rem;
+  }
+
+  // .range__swiper-slide-info-box
+
+  &__swiper-slide-info-box {
+    display: flex;
+    gap: 1.2rem;
+  }
+  &__swiper-slide-price-box {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  // .range__swiper-slide-price
+
+  &__swiper-slide-price {
+  }
+
+  // .range__swiper-slide-price-num
+
+  &__swiper-slide-price-num {
+  }
+
+  // .range__swiper-slide-old-price
+
+  &__swiper-slide-old-price {
+    text-decoration: line-through;
+    color: $black-30;
+    display: none;
+  }
+
+  // .range__swiper-slide-old-price-num
+
+  &__swiper-slide-old-price-num {
+  }
+
+  // .range__swiper-slide-desk
+
+  &__swiper-slide-desk {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Максимальное количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 13rem;
+    color: $black-30;
+  }
+
+  // .range__swiper-slide-basket
+
+  &__swiper-slide-basket {
+    position: absolute;
+    background-color: $white;
+    border-radius: 4rem;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background-color: $orange;
+      & .range__swiper-slide-basket-svg-box svg {
+        stroke: $white;
+      }
+    }
+  }
+
+  // .range__swiper-slide-basket-svg-box
+
+  &__swiper-slide-basket-svg-box {
+    width: 2.2rem;
+    height: 2.2rem;
+    & svg {
+      object-fit: contain;
+      stroke: $black;
+      transition: stroke 0.3s;
+    }
+  }
+
+  // .range__swiper-slide-img-box
+
+  &__swiper-slide-img-box {
+    position: relative;
+    width: 43rem;
+    height: 40rem;
+    border-radius: 2.4rem;
+    background: $white;
+    overflow: hidden;
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .range__swiper-slide-coin-box
+
+  &__swiper-slide-coin-box {
+    position: absolute;
+    top: 2.2rem;
+    left: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    display: none;
+  }
+
+  // .range__swiper-slide-coin-svg-box
+
+  &__swiper-slide-coin-svg-box {
+    width: 2.4rem;
+    height: 2.4rem;
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  // .range__swiper-slide-svg
+
+  &__swiper-slide-svg {
+  }
+
+  // .range__swiper-slide-coin-num
+
+  &__swiper-slide-coin-num {
+  }
+
+  // .range__swiper-slide-discount-box
+
+  &__swiper-slide-discount-box {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    display: none;
+  }
+
+  // .range__swiper-slide-discount
+
+  &__swiper-slide-discount {
+    background-color: $green;
+    padding: 0.6rem 1.6rem;
+    border-radius: 3.1rem;
+    width: fit-content;
+  }
+
+  // .range__swiper-slide-like-box
+
+  &__swiper-slide-like-box {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 4rem;
+    background: $light-grey;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visible 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .range__swiper-slide-like-svg-wrapper
+
+  &__swiper-slide-like-svg-wrapper {
+    width: 2.3rem;
+    height: 1.9rem;
+    & svg {
+      object-fit: contain;
+      stroke: $black-30;
+    }
+  }
+
+  // .range__swiper-scrollbar
+
+  &__swiper-scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  // .range__swiper-scrollbar-drag
+
+  &__swiper-scrollbar-drag.swiper-scrollbar-drag {
+    height: 4px;
+    background-color: $green;
+    transition: width 0.3s, transform 0.3s;
+  }
 }
-
-

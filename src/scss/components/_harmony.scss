@@ -1,6 +1,6 @@
 .harmony {
     position: relative;
-    padding: 11rem 0;
+    padding: 0 0 11rem ;
 }
 .harmony-top {
   // .harmony-top__inner
@@ -16,6 +16,8 @@
 
   &__title {
     width: 105rem;
+    position: relative;
+    z-index: 1;
     & span::before {
       height: 4.8rem;
     }
