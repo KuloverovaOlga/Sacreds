@@ -73,26 +73,22 @@
 
   &__swiper-slide.swiper-slide {
     transition: transform 0.3s;
-    &.swiper-slide-active {
+    &:nth-child(6n + 1) {
       transform: rotate(8deg) translateY(-8.3rem);
     }
-    &.swiper-slide-next {
+    &:nth-child(6n + 2) {
       transform: rotate(-8deg);
     }
-    &.swiper-slide-next + .swiper-slide {
+    &:nth-child(6n + 3) {
       transform: rotate(8deg) translate(2.3rem, 1rem);
     }
-    &.swiper-slide-next + .swiper-slide + .swiper-slide {
+    &:nth-child(6n + 4) {
       transform: rotate(-8deg) translateY(-7rem);
     }
-    &.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+    &:nth-child(6n + 5){
       transform: rotate(8deg);
     }
-    &.swiper-slide-next
-      + .swiper-slide
-      + .swiper-slide
-      + .swiper-slide
-      + .swiper-slide {
+    &:nth-child(6n + 6) {
       transform: rotate(-8deg) translateY(-3.8rem);
     }
   }

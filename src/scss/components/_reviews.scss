@@ -59,29 +59,50 @@ padding: 11rem 0;
     &__swiper-wrapper {
         margin: 11rem 0;
         padding-left: 10rem;
+        
     }
+
+
 
     // .reviews__swiper-slide
 
     &__swiper-slide.swiper-slide {
-        transition: transform 0.3s;
-        &.swiper-slide-active {
+        transition: transform 0.3s,  z-index  0.3s;  ;
+
+        &:hover {
+            &:nth-child(5n  + 1) {
+                transform: rotate(-8deg) translate(2rem, 2rem);
+              }
+
+              &:nth-child(5n + 2) {
+                transform: rotate(2deg) translate(5rem, -10.6rem);
+              }
+              &:nth-child(5n + 5) {
+                transform: rotate(-6deg) translate(5rem, -7.6rem);
+                & ~ .reviews__swiper-slide:nth-child(5n  + 1)  {
+                    transform: rotate(4deg) translateX(8rem);
+                }
+              }
+         
+          }
+
+        &:nth-child(5n  + 1) {
           transform: rotate(-8deg) translateY(6rem);
-          z-index: 5
+          z-index: 5;
         }
-        &.swiper-slide-next {
+        &:nth-child(5n  + 2) {
           transform: rotate(2deg) translateY(-8.6rem);
           z-index: 4
         }
-        &.swiper-slide-next + .swiper-slide {
+        &:nth-child(5n  + 3){
           transform: rotate(8deg) translateY(6.2rem);
           z-index: 3
         }
-        &.swiper-slide-next + .swiper-slide + .swiper-slide {
+        &:nth-child(5n  + 4) {
           transform: rotate(6deg) translateY(-4rem);
           z-index: 2
         }
-        &.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+        &:nth-child(5n + 5) {
           transform: rotate(-8deg);
           z-index: 1
         }

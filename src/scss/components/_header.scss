@@ -1,4 +1,20 @@
 .header {
+position: fixed;
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+top: 2rem;
+
+&.fixed-nav {
+  top: 0.8rem;
+  & .header__inner {
+    padding: 2rem 3.2rem;
+  background: rgba(253, 253, 253, 0.60);
+  backdrop-filter: blur(62px);
+  }
+
+}
+
 
   // .header____inner
 
@@ -6,8 +22,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30rem;
-    padding: 4rem 1.2rem 2.2rem 0;
+    border-radius: 40px;
+    padding: 2rem 1.2rem 2rem 0;
+    transition: padding 0.3s, background 0.3s, backdrop-filter 0.1s;
+
   }
 
   // .header__nav-wrapper
@@ -130,20 +148,20 @@
 }
 
 
-.main-page {
-  & .header {
+// .main-page {
+//   & .header {
 
-    &__tel-wrapper {
-      background-color: $white;
-    }
+//     &__tel-wrapper {
+//       background-color: $white;
+//     }
 
   
-    &__btn-link {
-      background-color: $white;
-    }
+//     &__btn-link {
+//       background-color: $white;
+//     }
 
-  }
-}
+//   }
+// }
 
 
 

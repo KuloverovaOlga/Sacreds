@@ -74,12 +74,13 @@
     &:after {
       content: "";
       position: absolute;
-      top: 6.2rem;
+      top: 6.1rem;
       left: 0;
       right: 0;
       height: 2px;
       width: 100%;
       background-color: $line;
+      z-index: -1;
     }
   }
 
@@ -99,9 +100,8 @@
 
   &__swiper-nav-item {
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     color: $black-30;
-    transition: color 0.3s;
     &:hover,
     &.isActive {
       color: $black;
@@ -381,7 +381,7 @@
 
   // .range__swiper-scrollbar
 
-  &__swiper-scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+  &__swiper-scrollbar {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -393,9 +393,9 @@
 
   // .range__swiper-scrollbar-drag
 
-  &__swiper-scrollbar-drag.swiper-scrollbar-drag {
+  &__swiper-scrollbar-drag{
     height: 4px;
     background-color: $green;
-    transition: width 0.3s, transform 0.3s;
+    transition: width 0.3s 0.3s, transform 0.3s, 0.3s;
   }
 }

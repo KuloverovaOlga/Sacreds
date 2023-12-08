@@ -5,6 +5,8 @@ import harmonySwiper from "./harmonySwiper";
 import reviewsSwiper from "./reviewsSwiper";
 import accordeon from "./accordeon";
 import rangeSwiper from "./rangeSwiper";
+import heroSwiper from "./heroSwiper";
+import header from "./header";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     try{
         collectionsSwiper()
     } catch {}
-    
     try{
         harmonySwiper()
     } catch {}
@@ -29,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try{
         rangeSwiper()
+    } catch {}
+    try{
+        heroSwiper()
+    } catch {}
+    try{
+        header()
     } catch {}
     
 })
