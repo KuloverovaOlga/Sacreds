@@ -1,0 +1,89 @@
+.error {
+margin-top: 17.7rem;
+margin-bottom: 11rem;
+
+&__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+    // .error__img-wrapper
+
+    &__img-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 34.9rem;
+        position: relative;
+    }
+
+    // .error__img-nim
+
+    &__img-num {
+        color: $black;
+font-family: 'CeraPro';
+font-size: 40rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 1.6rem;
+    }
+
+    // .error__img-box
+
+    &__img-box {
+        position: absolute;
+        width: 35.4rem;
+        height: 37.4rem;
+        left: 24.9rem;
+        bottom: 8rem;
+        & img {
+            object-fit: contain;
+        }
+    }
+
+    // .error__content-box
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .error__title
+
+    &__title {
+    }
+
+    // .error__desk
+
+    &__desk {
+    }
+
+    // .error__btn
+
+    &__btn {
+
+        background-color: $orange;
+        color: $white;
+        width: fit-content;
+    }
+
+    // .error__btn-text
+
+    &__btn-text {
+    }
+
+    // .error__btn-svg-box
+
+    &__btn-svg-box {
+        & svg {
+            fill: $white;
+        }
+    }
+}

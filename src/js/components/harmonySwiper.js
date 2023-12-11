@@ -15,12 +15,13 @@ const harmonySwiper = () => {
             prevEl: '.harmony-bottom__swiper-button-prev',
         },
     });
+
+
+
+
+
+
 }
-
-
-
-
-
   
 
 

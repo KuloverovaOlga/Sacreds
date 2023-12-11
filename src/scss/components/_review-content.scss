@@ -1,0 +1,293 @@
+
+
+
+
+.review-content {
+padding: 11rem 0;
+    &__inner {
+       display: flex;
+       flex-direction: column;
+       gap: 6rem;
+    }
+		// .review-content__header-box
+
+		&__header-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+		}
+
+		// .review-content__title
+
+		&__title {
+
+		}
+
+		// .review-content__btn
+
+		&__btn {
+            background-color: $green;
+		}
+
+		// .review-content__btn-text
+
+		&__btn-text {
+		}
+
+		// .review-content__btn-svg-box
+
+		&__btn-svg-box {
+            & svg {
+                fill: $black;
+            }
+		}
+
+		// .review-content__container
+
+		&__container {
+		}
+
+		// .review-content__wrapper
+
+		&__wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: row dense;
+            gap: 0.8rem;
+		}
+}
+.review-wrapper {
+
+		// .review-wrapper__item
+
+		&__item {
+ 
+		}
+}
+.review-item {
+    transition: opacity 0.3s, visibility 0.3s;
+    cursor: pointer;
+	background-color: $light-grey;
+    border-radius: 4rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+	justify-content: space-between;
+	&--text {
+
+
+	}
+	&--big {
+
+	
+		background-color: $green;
+		grid-row: span 2;
+
+
+		&--video {
+
+		}
+	}
+
+		// .review-item__header
+
+		&__header {
+		}
+
+		// .review-item__title
+
+		&__title {
+            position: relative;
+            z-index: 2;
+            & span::before{
+height: 3.6rem;
+            }
+		}
+
+		// .review-item__box
+
+		&__box {
+		}
+
+		// .review-item__btn
+
+		&__btn {
+		}
+
+		// .review-item__img
+
+        &__img {
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &--big {
+                width: 82.6rem;
+                height: 50.4rem;
+                border-radius: 4rem;
+                overflow: hidden;
+            }
+        }
+
+		// .review-item__img--big
+
+		&__img--big {
+            grid-row: span 2;
+		}
+
+       
+        // .review-item__box
+        &__box {
+            cursor: pointer;
+            position: relative;
+            display: block;
+        }
+
+		// .review-item__footer
+
+		&__footer {
+		}
+
+		// .review-item__name
+
+		&__name {
+		}
+
+		// .review-item__content
+
+		&__content {
+		}
+
+		// .review-item__text
+
+		&__text {
+            display: -webkit-box;
+    -webkit-line-clamp: 3; /* Максимальное количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+		}
+
+		// .review-item__hashtag
+
+		&__hashtag {
+		}
+
+		// .review-item__main
+
+		&__main {
+		}
+
+		// .review-item__date
+
+		&__date {
+		}
+
+
+
+
+
+            // .review-item__footer
+    
+            &__footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+    
+            // .review-item__footer-info
+    
+            &__footer-info {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+            }
+    
+            // .review-item__name
+    
+            &__name {
+            }
+    
+            // .review-item__status
+    
+            &__status {
+            }
+
+
+    
+            // .review__photo-box
+    
+            &__photo-box {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                overflow: hidden;
+                & img {
+                   object-fit: contain;
+                }
+            }
+}
+ 
+.review-content__pagination-wpapper {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 2rem;
+
+}
+.review-content__pagination {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1.6rem;
+font-family: 'CeraPro';
+font-size: 1.8rem;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 25.2px */
+letter-spacing: 0.72px;
+
+
+}
+.review-content__pagination-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    transition: border 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+
+    &.active {
+        border: 1px solid $black;
+    }
+
+    &-prev, 
+    &-next {
+        transition: opacity 0.3s;
+        & svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: $black;
+            stroke: $black;
+        }
+
+
+
+        &[disabled] {
+            opacity: 0.5;
+        }
+
+    }
+
+}
+
+
+
+

@@ -15,6 +15,14 @@ const reviewsSwiper = () => {
             prevEl: '.reviews__swiper-button-prev',
         },
     });
+
+
+    const sliders = document.querySelectorAll('.reviews__swiper-slide.swiper-slide') 
+
+    for (let i = 0; i < sliders.length; i++) {
+        const index = sliders.length - i;
+        sliders[i].style.zIndex = index
+    }
 }
 
 

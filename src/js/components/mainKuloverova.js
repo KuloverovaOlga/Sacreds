@@ -3,10 +3,15 @@ import form from "./form";
 import collectionsSwiper from "./collectionsSwiper";
 import harmonySwiper from "./harmonySwiper";
 import reviewsSwiper from "./reviewsSwiper";
-import accordeon from "./accordeon";
+import questions from "./questions";
 import rangeSwiper from "./rangeSwiper";
 import heroSwiper from "./heroSwiper";
 import header from "./header";
+import blogSwipper from "./blogSwipper";
+import reviewsPageReviews from "./reviewsPageReviews";
+import reviewsPageSwiper from "./reviewsPageSwiper";
+import productCardMin from "./productCardMin";
+import similarProductsSwiper from "./similarProductsSwiper";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -26,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewsSwiper()
     } catch {}
     try{
-        accordeon()
+        questions()
     } catch {}
     try{
         rangeSwiper()
@@ -36,6 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try{
         header()
+    } catch {}
+    try{
+        blogSwipper()
+    } catch {}
+    try{
+        reviewsPageReviews()
+    } catch {}
+    try{
+        reviewsPageSwiper()
+    } catch {}
+    try{
+        productCardMin()
+    } catch {}
+    try{
+        similarProductsSwiper()
     } catch {}
     
 })
