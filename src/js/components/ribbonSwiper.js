@@ -18,12 +18,10 @@ const ribbonSwiper = () => {
 			769: {
 				slidesPerView: 'auto',
 			},
-			320: {
-				slidesPerView: 2.25,
-				spaceBetween: rem(2.4), 
-			},
 		},
 	});
+	
+	
 
 
 

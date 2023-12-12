@@ -7,7 +7,7 @@ const blogSwipper = () => {
 
 	const swiperOne = new Swiper('.blog__swiper', {
         slidesPerView: 'auto',
-        spaceBetween:rem(1.2),
+        spaceBetween:rem(1.6),
         grabCursor: true,
         updateOnWindowResize: true,
         watchSlidesProgress: true,
@@ -15,7 +15,13 @@ const blogSwipper = () => {
             nextEl: '.blog__swiper-button-next',
             prevEl: '.blog__swiper-button-prev',
         },
-
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+        spaceBetween:rem(1.2),
+             
+            },
+        },
 
 
    

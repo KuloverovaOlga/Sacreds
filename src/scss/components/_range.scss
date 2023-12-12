@@ -153,5 +153,161 @@
   }
 }
 
-
+@media (max-width: 48em) {
+  .range {
+    padding: 11rem 0;
+    display: none;
+    // .range__inner
+  
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+    }
+  
+    // .range__header-box
+  
+    &__header-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 44.6rem;
+    }
+  
+    // .range__header-title
+  
+    &__header-title {
+      width: 77.6rem;
+    }
+  
+    // .range__header-btn-box
+  
+    &__header-btn-box {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      width: 60rem;
+    }
+  
+    // .range__btn
+  
+    &__btn {
+      background-color: $green;
+    }
+  
+    // .range__btn-text
+  
+    &__btn-text {
+    }
+  
+    // .range__btn-svg-box
+  
+    &__btn-svg-box {
+      & svg {
+        fill: $black;
+      }
+    }
+  
+    // .range__header-text
+  
+    &__header-text {
+    }
+  
+    // .range__swiper-box
+  
+    &__swiper-box {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 6.1rem;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $line;
+        z-index: -1;
+      }
+    }
+  
+    // .range__swiper-nav-menu
+  
+    &__swiper-nav-menu {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 10rem;
+      padding-bottom: 3rem;
+      width: fit-content;
+    }
+  
+    // .range__swiper-nav-item
+  
+    &__swiper-nav-item {
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      color: $black-30;
+      &:hover,
+      &.isActive {
+        color: $black;
+      }
+    }
+  
+    // .range__swiper
+  
+    &__swiper {
+      margin-top: 6rem;
+    }
+  
+    // .range__swiper-wrapper
+  
+    &__swiper-wrapper {
+    }
+  
+    // .range__swiper-slide
+  
+    // .range__swiper-slide
+  
+    &__swiper-slide {
+      flex: 0 0 100%;
+    }
+  
+    &__swiper-slide-swiper-wrapper.swiper-wrapper {
+      width: fit-content;
+    }
+  
+    .range__swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active
+      .range__swiper-slide-swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide {
+      pointer-events: fill !important;
+    }
+  
+    // .range__swiper-slide-link
+  
+  
+  
+    // .product-card-header-box
+  
+  
+  
+    // .range__swiper-scrollbar
+  
+    &__swiper-scrollbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: transparent;
+    }
+  
+    // .range__swiper-scrollbar-drag
+  
+    &__swiper-scrollbar-drag {
+      height: 4px;
+      background-color: $green;
+      transition: width 0.3s 0.3s, transform 0.3s, 0.3s;
+    }
+  }
+}
 
