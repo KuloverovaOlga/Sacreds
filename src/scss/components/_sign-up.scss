@@ -123,3 +123,133 @@ padding: 11rem 0;
     }
 }
 
+@media (max-width: 48em) {
+    .sign-up {
+        display: none;
+        padding: 11rem 0;
+            // .sign-up__inner
+        
+            &__inner {
+                display: flex;
+                padding: 4rem;
+                gap: 8rem;
+                border-radius: 4rem;
+                background-color: $light-grey;
+            }
+        
+            // .sign-up__photo-wrapper
+        
+            &__photo-wrapper {
+                position: relative;
+            }
+        
+            // .sign-up__photo-text
+        
+            &__photo-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $light-grey;
+                border-radius:  0 0 4rem 0;
+                padding: 0 2rem 2rem 0;
+                width: 35rem;
+                color: $black-50;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 5rem 0 0  0;
+                    box-shadow: -1rem -1rem 0 0.5rem $light-grey;
+                  }
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -4rem;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 5rem 0 0 0;
+                    box-shadow: -1rem -1rem 0 0.5rem $light-grey;
+                  }
+        
+            }
+        
+            // .sign-up__photo-box
+        
+            &__photo-box {
+                width: 65.4rem;
+                height: 22rem;
+                border-radius: 4rem;
+                overflow: hidden;
+                & img {
+                    object-fit: cover;
+                }
+            }
+        
+            // .sign-up__content-wrapper
+        
+            &__content-wrapper {
+                width: 100.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 5.2rem;
+            }
+        
+            // .sign-up__title
+        
+            &__title {
+            }
+        
+            // .sign-up__form
+        
+            &__form {
+                display: flex;
+                gap: 1.4rem;
+            }
+        
+            // .sign-up__input
+        
+            &__input {
+                padding: 1.4rem 2.4rem;
+                background-color:$white;
+                width: 33rem;
+                border-radius: 3.2rem;
+            }
+        
+            // .sign-up__input--name
+        
+            &__input--name {
+            }
+        
+            // .sign-up__input--tel
+        
+            &__input--tel {
+            }
+        
+            // .sign-up__btn
+        
+            &__btn {
+                background-color: $orange;
+                color: $white;
+            }
+        
+            // .sign-up__btn-text
+        
+            &__btn-text {
+            }
+        
+            // .sign-up__btn-svg-box
+        
+            &__btn-svg-box {
+                & svg {
+                    fill: $white;
+                }
+            }
+        }
+        
+    }
+  
+

@@ -1,4 +1,5 @@
 .hero {
+
   // .hero__swiper-box
 
   &__swiper-box {
@@ -436,6 +437,7 @@
 
 @media (max-width: 48em) {
   .hero {
+    display: none;
     // .hero__swiper-box
   
     &__swiper-box {

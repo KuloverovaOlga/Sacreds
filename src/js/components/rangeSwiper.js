@@ -28,7 +28,7 @@ const rangeSwiper = () => {
   });
   const swiperInner1 = new Swiper(".range__swiper-slide-swiper--1", {
     slidesPerView: 4,
-    slidesPerGroup: 4,
+
     spaceBetween: 12,
     grabCursor: true,
     updateOnWindowResize: true,
@@ -42,7 +42,7 @@ const rangeSwiper = () => {
   const swiperInner2 = new Swiper(".range__swiper-slide-swiper--2", {
     slidesPerView: 4,
     spaceBetween: 12,
-    slidesPerGroup: 4,
+
     grabCursor: true,
     updateOnWindowResize: true,
     watchSlidesProgress: true,
@@ -54,7 +54,7 @@ const rangeSwiper = () => {
   const swiperInner3 = new Swiper(".range__swiper-slide-swiper--3", {
     slidesPerView: 4,
     spaceBetween: 12,
-    slidesPerGroup: 4,
+
     grabCursor: true,
     updateOnWindowResize: true,
     watchSlidesProgress: true,
@@ -66,7 +66,7 @@ const rangeSwiper = () => {
   const swiperInner4 = new Swiper(".range__swiper-slide-swiper--4", {
     slidesPerView: 4,
     spaceBetween: 12,
-    slidesPerGroup: 4,
+
     grabCursor: true,
     updateOnWindowResize: true,
     watchSlidesProgress: true,
@@ -78,7 +78,7 @@ const rangeSwiper = () => {
   const swiperInner5 = new Swiper(".range__swiper-slide-swiper--5", {
     slidesPerView: 4,
     spaceBetween: 12,
-    slidesPerGroup: 4,
+
     grabCursor: true,
     updateOnWindowResize: true,
     watchSlidesProgress: true,
@@ -90,7 +90,7 @@ const rangeSwiper = () => {
   const swiperInner6 = new Swiper(".range__swiper-slide-swiper--6", {
     slidesPerView: 4,
     spaceBetween: 12,
-    slidesPerGroup: 4,
+
     grabCursor: true,
     updateOnWindowResize: true,
     watchSlidesProgress: true,

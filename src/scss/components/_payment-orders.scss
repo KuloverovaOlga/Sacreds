@@ -1,72 +1,129 @@
 .payment-orders {
-    padding: 11rem 0;
+  padding: 11rem 0;
 
+  // .payment-orders__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  // .payment-orders__title
+
+  &__title {
+    & span {
+      color: $orange;
+    }
+  }
+
+  // .payment-orders__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  // .payment-orders__item
+
+  &__item {
+    border-radius: 4rem;
+    background: $light-grey;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    padding: 3.2rem 22.6rem 3.2rem 3.2rem;
+    overflow: hidden;
+  }
+
+  // .payment-orders__count
+
+  &__count {
+    position: absolute;
+    font-family: "CeraPro";
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    top: -1rem;
+    left: 3.2rem;
+  }
+
+  // .payment-orders__info-box
+
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    justify-content: flex-end;
+    width: 70rem;
+  }
+
+  // .payment-orders__desk
+
+  &__desk {
+  }
+}
+
+@media (max-width: 48em) {
+  .payment-orders {
+    padding: 5rem 0;
     // .payment-orders__inner
 
     &__inner {
-        display: flex;
-        flex-direction: column;
-        gap: 10rem;
+      gap: 8rem;
     }
 
     // .payment-orders__title
 
     &__title {
-        & span {
-            color: $orange;
-        }
     }
 
     // .payment-orders__list
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
+      gap: 1.6rem;
     }
 
     // .payment-orders__item
 
     &__item {
-        border-radius: 4rem;
-    background: $light-grey;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-   position: relative;
-   padding: 3.2rem 22.6rem 3.2rem 3.2rem;
-   overflow: hidden;
-
+      border-radius: 4.8rem;
+      flex-direction: column;
+      padding: 4rem;
+      align-items: flex-start;
+      gap: 0.8rem;
     }
 
     // .payment-orders__count
 
     &__count {
-        position: absolute;
-        font-family: "CeraPro";
-        font-size: 16rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
-        top: -1rem;
-        left: 3.2rem;
+      position: relative;
+      top: -4rem;
+      left: 0;
+      height: 14rem;
+      overflow: hidden;
     }
 
     // .payment-orders__info-box
 
     &__info-box {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        gap: 0.8rem;
-        justify-content: flex-end;
-        width: 70rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 1.6rem;
+      width: 100%;
     }
 
     // .payment-orders__desk
 
     &__desk {
     }
+  }
 }

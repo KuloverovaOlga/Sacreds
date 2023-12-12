@@ -12,6 +12,7 @@ import reviewsPageReviews from "./reviewsPageReviews";
 import reviewsPageSwiper from "./reviewsPageSwiper";
 import productCardMin from "./productCardMin";
 import similarProductsSwiper from "./similarProductsSwiper";
+import deliverySwiper from "./deliverySwiper";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -51,13 +52,37 @@ document.addEventListener('DOMContentLoaded', () => {
     try{
         reviewsPageSwiper()
     } catch {}
-    try{
+    try {
         productCardMin()
     } catch {}
     try{
         similarProductsSwiper()
     } catch {}
+    try{
+        deliverySwiper()
+    } catch {}
     
 })
+
+
+// document.querySelector('#review_modal').addEventListener('click', () => {
+//     document.querySelector('.modal.form-bill').classList.add("active")
+// const closeBtn = document.querySelectorAll('.modal__close')
+
+// }) 
+
+// // $('#review_modal').on('click', function () {
+// //     $(".modal.form-bill").addClass("active");
+// //     openModal();
+// //   })
+  
+// //   if ($(".modal__close").length) {
+// //     $(".modal__close").on("click", function () {
+// //       if ($(this).closest(".modal").hasClass("active")) {
+// //         $(this).closest(".modal").removeClass('active');
+// //         closeModal();
+// //       }
+// //     });
+// //   }
 
 

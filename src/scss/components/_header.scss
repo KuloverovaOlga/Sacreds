@@ -164,4 +164,157 @@ top: 2rem;
 // }
 
 
+@media (max-width: 48em) {
+  .header {
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 2rem;
+    
+    &.fixed-nav {
+      top: 0.8rem;
+      & .header__inner {
+        padding: 2rem 3.2rem;
+      background: rgba(253, 253, 253, 0.60);
+      backdrop-filter: blur(62px);
+      }
+    
+    }
+    
+    
+      // .header____inner
+    
+      &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 40px;
+        padding: 2rem 1.2rem 2rem 0;
+        transition: padding 0.3s, background 0.3s, backdrop-filter 0.1s;
+    
+      }
+    
+      // .header__nav-wrapper
+    
+      &__nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22rem;
+        width: 95rem;
+      }
+    
+      // .header__logo
+    
+      &__logo {
+      }
+    
+      // .header__logo-text
+    
+      &__logo-text {
+    
+      }
+    
+      // .header__nav
+    
+      &__nav {
+      
+      }
+    
+      // .header__nav-list
+    
+      &__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 4.6rem;
+      }
+    
+      // .header__nav-item
+    
+      &__nav-item {
+      }
+    
+      // .header__nav-link
+    
+      &__nav-link {
+      }
+    
+      // .header__btn-wrapper
+    
+      &__btn-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+      }
+    
+      // .header__tel-wrapper
+    
+      &__tel-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 2rem;
+        text-align: center;
+        border-radius: 3.2rem;
+        background-color: $light-grey;
+      }
+    
+      // .header__tel-box
+    
+      &__tel-box {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-end;
+        padding-right: 0.2rem;
+      }
+    
+      // .header__tel-svg-box
+    
+      &__tel-svg-box {
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & img {
+          object-fit: contain;
+        }
+      }
+    
+      // .header__tel-link
+    
+      &__tel-link {
+      }
+    
+      // .header__schedule
+    
+      &__schedule {
+        color: $black-50;
+      }
+    
+      // .header__btn-box
+    
+      &__btn-box {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+      }
+    
+      // .header__btn-link
+    
+      &__btn-link {
+      }
+    
+      // .header__btn-svg-box
+    
+      &__btn-svg-box {
+      }
+    }
+}
+
+
 
