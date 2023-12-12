@@ -24,6 +24,12 @@ const ribbonSwiper = () => {
 			},
 		},
 	});
+
+
+
+
+   
+
 }
 
 export default ribbonSwiper

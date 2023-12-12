@@ -7,7 +7,7 @@ $white: #FDFDFD;
 $light-grey: #F6F6F6;
 $black-50: rgba(18, 35, 26, 0.50);
 $black-30: rgba(18, 35, 26, 0.30);
-$line: rgba(18, 35, 26, 0.10);
+$line: rgba(17, 34, 25, 0.10);
 $grey: #848C88;
 
 
@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: $white;
 }
 
 main {
@@ -46,6 +47,9 @@ main {
   font-weight: 500;
   line-height: 120%; /* 57.6px */
   letter-spacing: 1.92px;
+
+ 
+
 }
 
 .title-h3 {
@@ -74,6 +78,24 @@ main {
   line-height: 135%; /* 27px */
   letter-spacing: 0.8px;
 }
+
+.title-span {
+  position: relative;
+  display: inline-block;
+  color: $black;
+  &::before {
+    position: absolute;
+    content: "";
+    border-radius: 3.2rem;
+    background: $light-green;
+    top: 50%;
+    transform: translateY(-40%);
+    left: -1.3rem;
+    right: -1.3rem;
+    z-index: -1;
+
+  }
+  }
 
 .text {
   font-family: 'CeraPro';
@@ -147,6 +169,8 @@ letter-spacing: 0.64px;
   & div {
     width: 5.4rem;
     height: 0.9rem;
+    display: flex;align-items: center;
+    justify-content: center;
 & svg {
   object-fit: contain;
 }
@@ -183,7 +207,409 @@ letter-spacing: 0.64px;
 
 
 
+.fancybox {
+	&__toolbar {
+		display: none;
+	}
+    &__content {
+        border-radius: 3.2rem!important;
+        & .fancybox__html5video {
+            width: 58.8rem;
+            object-fit: cover;
+            border: none!important;;
+        }
+    }
+	&__content > .f-button.is-close-btn {
+		border: none;
+		width: 6rem;
+		height: 6rem;
 
+            background-color:  $green; 
+
+		--f-button-border-radius: 4rem;
+		--f-button-color: $black;
+		--f-button-hover-color: $black;
+		--f-button-svg-width: 3.2rem;
+		--f-button-svg-height: 3.2rem;
+		position: absolute;
+		top: 1.2rem;
+		right: 1.2rem;
+		opacity: 1;
+
+		svg {
+			width: 3.5rem;
+			height: 6.5rem;
+			stroke-width: inherit;
+            fill: $black;
+		}
+		&:hover:not([disabled]) {
+		
+			background-color: none;
+		}
+	}
+	&__container:not(.is-compact) .fancybox__slide.has-close-btn {
+		padding-top: 0;
+	}
+	&__backdrop {
+        background: rgba(14, 28, 21, 0.30);
+        backdrop-filter: blur(7.5px);
+		opacity: 1;
+	}
+	&__track {
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		// justify-content: center;
+	}
+	&__slide {
+		padding: 0;
+		justify-content: center;
+
+		&.has-image > .fancybox__content {
+			max-width: 123rem;
+			max-height: 92rem;
+			padding: 6rem;
+			background-color: #fff;
+		}
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+.is-horizontal .f-carousel__nav .f-button.is-next,
+.is-horizontal .fancybox__nav .f-button.is-next {
+	right: 10rem;
+}
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .fancybox__nav .f-button.is-prev {
+	left: 10rem;
+}
+.has-map .fancybox__content,
+.has-pdf .fancybox__content,
+.has-youtube .fancybox__content,
+.has-vimeo .fancybox__content,
+.has-html5video .fancybox__content {
+    padding: 0!important;
+    width: fit-content!important;
+    height: fit-content!important;
+    border-radius: 3.2rem!important;
+    aspect-ratio: 1/1.35!important;
+    overflow: hidden;
+	background-color: #fff;
+  &  > .f-button.is-close-btn {
+    background-color:  rgba(253, 253, 253, 0.10);
+    backdrop-filter: blur(10px);
+    & svg {
+        fill: $black;
+    }
+    
+  }
+
+}
+.f-button {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background: $white;
+	box-shadow: none;
+
+	&:hover:not([disabled]) {
+
+	}
+
+	svg {
+		width: 3.2rem;
+		height: 3.2rem;
+		stroke-width: 0.01rem;
+
+	}
+}
+
+.review-text-modal {
+	display: none;
+	&.fancybox__content {
+		padding: 4rem 8.2rem 4rem 4rem;
+		display: block;
+	}
+	.review-item__content {
+		height: auto;
+		max-width: 78.4rem;
+	}
+.review-item__header {
+    margin-bottom: 3.2rem;
+}
+
+    .review-item__text-wrapper {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+margin-bottom: 3.2rem;
+    }
+}
+
+
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  border-radius: 3.2rem;
+  background: $light-grey;
+  gap: 1.2rem;
+  position: relative;
+
+  &--discount {
+    .product-card__discount-box {
+      display: flex;
+    }
+    .product-card__old-price {
+      display: flex;
+    }
+  }
+
+  &--coin {
+    .product-card__coin-box {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    & .product-card__img-box {
+      & img:nth-child(2) {
+        opacity: 1;
+        visibility: visible;
+      }
+      & img:nth-child(1) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    // .product-card-basket
+
+    & .product-card__basket {
+      background-color: $orange;
+      & .product-card__basket-svg-box svg {
+        stroke: $white;
+      }
+    }
+
+    &.isActive {
+      & .product-card__like-svg-wrapper svg{
+        fill: $orange;
+      }
+    }
+
+    }
+  
+
+    
+    &__header-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 0.8rem 0.8rem 0;
+      position: relative;
+    }
+  
+    // .product-card-title
+  
+    &__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* Максимальное количество строк */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 24.5rem;
+    }
+  
+    // .product-card-info-box
+  
+    &__info-box {
+      display: flex;
+      gap: 1.2rem;
+    }
+    &__price-box {
+      display: flex;
+      gap: 0.4rem;
+    }
+  
+    // .product-card-price
+  
+    &__price {
+    }
+  
+    // .product-card-price-num
+  
+    &__price-num {
+    }
+  
+    // .product-card-old-price
+  
+    &__old-price {
+      text-decoration: line-through;
+      color: $black-30;
+      display: none;
+    }
+  
+    // .product-card-old-price-num
+  
+    &__old-price-num {
+    }
+  
+    // .-desk
+  
+    &__desk {
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* Максимальное количество строк */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 13rem;
+      color: $black-30;
+    }
+  
+    // .-basket
+  
+    &__basket {
+      position: absolute;
+      background-color: $white;
+      border-radius: 4rem;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+      top: 0;
+      right: 0;
+    }
+  
+    // .-basket-svg-box
+  
+    &__basket-svg-box {
+      width: 2.2rem;
+      height: 2.2rem;
+      pointer-events: none;
+      & svg {
+        object-fit: contain;
+        stroke: $black;
+        transition: stroke 0.3s;
+      }
+    }
+  
+    // .-img-box
+  
+    &__img-box {
+      position: relative;
+      width: 43rem;
+      height: 40rem;
+      border-radius: 2.4rem;
+      background: $white;
+      overflow: hidden;
+      & img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+      & img:nth-child(2) {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+    // .-coin-box
+  
+    
+
+  }
+
+  &__coin-box {
+    position: absolute;
+    top: 2.2rem;
+    left: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    display: none;
+  }
+
+  // .-coin-svg-box
+
+  &__coin-svg-box {
+    width: 2.4rem;
+    height: 2.4rem;
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  // .-svg
+
+  &__svg {
+  }
+
+  // .-coin-num
+
+  &__coin-num {
+  }
+
+  // .-discount-box
+
+  &__discount-box {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    display: none;
+  }
+
+  // .-discount
+
+  &__discount {
+    background-color: $green;
+    padding: 0.6rem 1.6rem;
+    border-radius: 3.1rem;
+    width: fit-content;
+  }
+
+  // .-like-box
+
+  &__like-box {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 4rem;
+    background: $light-grey;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    transition: opacity 0.3s, visible 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .-like-svg-wrapper
+
+  &__like-svg-wrapper {
+    width: 2.3rem;
+    height: 1.9rem;
+    pointer-events: none;
+    & svg {
+      object-fit: contain;
+      stroke: $black-30;
+      fill: transparent;
+      transition: fill 0.3s;
+    }
+  }
+}
 
 @media (max-width: 48em) {
 

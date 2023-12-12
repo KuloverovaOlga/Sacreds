@@ -1,0 +1,132 @@
+.questions {
+  padding: 11rem 0;
+  // .questions__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  // .questions__title
+
+  &__title {
+  }
+
+  // .questions__accordion-wrapper
+
+  &__accordion-wrapper {
+  }
+
+  // .questions__accordion
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  // .questions__accordion-item
+
+  &__accordion-item {
+    border-radius: 4rem;
+    background: $light-grey;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  // .questions__accordion-count
+
+  &__accordion-count {
+    position: absolute;
+    font-family: "CeraPro";
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    top: -1rem;
+    left: 3.2rem;
+    transition: color 0.3s;
+  }
+
+  // .questions__accordion-item-header
+
+  &__accordion-item-header {
+    padding: 3.2rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20rem;
+    width: 100%;
+    justify-content: flex-end;
+    &.active ~ .questions__accordion-count {
+      color: $orange;
+    }
+    &.active + .questions__accordion-item-body {
+      margin-bottom: 3.2rem;
+    }
+    &.active .questions__accordion-svg-wrapper {
+      background-color: $orange;
+    }
+    &.active .questions__accordion-svg-box {
+    transform: rotate(-90deg);
+    & svg {
+        fill: $white;
+        stroke: $white;
+    }
+    }
+  }
+
+  // .questions__accordion-title
+
+  &__accordion-title {
+    width: 59.7rem;
+  }
+
+  // .questions__accordion-svg-wrapper
+  &__accordion-svg-wrapper {
+    width: 6rem;
+    height: 6rem;
+    background-color: $white;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__accordion-svg-box {
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: transform 0.3s;
+
+    & svg {
+      object-fit: contain;
+      fill: $black;
+      stroke: $black;
+      transition: fill 0.3s, stroke 0.3s;
+    }
+  }
+
+  // .questions__accordion-item-body
+
+  &__accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, margin-bottom 0.3s;
+    width: 86rem;
+    margin-right: 3.2rem;
+  }
+
+  // .questions__accordion-item-body-content
+
+  &__accordion-item-body-content {
+    width: 59.7rem;
+  }
+}
+

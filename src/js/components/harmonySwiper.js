@@ -8,7 +8,6 @@ const harmonySwiper = () => {
 	const swiperOne = new Swiper('.harmony-bottom__swiper', {
         slidesPerView: '5.8',
         grabCursor: true,
-        loop: true,
         updateOnWindowResize: true,
         watchSlidesProgress: true,
         navigation: {
@@ -16,12 +15,13 @@ const harmonySwiper = () => {
             prevEl: '.harmony-bottom__swiper-button-prev',
         },
     });
+
+
+
+
+
+
 }
-
-
-
-
-
   
 
 
