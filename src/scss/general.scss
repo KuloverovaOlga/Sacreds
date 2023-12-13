@@ -670,6 +670,20 @@ margin-bottom: 3.2rem;
   }
 }
 
+
+.scrollingMeny {
+  transition: transform 0.3s;
+
+  &.scrollingMenyBottom {
+    transform: translateY(0);
+    &.isActive {
+      transform: translateY(150%);
+    }
+  }
+
+
+}
+
 @media (max-width: 48em) {
   .title-h1 {
     font-size: 5.6rem;
