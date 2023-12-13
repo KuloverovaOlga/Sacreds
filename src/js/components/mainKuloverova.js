@@ -13,69 +13,70 @@ import reviewsPageSwiper from "./reviewsPageSwiper";
 import productCardMin from "./productCardMin";
 import similarProductsSwiper from "./similarProductsSwiper";
 import deliverySwiper from "./deliverySwiper";
+import heroMenuMob from "./heroMenusMob";
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    try{
-        ribbonSwiper()
-    } catch {}
-    try{
-        form()
-    } catch {}
-    try{
-        collectionsSwiper()
-    } catch {}
-    try{
-        harmonySwiper()
-    } catch {}
-    try{
-        reviewsSwiper()
-    } catch {}
-    try{
-        questions()
-    } catch {}
-    try{
-        rangeSwiper()
-    } catch {}
-    try{
-        heroSwiper()
-    } catch {}
-    try{
-        header()
-    } catch {}
-    try{
-        blogSwipper()
-    } catch {}
-    try{
-        reviewsPageReviews()
-    } catch {}
-    try{
-        reviewsPageSwiper()
-    } catch {}
-    try {
-        productCardMin()
-    } catch {}
-    try{
-        similarProductsSwiper()
-    } catch {}
-    try{
-        deliverySwiper()
-    } catch {}
-    
-})
-
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    ribbonSwiper();
+  } catch {}
+  try {
+    form();
+  } catch {}
+  try {
+    collectionsSwiper();
+  } catch {}
+  try {
+    harmonySwiper();
+  } catch {}
+  try {
+    reviewsSwiper();
+  } catch {}
+  try {
+    questions();
+  } catch {}
+  try {
+    rangeSwiper();
+  } catch {}
+  try {
+    heroSwiper();
+  } catch {}
+  try {
+    header();
+  } catch {}
+  try {
+    blogSwipper();
+  } catch {}
+  try {
+    reviewsPageReviews();
+  } catch {}
+  try {
+    reviewsPageSwiper();
+  } catch {}
+  try {
+    productCardMin();
+  } catch {}
+  try {
+    similarProductsSwiper();
+  } catch {}
+  try {
+    deliverySwiper();
+  } catch {}
+  try {
+    heroMenuMob();
+  } catch {}
+});
 
 // document.querySelector('#review_modal').addEventListener('click', () => {
 //     document.querySelector('.modal.form-bill').classList.add("active")
 // const closeBtn = document.querySelectorAll('.modal__close')
 
-// }) 
+// })
 
 // // $('#review_modal').on('click', function () {
 // //     $(".modal.form-bill").addClass("active");
 // //     openModal();
 // //   })
-  
+
 // //   if ($(".modal__close").length) {
 // //     $(".modal__close").on("click", function () {
 // //       if ($(this).closest(".modal").hasClass("active")) {
@@ -84,5 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // //       }
 // //     });
 // //   }
-
-
