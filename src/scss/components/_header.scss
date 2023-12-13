@@ -66,11 +66,42 @@ top: 2rem;
   // .header__nav-item
 
   &__nav-item {
+    white-space: nowrap;
   }
 
   // .header__nav-link
 
   &__nav-link {
+
+    position: relative;
+    padding: 0.6rem 1.2rem 0.6rem 2.4rem;
+    border-radius: 2.4rem;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+    &::before {
+      transition: opacity 0.3s, visibility 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      content:"";
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: $black;
+      border-radius:50%;
+      left: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%
+      );
+    }
+
+    &:hover,
+    &.isActive {
+      border: 1px solid $black;
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        }
+    }
   }
 
   // .header__btn-wrapper
