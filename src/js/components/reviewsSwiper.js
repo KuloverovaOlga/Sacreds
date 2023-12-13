@@ -6,13 +6,20 @@ import { rem } from "../utils/constants";
 const reviewsSwiper = () => {
 
 	const swiperOne = new Swiper('.reviews__swiper', {
-        slidesPerView: '4.8',
+        slidesPerView: 'auto',
+        spaceBetween:rem(1.6),
         grabCursor: true,
         updateOnWindowResize: true,
         watchSlidesProgress: true,
         navigation: {
             nextEl: '.reviews__swiper-button-next',
             prevEl: '.reviews__swiper-button-prev',
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: '4.8',
+               },   
         },
     });
 

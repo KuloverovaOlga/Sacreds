@@ -60,7 +60,7 @@ top: 2rem;
   &__nav-list {
     display: flex;
     align-items: center;
-    gap: 4.6rem;
+    gap: 3.2rem;
   }
 
   // .header__nav-item
@@ -179,20 +179,28 @@ top: 2rem;
 }
 
 
-// .main-page {
-//   & .header {
+.main-page {
+  & .header {
 
-//     &__tel-wrapper {
-//       background-color: $white;
-//     }
+    &__nav-list {
+      gap: 0;
+      width: 62.4rem;
+      justify-content: space-between;
+      transition: gap 0.3s;
+    }
 
-  
-//     &__btn-link {
-//       background-color: $white;
-//     }
+    &.fixed-nav {
+      & .header__nav-list {
+        gap: 3.2rem;
+        width: auto;
+        justify-content: space-between;
+      }
+    
+    }
+  }
 
-//   }
-// }
+ 
+}
 
 
 @media (max-width: 48em) {
@@ -344,7 +352,14 @@ top: 2rem;
     
       &__btn-svg-box {
       }
+
+
+
+
+
     }
+
+     
 }
 
 

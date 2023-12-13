@@ -14,6 +14,8 @@ import productCardMin from "./productCardMin";
 import similarProductsSwiper from "./similarProductsSwiper";
 import deliverySwiper from "./deliverySwiper";
 import heroMenuMob from "./heroMenusMob";
+import harmonyBtnShowMore from "./harmonyBtnShowMore";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -63,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch {}
   try {
     heroMenuMob();
+  } catch {}
+  try {
+    harmonyBtnShowMore();
   } catch {}
 });
 
