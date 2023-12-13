@@ -113,6 +113,7 @@
 
   &__swiper-slide {
     flex: 0 0 100%;
+
   }
 
   &__swiper-slide-swiper-wrapper.swiper-wrapper {
@@ -120,9 +121,11 @@
   }
 
   .range__swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active
-    .range__swiper-slide-swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide {
+  .range__swiper-slide-swiper-slide.swiper-slide {
     pointer-events: fill !important;
+ 
   }
+
 
   // .range__swiper-slide-link
 
@@ -151,47 +154,63 @@
     background-color: $green;
     transition: width 0.3s 0.3s, transform 0.3s, 0.3s;
   }
+
+  &__swiper-slide-swiper-button-prev{
+
+  }
+
+
+
+
+
+  .swiper-grid-column > .swiper-wrapper {
+    flex-direction: row !important;
+}
+  .range__swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+}
+
 }
 
 @media (max-width: 48em) {
   .range {
-    padding: 11rem 0;
-    display: none;
+    padding: 10rem 0;
     // .range__inner
-  
     &__inner {
       display: flex;
       flex-direction: column;
-      gap: 10rem;
+      gap: 8rem;
+      position: relative;
+      padding-bottom: 22.8rem;
     }
   
     // .range__header-box
   
     &__header-box {
       display: flex;
-      align-items: flex-start;
-      gap: 44.6rem;
+      flex-direction: column;
+      gap: 3.2rem;
     }
   
     // .range__header-title
   
     &__header-title {
-      width: 77.6rem;
+      width: 100%;
     }
   
     // .range__header-btn-box
   
     &__header-btn-box {
-      display: flex;
-      flex-direction: column;
-      gap: 3.2rem;
-      width: 60rem;
+      width:100%;
     }
   
     // .range__btn
   
     &__btn {
-      background-color: $green;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
     }
   
     // .range__btn-text
@@ -219,7 +238,7 @@
       &:after {
         content: "";
         position: absolute;
-        top: 6.1rem;
+        top: 8rem;
         left: 0;
         right: 0;
         height: 2px;
@@ -232,13 +251,22 @@
     // .range__swiper-nav-menu
   
     &__swiper-nav-menu {
-      position: relative;
-      top: 0;
-      left: 0;
-      display: flex;
-      gap: 10rem;
-      padding-bottom: 3rem;
-      width: fit-content;
+      gap: 12rem;
+      padding-bottom: 3.6rem;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: thin; /* для Firefox */
+      -ms-overflow-style: none; /* для IE и Edge */
+      &::-webkit-scrollbar {
+        width: 0; /* ширина скроллбара */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent; /* цвет ползунка */
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent; /* цвет трека */
+      }
     }
   
     // .range__swiper-nav-item
@@ -247,6 +275,7 @@
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
       color: $black-30;
+      white-space: nowrap;
       &:hover,
       &.isActive {
         color: $black;
@@ -257,6 +286,7 @@
   
     &__swiper {
       margin-top: 6rem;
+
     }
   
     // .range__swiper-wrapper
@@ -275,10 +305,14 @@
     &__swiper-slide-swiper-wrapper.swiper-wrapper {
       width: fit-content;
     }
+    .range__swiper-slide-swiper-slide {
+ 
+    }
   
     .range__swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active
       .range__swiper-slide-swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide {
       pointer-events: fill !important;
+      
     }
   
     // .range__swiper-slide-link
@@ -308,6 +342,15 @@
       background-color: $green;
       transition: width 0.3s 0.3s, transform 0.3s, 0.3s;
     }
+
+   
+  }
+
+  .range__swiper-slide-swiper-button-prev.swiper-button-prev{
+    display: none;
+  }
+  .range__swiper-slide-swiper-button-next.swiper-button-next{
+    display: none;
   }
 }
 

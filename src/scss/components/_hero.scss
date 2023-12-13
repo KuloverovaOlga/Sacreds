@@ -96,6 +96,9 @@
 
   &__swiper-content-title-box {
     width: 61rem;
+display: flex;
+flex-direction: column;
+gap: 3.5rem;
   }
 
   // .hero__swiper-content-title
@@ -110,6 +113,7 @@
   // .hero__swiper-content-desk
 
   &__swiper-content-desk {
+    color: $black-50;
   }
 
   // .hero__swiper-slide-img-box
@@ -358,6 +362,7 @@
     display: flex;
     flex-direction: column;
     gap: 6rem;
+    padding-top: 12rem;
   }
 
   // .hero__item
@@ -413,10 +418,18 @@
   &__item-svg-box {
     width: 2.4rem;
     height: 2.4rem;
-    & img {
-      object-fit: contain;
+    & svg {
+      object-fit: cover;
       height: 100%;
       width: 100%;
+      & .hero__item-svg-stroke {
+stroke: $black;
+      }
+
+      & .hero__item-svg-fill
+      {
+        fill: $black;
+      }
     }
   }
 
@@ -428,6 +441,7 @@
   // .hero__item-desk
 
   &__item-desk {
+    color: $black-50;
   }
 }
 
@@ -512,6 +526,9 @@
 
     &__swiper-content-title-box {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
     }
 
     // .hero__swiper-content-title
@@ -609,48 +626,7 @@
     // .hero__btn-box
 
     &__btn-box {
-      position: fixed;
-      background-color: $green;
-      width: 71rem;
-      right: 0rem;
-      bottom: 0rem;
-      left: 0rem;
-      padding: 2.8rem;
-      margin: 0 2rem 2.4rem 2rem;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 6rem;
-      border-radius: 4.8rem;
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   right: 0;
-      //   bottom: 100%;
-      //   width: 4rem;
-      //   height: 4rem;
-      //   border-radius: 0 0 2rem 0;
-      //   box-shadow: 1rem 1rem 0 0.5rem $white;
-      // }
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   right: 100%;
-      //   bottom: 0;
-      //   width: 4rem;
-      //   height: 4rem;
-      //   border-radius: 0 0 2rem 0;
-      //   box-shadow: 1rem 1rem 0 0.5rem $white;
-      // }
-
-      &::after {
-        display: none;
-      }
-      &::before {
-        display: none;
-      }
+      display: none;
     }
 
     // .hero__btn-link
@@ -674,34 +650,26 @@
       width: fit-content !important;
       left: auto !important;
       top: auto !important;
-      bottom: 15.4rem !important;
+      bottom: 15rem !important;
       right: 0 !important;
       transform: none !important;
-      border-radius: 3.2rem 0 0 0;
+      border-radius: 4.8rem 0 0 0;
+      padding: 1rem 0 0 1rem;
 
       & .swiper-pagination-bullet {
         background-color: transparent;
-        width: 6rem;
-        height: 6rem;
-        margin: 0 !important
-                  ;
-
+        width: 10rem;
+        height: 10rem;
+        margin: 0 !important;
+        color: $black;
         opacity: 1;
-        border: 2px solid $white;
-        color: $white;
-        font-family: "CeraPro";
-        font-size: 3.2rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 75% */
-        letter-spacing: 1.28px;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
+        border: 2px solid $black;
+        font-size: 4rem;
+        z-index: 2;
         transition: color 0.3s, background-color 0.3s;
         &-active {
-          background-color: $white;
-          color: $black;
+          background-color: $black;
+          color: $white;
         }
       }
 
@@ -731,55 +699,25 @@
     // .hero__list-box
 
     &__list-box {
-      display: flex;
-      align-items: flex-end;
-      gap: 2.2rem;
-      position: absolute;
-      bottom: 10.2rem;
-      left: 0;
-
       position: static;
     }
 
     // .hero__list-img-wrapper
 
     &__list-img-wrapper {
-      position: relative;
-      width: 36.7rem;
-      height: 36.7rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: -8.1rem;
-      margin-bottom: -9rem;
+      display: none;
     }
 
     // .hero__list-img-box
 
     &__list-img-box {
-      border-radius: 50%;
-      overflow: hidden;
-      width: 21.4rem;
-      height: 21.4rem;
-      position: absolute;
-      & img {
-        object-fit: contain;
-        transform: rotate(10deg);
-      }
+      
     }
 
     // .hero__list-svg-box
 
     &__list-svg-box {
-      position: absolute;
-      width: 36.7rem;
-      height: 36.7rem;
-      & img {
-        object-fit: contain;
-        width: 106%;
-        width: 100%;
-        height: 100%;
-      }
+   
     }
 
     // .hero__list
@@ -793,40 +731,25 @@
     // .hero__item
 
     &__item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
+      border-radius: 4.8rem;
+      background: $light-grey;
+      padding: 2.4rem 3.2rem; 
       position: relative;
       &::before {
-        position: absolute;
-        content: "";
-        width: 0.8rem;
-        height: 0.8rem;
-        border-radius: 50%;
-        background-color: $black;
+        display: none;
       }
       &:nth-child(1) {
-        margin-left: -20rem;
-        &::before {
-          left: 0;
-          bottom: -2.7rem;
-        }
+        margin-left: 0;
+
       }
       &:nth-child(2) {
-        margin-left: -3.5rem;
+        margin-left: 0;
 
-        &::before {
-          left: -3.8rem;
-          top: 2.8rem;
-        }
       }
       &:nth-child(3) {
-        margin-top: 2.3rem;
-        margin-bottom: 4.2rem;
-        &::before {
-          left: -2.65rem;
-          top: 2.4rem;
-        }
+        margin-top: 0;
+        margin-bottom: 0;
+
       }
     }
 
@@ -835,29 +758,44 @@
     &__item-title-box {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0rem;
+
     }
 
     // .hero__item-svg-box
 
     &__item-svg-box {
-      width: 2.4rem;
-      height: 2.4rem;
-      & img {
-        object-fit: contain;
+      position: absolute;
+      left: 3.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8.8rem;
+      height: 8.8rem;
+      & svg {
+        object-fit: cover;
         height: 100%;
         width: 100%;
+        & .hero__item-svg-stroke {
+  stroke: $orange;
+        }
+  
+        & .hero__item-svg-fill
+        {
+          fill: $orange;
+        }
       }
     }
 
     // .hero__item-title
 
     &__item-title {
+      padding-left: 11.2rem;
     }
 
     // .hero__item-desk
 
     &__item-desk {
+      padding-left: 11.2rem;
     }
   }
 }

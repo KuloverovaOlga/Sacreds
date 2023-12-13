@@ -127,7 +127,7 @@
     z-index: 1;
     width: 41.6rem;
     height: 42rem;
-    right: 2.5rem;
+    right: 4rem;
     bottom: 3rem;
     transform: rotate(-6deg);
     transform-origin: 50% 50%;
@@ -150,24 +150,25 @@
   // .collections__swiper-button-prev
 
   &__swiper-button-prev {
+    left: 5rem!important;
   }
 
   // .collections__swiper-button-next
 
   &__swiper-button-next.swiper-button-next {
-    right: 5rem;
+    right: 5rem!important;
   }
 }
 
 
 @media (max-width: 48em) {
   .collections {
-    display: none;
+
     // .collections__container
-    padding: 11rem 0 7rem;
+    padding: 10rem 0;
     &__container {
-      width: 192rem;
-      padding-left: 4.1rem;
+      width: 100%;
+      padding-left: 2rem;
     }
   
     // .collections__inner
@@ -175,13 +176,13 @@
     &__inner {
       display: flex;
       flex-direction: column;
-      gap: 10rem;
+      gap: 8rem;
     }
   
     // .collections__title
   
     &__title {
-      width: 79rem;
+      width: 57rem;
     }
   
     // .collections__swiper
@@ -197,13 +198,16 @@
     // .collections__swiper-slide
   
     &__swiper-slide {
+      width: 63.4rem!important;
+      height: 64rem!important;
     }
   
     // .collections__slide-inner
   
     &__slide-inner {
       position: relative;
-      margin: 17.5rem 2.9rem 0 4.5rem;
+      margin: 0;
+
     }
   
     // .collections__link
@@ -211,20 +215,19 @@
     &__link {
       position: relative;
       z-index: 2;
-      width: 44.6rem;
-      height: 42.2rem;
-      padding: 3.2rem;
+      width: 63.4rem;
+      height: 64rem;
+      padding: 20rem 4rem 4rem;
       display: block;
-      border-radius: 3.2rem;
-      background: $light-grey;
+      border-radius: 4.8rem;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-  
       &:hover + .collections__img-box {
-        transform: rotate(10);
-        right: 4rem;
-        bottom: 16rem;
+        transform: rotate(0);
+        right: auto;
+        bottom: auto;
       }
   
       &:hover {
@@ -243,6 +246,7 @@
     // .collections__desk
   
     &__desk {
+
     }
   
     // .collections__info
@@ -255,46 +259,36 @@
     // .collections__count-info
   
     &__count-info {
-      width: 17rem;
+      width: 26.6rem;
     }
   
     // .collections__btn
   
     &__btn {
-      width: 6rem;
-      height: 6rem;
-      background-color: $white;
-      border-radius: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
     }
   
     // .collections__svg-box
   
     &__svg-box {
-      width: 1.6rem;
-      height: 1.6rem;
-      & svg {
-        object-fit: contain;
-        fill: $black;
-        stroke: $black;
-        transition: fill 0.3s, stroke 0.3s;
-      }
+      width: 3.2rem;
+      height: 3.2rem;
     }
   
     // .collections__img-box
   
     &__img-box {
       position: absolute;
-      z-index: 1;
-      width: 41.6rem;
-      height: 42rem;
-      right: 2.5rem;
-      bottom: 3rem;
-      transform: rotate(-6deg);
-      transform-origin: 50% 50%;
+      z-index: 2;
+      width: 12.8rem;
+      height:12.8rem;
+      right: auto;
+      bottom: auto;
+      left: 4rem;
+      top: 4rem;
+      transform: rotate(0);
       border-radius: 3.2rem;
       overflow: hidden;
       transition: right 0.3s, bottom 0.3s, transform 0.3s;
@@ -309,17 +303,8 @@
   
     &__swiper-button-prev.swiper-button-prev,
     &__swiper-button-next.swiper-button-next {
-      top: 37rem;
+   display: none;
     }
-    // .collections__swiper-button-prev
-  
-    &__swiper-button-prev {
-    }
-  
-    // .collections__swiper-button-next
-  
-    &__swiper-button-next.swiper-button-next {
-      right: 5rem;
-    }
+
   }
 }

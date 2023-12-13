@@ -2,11 +2,13 @@ const heroMenuMob = () => {
   let lastScrollPosition = 0;
   const menus = document.querySelectorAll('.scrollingMeny');
 
+
+
   const updateMenuVisibility = () => {
       const currentScrollPosition = window.scrollY;
 
       if (window.innerWidth <= 768) {
-          if (currentScrollPosition >= lastScrollPosition) {
+          if (currentScrollPosition > lastScrollPosition) {
               // Scrolling down
               menus.forEach(item => {
                   item.classList.add('isActive');

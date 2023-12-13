@@ -6,8 +6,8 @@ import { rem } from "../utils/constants";
 const collectionsSwiper = () => {
 
 	const swiperOne = new Swiper('.collections__swiper', {
-        slidesPerView: '3.4',
-        spaceBetween:rem(4),
+        slidesPerView: 'auto',
+        spaceBetween:rem(1.6),
         grabCursor: true,
         updateOnWindowResize: true,
         watchSlidesProgress: true,
@@ -16,7 +16,13 @@ const collectionsSwiper = () => {
             prevEl: '.collections__swiper-button-prev',
         },
 
-
+        breakpoints: {
+            768: {
+                slidesPerView: '3.4',
+                spaceBetween:rem(4),
+             
+            },   
+        },
 
    
     });

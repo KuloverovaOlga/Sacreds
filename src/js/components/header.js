@@ -2,7 +2,7 @@ const header = () => {
     
 		const nav = document.querySelector('.header');
 		const navOffsetTop = nav.offsetTop;
-		console.log(navOffsetTop)
+
 	
 		function handleScroll() {
 			if (window.scrollY > navOffsetTop) {
