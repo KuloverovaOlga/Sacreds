@@ -1,32 +1,37 @@
 const heroMenuMob = () => {
-    let lastScrollPosition = 0;
+  let lastScrollPosition = 0;
+  const menus = document.querySelectorAll('.scrollingMeny');
 
-const menus = document.querySelectorAll('.scrollingMeny');
-
-
-    window.addEventListener('scroll', () => {
+  const updateMenuVisibility = () => {
       const currentScrollPosition = window.scrollY;
-    
-      if (currentScrollPosition >= lastScrollPosition  ) {
-        // Scrolling down
 
-        menus.forEach(item => {
-          item.classList.add('isActive');
-        })
-
-       
+      if (window.innerWidth <= 768) {
+          if (currentScrollPosition >= lastScrollPosition) {
+              // Scrolling down
+              menus.forEach(item => {
+                  item.classList.add('isActive');
+              });
+          } else {
+              // Scrolling up
+              menus.forEach(item => {
+                  item.classList.remove('isActive');
+              });
+          }
       } else {
-        // Scrolling up
-
-        menus.forEach(item => {
-          item.classList.remove('isActive');
-        })
-
+          // Если ширина экрана больше 768, удаляем класс 'isActive'
+          menus.forEach(item => {
+              item.classList.remove('isActive');
+          });
       }
-    
+
       lastScrollPosition = currentScrollPosition;
-    });
-}
+  };
 
- export default heroMenuMob
+  window.addEventListener('scroll', updateMenuVisibility);
+  window.addEventListener('resize', updateMenuVisibility);
 
+  // Вызываем функцию обновления видимости меню при загрузке страницы
+  updateMenuVisibility();
+};
+
+export default heroMenuMob;
