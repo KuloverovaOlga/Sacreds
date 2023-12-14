@@ -649,17 +649,7 @@ main {
   }
 }
 
-// ---------------------------------scrollingMeny-----------------------------------------
-.scrollingMeny {
-  transition: transform 0.3s;
 
-  &.scrollingMenyBottom {
-    transform: translateY(0);
-    &.isActive {
-      transform: translateY(150%);
-    }
-  }
-}
 // --------------------------------------media------------------------------------
 // --------------------------------------media------------------------------------
 
@@ -683,7 +673,9 @@ main {
   .subscription {
     font-size: 2.4rem;
   }
-
+  .logo {
+    font-size: 4rem;
+  }
   .button {
     font-size: 2.8rem;
   }
@@ -705,6 +697,27 @@ main {
       height: 4rem;
     }
   }
+
+// ---------------------------------scrollingMeny-----------------------------------------
+.scrollingMeny {
+  transition: transform 0.3s;
+
+  &.scrollingMenyBottom {
+    transform: translateY(0);
+    &.isActive {
+      transform: translateY(250%);
+    }
+  }
+
+  &.scrollingMenyTop {
+    transform: translateY(0);
+    &.isActive {
+      transform: translateY(-250%);
+    }
+  }
+}
+
+
 // ---------------------------------swiper-----------------------------------------
   .button-swiper.swiper-button-prev,
   .button-swiper.swiper-button-next {
@@ -718,6 +731,25 @@ main {
     }
   }
 
+  
+  .swiper-grid-column > .swiper-wrapper {
+    flex-direction: row !important;
+}
+  .range__swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+}
+
+.product-card__swiper .swiper-pagination .swiper-pagination-bullet{
+width: 1.2rem;
+height: 1.2rem;
+border-radius: 50%;
+background-color: #D9D9D9;
+transition: background-color 0.3s;
+margin: 0!important;
+}
+.product-card__swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: $black;
+}
 
 // ---------------------------------fancybox-----------------------------------------
   .fancybox {

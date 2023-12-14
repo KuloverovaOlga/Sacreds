@@ -5,6 +5,7 @@
 
 @media (max-width: 48em) {
       .bottom-menu {
+ 
         position: fixed;
         background-color: $green;
         width: 71rem;
@@ -60,6 +61,15 @@
         z-index: 1;
               width: 3.2rem;
         height: 3.2rem;
+        &:hover {
+            background-color: $green;
+            & svg {
+              stroke: $black;
+              & .fill {
+                fill: $black;
+              }
+            }
+          }
       }
     
       // .hero__btn-svg-box
