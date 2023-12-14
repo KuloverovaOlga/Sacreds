@@ -6,7 +6,7 @@ const heroMenuMob = () => {
       const currentScrollPosition = window.scrollY;
 
       if (window.innerWidth <= 768) {
-          if (currentScrollPosition >= lastScrollPosition) {
+          if (currentScrollPosition > lastScrollPosition) {
               // Scrolling down
               menus.forEach(item => {
                   item.classList.add('isActive');
@@ -35,3 +35,7 @@ const heroMenuMob = () => {
 };
 
 export default heroMenuMob;
+
+
+
+

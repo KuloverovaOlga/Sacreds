@@ -48,15 +48,15 @@
 }
 @media (max-width: 48em) {
     .similar-products {
-        display: none;
-        padding: 11rem 0;
+
+        padding: 10rem 0;
     
         // .similar-products__inner
     
         &__inner {
             display: flex;
             flex-direction: column;
-            gap: 6rem;
+            gap: 3.2rem;
         }
     
         // .similar-products__title
@@ -86,14 +86,9 @@
         &__swiper-slide-link {
         }
     
-        // .similar-products__swiper-slide-swiper-button-prev
-    
-        &__swiper-slide-swiper-button-prev {
-        }
-    
-        // .similar-products__swiper-slide-swiper-button-next
-    
-        &__swiper-slide-swiper-button-next {
+       .similar-products__swiper-slide-swiper-button-prev,
+       .similar-products__swiper-slide-swiper-button-next {
+        display: none;
         }
     }
         

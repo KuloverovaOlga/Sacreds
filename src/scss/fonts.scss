@@ -1,4 +1,14 @@
 @font-face {
+	font-family: 'YandexSansDisplay';
+	src: url('./assets/fonts/YandexSansDisplay-Bold.eot');
+	src: local('YandexSansDisplay-Bold'), local('YandexSansDisplay-Bold'),
+			url('./assets/fonts/YandexSansDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+			url('./assets/fonts/YandexSansDisplay-Bold.woff2') format('woff2'),
+			url('./assets/fonts/YandexSansDisplay-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'CeraPro';
 	src: url('./assets/fonts/CeraPro-Bold.eot');
 	src: local('CeraPro-Bold'), local('CeraPro-Bold'),

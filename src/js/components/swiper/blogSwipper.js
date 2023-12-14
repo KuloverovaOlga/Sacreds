@@ -1,6 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { rem } from "../utils/constants";
+import { rem } from "../../utils/constants";
 
 
 const blogSwipper = () => {
@@ -17,9 +17,8 @@ const blogSwipper = () => {
         },
         breakpoints: {
             768: {
-                slidesPerView: 'auto',
-        spaceBetween:rem(1.2),
-             
+                slidesPerView: '2.9',
+                spaceBetween:rem(1.2),
             },
         },
 

@@ -1,0 +1,213 @@
+.article-products {
+    padding: 11rem 0;
+    // .article-products__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+    &__header-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .article-products__title
+
+    &__title {
+    }
+
+    // .article-products__header-btn
+
+    &__header-btn {
+        background-color: $green;
+    }
+
+    // .article-products__header-btn-text
+
+    &__header-btn-text {
+    }
+
+    // .article-products__header-btn-svg-box
+
+    &__header-btn-svg-box {
+    }
+
+    // .article-products__swiper
+
+    &__swiper {
+        width: 100%!important
+        ;
+    }
+
+    // .article-products__swiper-wrapper
+
+    &__swiper-wrapper {
+    }
+
+    // .article-products__swiper-slide
+
+    &__swiper-slide {
+    }
+
+    // .article-products__swiper-button-prev
+
+    &__swiper-button-prev {
+    }
+
+    // .article-products__swiper-button-next
+
+    &__swiper-button-next {
+    }
+    &__swiper-slide-swiper-pagination.swiper-pagination {
+        display: none;
+      }
+}
+
+@media (max-width: 48em) {
+
+    .article-products {
+        padding: 10rem 0;
+        // .article-products__inner
+    
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            padding-bottom: 16.2rem;
+            position: relative;
+        }
+        &__header-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        // .article-products__title
+    
+        &__title {
+        }
+    
+        // .article-products__header-btn
+    
+        &__header-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    
+        // .article-products__header-btn-text
+    
+        &__header-btn-text {
+        }
+    
+        // .article-products__header-btn-svg-box
+    
+        &__header-btn-svg-box {
+        }
+    
+        // .article-products__swiper
+    
+        &__swiper {
+            width: 100%!important
+            ;
+        }
+    
+        // .article-products__swiper-wrapper
+    
+        &__swiper-wrapper {
+            padding-bottom: 6.6rem;
+        }
+    
+        // .article-products__swiper-slide
+    
+        &__swiper-slide {
+        }
+    
+        // .article-products__swiper-button-prev
+    
+        &__swiper-button-prev {
+        }
+    
+        // .article-products__swiper-button-next
+    
+        &__swiper-button-next {
+        }
+
+        &__swiper-pagination.swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: auto!important
+            ;
+            bottom: 0!important;
+          }
+
+          &__swiper-button-prev.swiper-button-prev,
+          &__swiper-button-next.swiper-button-next {
+           display: none;
+           }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // .similar-products {
+
+    //     padding: 10rem 0;
+    
+    //     // .similar-products__inner
+    
+    //     &__inner {
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 3.2rem;
+    //     }
+    
+    //     // .similar-products__title
+    
+    //     &__title {
+    //     }
+    
+    //     // .similar-products__swiper
+    
+    //     &__swiper {
+    //         width: 100%!important
+    //         ;
+    //     }
+    
+    //     // .similar-products__swiper-slide-swiper-wrapper
+    
+    //     &__swiper-slide-swiper-wrapper {
+    //     }
+    
+    //     // .similar-products__swiper-slide-swiper-slide
+    
+    //     &__swiper-slide-swiper-slide {
+    //     }
+    
+    //     // .similar-products__swiper-slide-link
+    
+    //     &__swiper-slide-link {
+    //     }
+    
+    //    .similar-products__swiper-slide-swiper-button-prev,
+    //    .similar-products__swiper-slide-swiper-button-next {
+    //     display: none;
+    //     }
+    // }
+        
+    }

@@ -1,6 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { rem } from "../utils/constants";
+import { rem } from "../../utils/constants";
 
 const rangeSwiper = () => {
   // Инициализация Swiper с автоматической высотой, горизонтальным направлением и одним видимым слайдом за раз
@@ -27,76 +27,161 @@ const rangeSwiper = () => {
     },
   });
   const swiperInner1 = new Swiper(".range__swiper-slide-swiper--1", {
-    slidesPerView: 4,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
-    spaceBetween: 12,
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--1 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--1 .swiper-button-prev",
     },
-  });
+    pagination: {
+      el: '.range__swiper-slide-swiper--1 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
 
+
+       
+      },
+    },
+
+    // slidesPerView: 4,
+    // spaceBetween: 12,
+
+    // grabCursor: true,
+    // updateOnWindowResize: true,
+    // watchSlidesProgress: true,
+    // navigation: {
+    //   nextEl: ".range__swiper-slide-swiper--1 .swiper-button-next",
+    //   prevEl: ".range__swiper-slide-swiper--1 .swiper-button-prev",
+    // },
+  });
   const swiperInner2 = new Swiper(".range__swiper-slide-swiper--2", {
-    slidesPerView: 4,
-    spaceBetween: 12,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--2 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--2 .swiper-button-prev",
     },
+    pagination: {
+      el: '.range__swiper-slide-swiper--2 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
   });
   const swiperInner3 = new Swiper(".range__swiper-slide-swiper--3", {
-    slidesPerView: 4,
-    spaceBetween: 12,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--3 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--3 .swiper-button-prev",
     },
+    pagination: {
+      el: '.range__swiper-slide-swiper--3 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
   });
   const swiperInner4 = new Swiper(".range__swiper-slide-swiper--4", {
-    slidesPerView: 4,
-    spaceBetween: 12,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--4 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--4 .swiper-button-prev",
     },
+    pagination: {
+      el: '.range__swiper-slide-swiper--4 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
   });
   const swiperInner5 = new Swiper(".range__swiper-slide-swiper--5", {
-    slidesPerView: 4,
-    spaceBetween: 12,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--5 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--5 .swiper-button-prev",
     },
+    pagination: {
+      el: '.range__swiper-slide-swiper--5 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
   });
   const swiperInner6 = new Swiper(".range__swiper-slide-swiper--6", {
-    slidesPerView: 4,
-    spaceBetween: 12,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
 
     grabCursor: true,
-    updateOnWindowResize: true,
-    watchSlidesProgress: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--6 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--6 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--6 .swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        grid: {
+          rows: 1,
+        },
+      },
     },
   });
 
@@ -157,8 +242,6 @@ const rangeSwiper = () => {
       item.classList.add("isActive");
     });
   });
-
-  
 };
 
 export default rangeSwiper;
