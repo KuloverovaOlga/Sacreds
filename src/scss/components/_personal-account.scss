@@ -1,0 +1,310 @@
+.tab {
+  &-content {
+    display: none;
+  }
+}
+
+.personal-account {
+  padding-top: 17.7rem;
+  &__tabs {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 6rem;
+  }
+  &__tab {
+    width: 25rem;
+    min-height: 8.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 0 2.4rem;
+    background-color: #f6f6f6;
+    border-radius: 3.2rem;
+    cursor: pointer;
+    &._active {
+      background-color: #c6ef4e;
+    }
+    .content {
+      &-icon {
+        flex: none;
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+      &-text {
+        font-weight: 500;
+      }
+    }
+  }
+  &__tab-content {
+    &.bonuses {
+      .bonuses {
+        &__table {
+          &-empty {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        &__texts {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          margin-bottom: 3.2rem;
+        }
+        &__amount {
+          font-family: MontserratAlternates;
+          font-size: 3.2rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+          letter-spacing: 1.28px;
+          color: #0e1c15;
+          margin-bottom: 6rem;
+          span {
+            color: #fc5b31;
+          }
+        }
+        &__btn {
+          background-color: #fc5b31;
+          color: #fff;
+          margin-top: 2.4rem;
+          &-svg-box {
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    &.referral {
+      .referral {
+        &__texts {
+          max-width: 72rem;
+          margin-bottom: 6rem;
+        }
+        &__link {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          margin-bottom: 4rem;
+          &-text {
+            color: rgba(18, 35, 26, 0.5);
+          }
+          &-link {
+            max-width: 60.5rem;
+            padding: 1.4rem 2.4rem;
+            background-color: #f6f6f6;
+            border-radius: 3.2rem;
+          }
+        }
+        &__btn {
+          background-color: #fc5b31;
+          color: #fff;
+          &-svg-box {
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+        &__table {
+          &-block {
+            margin-top: 22rem;
+          }
+          &-title {
+            margin-bottom: 6rem;
+          }
+          &-empty {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  &__table {
+    width: 100%;
+    padding: 4rem;
+    background-color: #f6f6f6;
+    border-radius: 3.2rem;
+    &-heading {
+      display: flex;
+      padding-bottom: 2.4rem;
+      border-bottom: 0.2rem solid rgba(18, 35, 26, 0.3);
+      margin-bottom: 4rem;
+      &-mobile {
+        display: none;
+        color: rgba(18, 35, 26, 0.3);
+      }
+      &.bonuses__table-heading {
+        gap: 65.2rem;
+      }
+      &.referral__table-heading {
+        p {
+          &:nth-child(1) {
+            width: 44.7rem;
+          }
+          &:nth-child(2) {
+            width: 47.6rem;
+          }
+          &:nth-child(3) {
+            width: 50.2rem;
+          }
+        }
+      }
+    }
+    &-item {
+      padding: 3.2rem 0;
+      border-bottom: 0.2rem solid rgba(18, 35, 26, 0.1);
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      &.bonuses__table-item {
+        display: flex;
+        .bonuses__table-cell {
+          display: flex;
+          align-items: center;
+          min-height: 5rem;
+          &:nth-child(1) {
+            width: 70rem;
+          }
+          &:nth-child(2) {
+            width: 72.8rem;
+          }
+        }
+      }
+      &.referral__table-item {
+        display: flex;
+        .referral__table-cell {
+          display: flex;
+          align-items: center;
+          min-height: 5rem;
+          &:nth-child(1) {
+            width: 45rem;
+          }
+          &:nth-child(2) {
+            width: 48rem;
+          }
+          &:nth-child(3) {
+            width: 50.2rem;
+          }
+        }
+      }
+    }
+    &-text {
+      font-family: CeraPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.72px;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .personal-account {
+    &__tabs {
+      display: none;
+    }
+    &__tab-content {
+      &.bonuses {
+        .bonuses {
+          &__texts {
+            gap: 1.6rem;
+            margin-bottom: 6rem;
+          }
+          &__amount {
+            font-size: 4rem;
+            margin-bottom: 8rem;
+          }
+          &__btn {
+            width: 100%;
+            margin-top: 4.8rem;
+          }
+        }
+      }
+      &.referral {
+        .referral {
+          &__texts {
+            max-width: 100%;
+            margin-bottom: 6rem;
+          }
+          &__link {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 6rem;
+            &-text {
+              color: rgba(18, 35, 26, 0.5);
+            }
+            &-link {
+              max-width: 100%;
+              padding: 2.4rem 4rem;
+              border-radius: 6.4rem;
+            }
+          }
+          &__btn {
+            width: 100%;
+          }
+          &__table {
+            &-block {
+              margin-top: 20rem;
+            }
+            &-title {
+              margin-bottom: 6.4rem;
+            }
+          }
+        }
+      }
+    }
+    &__table {
+      padding: 4rem;
+      border-radius: 4.8rem;
+      &-heading {
+        display: none;
+        &-mobile {
+          display: block;
+        }
+      }
+      &-item {
+        padding: 4rem 0;
+        flex-direction: column;
+        gap: 2.4rem;
+        &.bonuses__table-item {
+          .bonuses__table-cell {
+            justify-content: space-between;
+            min-height: fit-content;
+            &:nth-child(1),
+            &:nth-child(2) {
+              width: 100%;
+            }
+          }
+        }
+        &.referral__table-item {
+          .referral__table-cell {
+            justify-content: space-between;
+            min-height: fit-content;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &-text {
+        max-width: 30rem;
+        font-size: 2.8rem;
+        text-align: right;
+      }
+    }
+  }
+}
