@@ -2,8 +2,6 @@ const heroMenuMob = () => {
   let lastScrollPosition = 0;
   const menus = document.querySelectorAll('.scrollingMeny');
 
-
-
   const updateMenuVisibility = () => {
       const currentScrollPosition = window.scrollY;
 
@@ -37,3 +35,7 @@ const heroMenuMob = () => {
 };
 
 export default heroMenuMob;
+
+
+
+

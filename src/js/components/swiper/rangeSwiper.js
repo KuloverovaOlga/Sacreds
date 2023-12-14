@@ -1,6 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { rem } from "../utils/constants";
+import { rem } from "../../utils/constants";
 
 const rangeSwiper = () => {
   // Инициализация Swiper с автоматической высотой, горизонтальным направлением и одним видимым слайдом за раз
@@ -31,11 +31,14 @@ const rangeSwiper = () => {
     grid: {
       rows: 2,
     },
-   
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--1 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--1 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--1 .swiper-pagination',
     },
     breakpoints: {
       768: {
@@ -44,6 +47,9 @@ const rangeSwiper = () => {
         grid: {
           rows: 1,
         },
+
+
+       
       },
     },
 
@@ -58,17 +64,19 @@ const rangeSwiper = () => {
     //   prevEl: ".range__swiper-slide-swiper--1 .swiper-button-prev",
     // },
   });
-
   const swiperInner2 = new Swiper(".range__swiper-slide-swiper--2", {
     slidesPerView: 2,
     grid: {
       rows: 2,
     },
-    spaceBetween: 10,
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--2 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--2 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--2 .swiper-pagination',
     },
     breakpoints: {
       768: {
@@ -85,11 +93,14 @@ const rangeSwiper = () => {
     grid: {
       rows: 2,
     },
-    spaceBetween: 10,
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--3 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--3 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--3 .swiper-pagination',
     },
     breakpoints: {
       768: {
@@ -106,11 +117,14 @@ const rangeSwiper = () => {
     grid: {
       rows: 2,
     },
-    spaceBetween: 10,
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--4 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--4 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--4 .swiper-pagination',
     },
     breakpoints: {
       768: {
@@ -127,11 +141,14 @@ const rangeSwiper = () => {
     grid: {
       rows: 2,
     },
-    spaceBetween: 10,
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--5 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--5 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--5 .swiper-pagination',
     },
     breakpoints: {
       768: {
@@ -148,11 +165,14 @@ const rangeSwiper = () => {
     grid: {
       rows: 2,
     },
-    spaceBetween: 10,
+
     grabCursor: true,
     navigation: {
       nextEl: ".range__swiper-slide-swiper--6 .swiper-button-next",
       prevEl: ".range__swiper-slide-swiper--6 .swiper-button-prev",
+    },
+    pagination: {
+      el: '.range__swiper-slide-swiper--6 .swiper-pagination',
     },
     breakpoints: {
       768: {

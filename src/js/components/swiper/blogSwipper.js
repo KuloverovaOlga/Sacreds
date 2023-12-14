@@ -1,6 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { rem } from "../utils/constants";
+import { rem } from "../../utils/constants";
 
 
 const blogSwipper = () => {

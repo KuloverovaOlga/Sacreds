@@ -1,28 +1,34 @@
-import ribbonSwiper from "./ribbonSwiper";
-import form from "./form";
-import collectionsSwiper from "./collectionsSwiper";
-import harmonySwiper from "./harmonySwiper";
-import reviewsSwiper from "./reviewsSwiper";
-import questions from "./questions";
-import rangeSwiper from "./rangeSwiper";
-import heroSwiper from "./heroSwiper";
+import ribbonSwiper from "./swiper/ribbonSwiper";
+import collectionsSwiper from "./swiper/collectionsSwiper";
+import harmonySwiper from "./swiper/harmonySwiper";
+import reviewsSwiper from "./swiper/reviewsSwiper";
+import rangeSwiper from "./swiper/rangeSwiper";
+import heroSwiper from "./swiper/heroSwiper";
+import blogSwipper from "./swiper/blogSwipper";
+import reviewsPageSwiper from "./swiper/reviewsPageSwiper";
+import deliverySwiper from "./swiper/deliverySwiper";
+import similarProductsSwiper from "./swiper/similarProductsSwiper";
+import articleProductsSwiper from "./swiper/articleProductsSwiper";
+import productCardHeroSwiper from "./swiper/productCardHeroSwiper";
+
+
+
+
 import header from "./header";
-import blogSwipper from "./blogSwipper";
+import form from "./form";
+import questions from "./questions";
 import reviewsPageReviews from "./reviewsPageReviews";
-import reviewsPageSwiper from "./reviewsPageSwiper";
 import productCardMin from "./productCardMin";
-import similarProductsSwiper from "./similarProductsSwiper";
-import deliverySwiper from "./deliverySwiper";
 import heroMenuMob from "./heroMenusMob";
 import harmonyBtnShowMore from "./harmonyBtnShowMore";
+import burgerMenu from "./burger";
+import productCardHero from "./productCardHero";
+import productCardTabs from "./productCardTabs";
 
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
     ribbonSwiper();
-  } catch {}
-  try {
-    form();
   } catch {}
   try {
     collectionsSwiper();
@@ -34,19 +40,41 @@ document.addEventListener("DOMContentLoaded", () => {
     reviewsSwiper();
   } catch {}
   try {
-    questions();
-  } catch {}
-  try {
     rangeSwiper();
   } catch {}
   try {
     heroSwiper();
   } catch {}
   try {
-    header();
+    blogSwipper();
   } catch {}
   try {
-    blogSwipper();
+    similarProductsSwiper();
+  } catch {}
+  try {
+    articleProductsSwiper();
+  } catch {}
+  try {
+    deliverySwiper();
+  } catch {}
+  try {
+    productCardHeroSwiper();
+  } catch {}
+
+
+
+
+
+
+
+  try {
+    form();
+  } catch {}
+  try {
+    questions();
+  } catch {}
+  try {
+    header();
   } catch {}
   try {
     reviewsPageReviews();
@@ -58,16 +86,19 @@ document.addEventListener("DOMContentLoaded", () => {
     productCardMin();
   } catch {}
   try {
-    similarProductsSwiper();
-  } catch {}
-  try {
-    deliverySwiper();
-  } catch {}
-  try {
     heroMenuMob();
   } catch {}
   try {
     harmonyBtnShowMore();
+  } catch {}
+  try {
+    burgerMenu();
+  } catch {}
+  try {
+    productCardHero();
+  } catch {}
+  try {
+    productCardTabs();
   } catch {}
 });
 

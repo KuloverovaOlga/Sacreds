@@ -372,6 +372,17 @@ margin-left: 2rem;
   &__yandex-grade-num {
   }
 }
+
+.main--about {
+  .reviews {
+    &__yandex-box {
+      display: none;
+      }
+  }
+}
+
+
+
 @media (max-width: 48em) {
   .reviews {
     padding: 10rem 0;

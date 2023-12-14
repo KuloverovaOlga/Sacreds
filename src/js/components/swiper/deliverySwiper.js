@@ -1,12 +1,11 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { rem } from "../utils/constants";
+import { rem } from "../../utils/constants";
 
 const deliverySwiper = () => {
   let swiperOne = null; // Объявляем переменную, чтобы хранить экземпляр Swiper
 
   const swiperPopularCategories = () => {
-
     const initSwiper = () => {
       swiperOne = new Swiper(".delivery__swiper", {
         direction: "vertical",
@@ -28,15 +27,14 @@ const deliverySwiper = () => {
           prevEl: ".delivery__swiper-button-prev",
         },
         breakpoints: {
-            768: {
-                slidesPerView: "auto",
-                spaceBetween: 32, 
-                centeredSlides: true, 
-            },
+          768: {
+            slidesPerView: "auto",
+            spaceBetween: 32,
+            centeredSlides: true,
+          },
         },
       });
     };
-
 
     const destroySwiper = () => {
       if (swiperOne !== null) {
@@ -45,20 +43,16 @@ const deliverySwiper = () => {
       }
     };
 
-
     if (window.innerWidth > 768) {
       initSwiper();
     }
 
- 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
-
         if (swiperOne === null) {
           initSwiper();
         }
       } else {
-
         destroySwiper();
       }
     });

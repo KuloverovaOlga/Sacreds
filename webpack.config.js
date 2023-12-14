@@ -20,6 +20,8 @@ const entryPoints = {
   reviews: path.resolve(__dirname, "src", "index.js"),
   delivery: path.resolve(__dirname, "src", "index.js"),
   card_product: path.resolve(__dirname, "src", "index.js"),
+  about: path.resolve(__dirname, "src", "index.js"),
+  detailed_article: path.resolve(__dirname, "src", "index.js"),
 
   
 };
