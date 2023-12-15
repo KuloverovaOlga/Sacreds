@@ -163,6 +163,27 @@
   // .header__btn-link
 
   &__btn-link {
+
+  }
+  &__btn-link--basket,
+  &__btn-link--like {
+    position: relative;
+  }
+
+  &__btn-link-like-count,
+  &__btn-link-basket-count {
+width: 3.2rem;
+height: 3.2rem;
+background-color: $black;
+border-radius: 50%
+;
+display: flex;
+align-items: center;
+justify-content: center;
+color: $white;
+position: absolute;
+top: -1.45rem;
+right: 0;
   }
 
   // .header__btn-svg-box
@@ -452,6 +473,27 @@
       border-radius: 50%;
       pointer-events: none;
     }
+
+
+    &__btn-link--basket,
+    &__btn-link--like {
+
+    }
+  
+    &__btn-link-like-count,
+    &__btn-link-basket-count {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.6rem;
+      height: 3.6rem;
+      position: absolute;
+      top: -1.5rem;
+      right: -1rem;
+      background-color: $orange;
+
+    }
+
 
     &__btn-link-text {
       display: block;

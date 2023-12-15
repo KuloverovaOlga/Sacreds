@@ -22,6 +22,7 @@ const entryPoints = {
   card_product: path.resolve(__dirname, "src", "index.js"),
   about: path.resolve(__dirname, "src", "index.js"),
   detailed_article: path.resolve(__dirname, "src", "index.js"),
+  contacts: path.resolve(__dirname, "src", "index.js"),
 
   
 };
