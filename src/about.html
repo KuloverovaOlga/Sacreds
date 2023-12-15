@@ -5,15 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-        <title>Главная</title>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"></script>
+        <title>О нас</title>
     </head>
     <body>
         <include src="./components/header.html"></include>
 
         <main class="main main--about">
+            <include src="./components/bottom-menu.html"></include>
             <include src="./components/ribbon.html"></include>
             <include src="./components/reviewMain.html"></include>
+         
+            
+            <section class="record">
+                <div class="container">
+                    <div class="record__inner">
+                        <div class="record__photo-box">
+                            <img src="./assets/images/record.webp" alt="" />
+                        </div>
+                        <div class="record__content-wrapper">
+                            <p class="record__title title-h2">Запишитесь на бесплатную консультацию к нашему психологу</p>
+                            <form class="record__form">
+                                <input class="record__input input--name text" type="text" placeholder="Введите имя" required />
+                                <input class="record__input input--tel text" type="tel" placeholder="+7(900) 000-00-00" required />
+                                <button class="record__btn button-long-arr" type="submit">
+                                    <span class="record__btn-text button">Записаться</span>
+                                    <div class="record__btn-svg-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                            <path
+                                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <include src="./components/map.html"></include>
+
         </main>
         <include src="./components/footer.html"></include>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

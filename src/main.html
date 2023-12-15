@@ -9,10 +9,13 @@
         <title>Главная</title>
     </head>
     <body class="main-page">
+        <div class="wrapper">
         <include src="./components/header.html"></include>
-        <include src="./components/bottom-menu.html"></include>
+
 
         <main class="main main--main-page">
+            <include src="./components/bottom-menu.html"></include>
+            <include src="./components/popup.html"></include>
             <section class="hero">
                 <div class="container">
                     <div class="hero__swiper-box">
@@ -22,7 +25,7 @@
                                     <div class="hero__swiper-header-box">
                                         <div class="hero__swiper-content-btn-box">
                                             <p class="hero__swiper-content-count">01</p>
-                                            <a href="#" class="hero__swiper-content-btn">
+                                            <button data-popup=".popup" class="hero__swiper-content-btn">
                                                 <span class="hero__swiper-content-btn-text button">Получить консультацию</span>
                                                 <div class="hero__swiper-content-btn-svg-box">
                                                     <svg viewBox="0 0 24 25" fill="none">
@@ -31,7 +34,7 @@
                                                         />
                                                     </svg>
                                                 </div>
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="hero__swiper-content-title-box">
                                             <p class="hero__swiper-content-title title-h2">
@@ -47,7 +50,7 @@
                                     <div class="hero__swiper-slide-img-box">
                                         <img class="hero__swiper-slide-img" src="./assets/images/hero-swiper1.webp" alt="" />
 
-                                        <a href="./assets/mainpage-hero-vid.mp4" data-fancybox class="hero__swiper-slide-link">
+                                        <a href="#"  class="hero__swiper-slide-link">
                                             <div class="hero__swiper-slide-link-img-box">
                                                 <img src="./assets/images/hero-swiper-btn1.webp" alt="" class="hero__swiper-slide-link-img" />
                                             </div>
@@ -97,7 +100,7 @@
                                     <div class="hero__swiper-slide-img-box">
                                         <img class="hero__swiper-slide-img" src="./assets/images/hero-swiper2.webp" alt="" />
 
-                                        <a href="./assets/mainpage-hero-vid.mp4" data-fancybox class="hero__swiper-slide-link">
+                                        <a href="#" class="hero__swiper-slide-link">
                                             <div class="hero__swiper-slide-link-img-box">
                                                 <img src="./assets/images/hero-swiper-btn2.webp" alt="" class="hero__swiper-slide-link-img" />
                                             </div>
@@ -146,7 +149,7 @@
                                     <div class="hero__swiper-slide-img-box">
                                         <img class="hero__swiper-slide-img" src="./assets/images/hero-swiper1.webp" alt="" />
 
-                                        <a href="./assets/mainpage-hero-vid.mp4" data-fancybox class="hero__swiper-slide-link">
+                                        <a href="#" class="hero__swiper-slide-link">
                                             <div class="hero__swiper-slide-link-img-box">
                                                 <img src="./assets/images/hero-swiper-btn1.webp" alt="" class="hero__swiper-slide-link-img" />
                                             </div>
@@ -1098,8 +1101,8 @@
                         <div class="sign-up__content-wrapper">
                             <p class="sign-up__title title-h2">Запишитесь <br />на бесплатную консультацию к нашему психологу</p>
                             <form class="sign-up__form">
-                                <input class="sign-up__input sign-up__input--name text" type="text" placeholder="Введите имя" required />
-                                <input class="sign-up__input sign-up__input--tel text" type="tel" placeholder="+7(900) 000-00-00" required />
+                                <input class="sign-up__input input--name text" type="text" placeholder="Введите имя" required />
+                                <input class="sign-up__input input--tel text" type="tel" placeholder="+7(900) 000-00-00" required />
                                 <button class="sign-up__btn button-long-arr" type="submit">
                                     <span class="sign-up__btn-text button">Записаться</span>
                                     <div class="sign-up__btn-svg-box">
@@ -1494,6 +1497,7 @@
             </section>
         </main>
         <include src="./components/footer.html"></include>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script>
             Fancybox.bind('[data-fancybox]', {

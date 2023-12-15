@@ -24,6 +24,8 @@ import harmonyBtnShowMore from "./harmonyBtnShowMore";
 import burgerMenu from "./burger";
 import productCardHero from "./productCardHero";
 import productCardTabs from "./productCardTabs";
+import map from "./map";
+import popup from "./popup";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     productCardHeroSwiper();
   } catch {}
+ 
 
 
 
@@ -68,8 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   try {
-    form();
+    form('.sign-up__form');
   } catch {}
+  try {
+    form('.record__form');
+  } catch {}
+
+
+
   try {
     questions();
   } catch {}
@@ -100,6 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     productCardTabs();
   } catch {}
+  try {
+    map();
+  } catch {}
+  try {
+    popup();
+  } catch {}
+
 });
 
 // document.querySelector('#review_modal').addEventListener('click', () => {

@@ -45,7 +45,7 @@ const reviewsPageReviews = () => {
         for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
             button.textContent = i;
-            button.classList.add('review-content__pagination-btn');
+            button.classList.add('content__pagination-btn');
             button.setAttribute('data-page', i);
             button.addEventListener('click', () => showPage(i));
             paginationContainer.appendChild(button);
