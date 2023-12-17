@@ -23,6 +23,9 @@ const personalAccount = () => {
       tabContents.forEach((content) => {
         if (content.dataset.content === tabId) {
           content.style.display = 'block';
+          if(content.classList.contains('account')) {
+            content.style.display = 'flex';
+          }
         } else {
           content.style.display = 'none';
         }
