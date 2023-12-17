@@ -1,13 +1,14 @@
 import IMask from 'imask';
 
-const form = () => {
-    const form = document.querySelector('.sign-up__form');
+const form = (selector) => {
+
+    const form = document.querySelector(selector);
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.querySelector('.sign-up__input--name').value;
+        const name = form.querySelector('.input--name').value;
 
-        function validateName(name) {
+        function validateName(name) {form
             return name.trim() !== '';
         }
 
@@ -20,11 +21,13 @@ const form = () => {
     });
 
 
-    const tel = document.querySelector('.sign-up__input--tel')
+    const tel = form.querySelector('.input--tel')
 
     IMask(tel, {
         mask: '+{7}(000)000-00-00',
     });
+
+
 
 
 }

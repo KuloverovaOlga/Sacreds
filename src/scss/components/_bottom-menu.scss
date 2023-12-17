@@ -71,6 +71,32 @@
             }
           }
       }
+
+
+
+      &__btn-link--basket {
+  position: relative;
+      }
+    
+
+      &__btn-link--basket .bottom-menu__btn-link-basket-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.6rem;
+        height: 3.6rem;
+        position: absolute;
+        top: -3rem;
+        right: -3rem;
+        background-color: $orange;
+        border-radius: 50%
+;color: $white;
+overflow: hidden;
+
+
+  
+      }
+
     
       // .hero__btn-svg-box
     
