@@ -1,0 +1,74 @@
+.catalog {
+    padding-top: 17.7rem;
+    &__title {
+        margin-bottom: 6rem;
+    }
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        margin-bottom: 12rem;
+    }
+    &__categories {
+        overflow: hidden;
+    }
+    &__types {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0 1.2rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &-box {
+            width: 25rem;
+            height: 17.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2.5rem 5.2rem;
+            background-color: #f6f6f6;
+            border-radius: 1.6rem;
+            cursor: pointer;
+            &._isActive {
+                color: #fff;
+                background-color: #fc5b31;
+            }
+        }
+        &-image {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+        }
+        &-title {
+            flex: 1 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__tags {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: nowrap;
+        &-box {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 2.4rem 2rem;
+            border-radius: 3.2rem;
+            background-color: #f6f6f6;
+            cursor: pointer;
+            &._isActive {
+                background-color: #c6ef4e;
+            }
+        }
+        &-count {
+            color: rgba(18, 35, 26, 0.5);
+        }
+    }
+}
