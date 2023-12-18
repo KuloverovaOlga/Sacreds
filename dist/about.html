@@ -10,7 +10,7 @@
     <script defer src="main.js"></script></head>
     <body>
         <div class="wrapper">
-        <header class="header">
+            <header class="header">
   <div class="container">
     <div class="header__inner">
       <div class="header__mob-nav scrollingMeny scrollingMenyTop">
@@ -99,7 +99,7 @@
             </p>
           </div>
           <div class="header__btn-box">
-            <a href="#"  data-popup="#popup__entrys-personal-area" class="header__btn-link header__link">
+            <button  data-popup="#popup__entrys-personal-area" class="header__btn-link header__link">
               <div class="header__btn-link-circle button-circle">
                 <div class="header__btn-svg-box">
                   <svg
@@ -131,7 +131,7 @@
                 </div>
               </div>
               <p class="header__btn-link-text text">Профиль</p>
-            </a>
+            </button>
             <a href="#" class="header__btn-link   header__link" >
               <div class="header__btn-link-circle header__btn-link--like button-circle">
                 <div class="header__btn-svg-box">
@@ -212,8 +212,8 @@
 </header>
 
 
-        <main class="main main--about">
-            <div id="popup__entrys-personal-area" aria-hidden="true" class="popup popup--long popup__entrys-personal-area">
+            <main class="main main--about">
+                <div id="popup__entrys-personal-area" aria-hidden="true" class="popup popup--long popup__entrys-personal-area">
     <div class="popup__wrapper">
         <div class="popup__content">
             <div class="popup__body">
@@ -238,7 +238,7 @@
                                     data-required
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                                   
                                 />
                             </label>
 
@@ -255,7 +255,7 @@
                                     data-required="password"
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                               
                                 />
                             </label>
                             <span class="error-span subscription"></span>
@@ -357,7 +357,7 @@
                                     data-required
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                        
                                 />
                             </label>
 
@@ -425,7 +425,7 @@
                                     data-required
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                                
                                 />
                             </label>
 
@@ -442,7 +442,7 @@
                                     data-required
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                                   
                                 />
                             </label>
 
@@ -459,7 +459,7 @@
                                     data-required
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                               
                                 />
                             </label>
 
@@ -476,7 +476,7 @@
                                     data-required="password"
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                           
                                 />
                             </label>
                             <span class="error-span subscription"></span>
@@ -492,7 +492,7 @@
                                     data-required="password"
                                     autocomplete="off"
                                     name="form[]"
-                                    data-error="Поле не заполнено"
+                          
                                 />
                             </label>
                             <span class="error-span subscription"></span>
@@ -603,7 +603,7 @@
                         </div>
 					</div>
 						<button type="submit" class="popup__body-btn button button-long-arr">
-                            <span class="popup__body-btn__text button">Запросить код повторно через <span class="popup__body-btn__text-timer">01:00</span></span>
+                            <span class="popup__body-btn__text button">Запросить код повторно <span class="popup__body-btn__text-timer-wrapper"><span class="popup__body-btn__text-timer">через</span> <span class="popup__body-btn__timer">01:00</span></span> </span>
                             <div class="hero__swiper-content-btn-svg-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
                                     <path
@@ -688,9 +688,7 @@
                                 data-validate
                                 data-required
                                 autocomplete="off"
-                                type="text"
                                 name="form[]"
-                                data-error="Поле не заполнено"
                             />
                             <span class="error-span subscription"></span>
                         </div>
@@ -702,9 +700,7 @@
                                 data-validate
                                 data-required="tel"
                                 autocomplete="off"
-                                name="form[]"
-                                data-error="Поле не заполнено"
-                            />
+                                name="form[]"/>
                             <span class="error-span subscription"></span>
                         </div>
                     </div>
@@ -712,7 +708,6 @@
                         <div data-da=".request-modal__actions,768,first" class="popup__sign-up-form-checkbox-box checkbox">
                             <input
                                 id="chx_1"
-                                data-error
                                 data-required
                                 data-validate
                                 class="checkbox__input popup__sign-up-form-checkbox input--checkbox popup__input-checkbox"
@@ -810,7 +805,7 @@
                                 autocomplete="off"
                                 type="text"
                                 name="form[]"
-                                data-error="Поле не заполнено"
+                       
                             />
                             <span class="error-span subscription"></span>
                         </div>
@@ -823,8 +818,7 @@
                                 data-required="tel"
                                 autocomplete="off"
                                 name="form[]"
-                                data-error="Поле не заполнено"
-                            />
+                             />
                             <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__review-form-input-group input-group">
@@ -836,7 +830,6 @@
                                 data-required="text"
                                 autocomplete="off"
                                 name="form[]"
-                                data-error="Поле не заполнено"
                             />
                             <span class="error-span subscription"></span>
                         </div>
@@ -848,7 +841,7 @@
                                 data-required="text"
                                 autocomplete="off"
                                 name="form[]"
-                                data-error="Поле не заполнено"
+                         
                             ></textarea>
                             <span class="error-span subscription"></span>
                         </div>
@@ -886,7 +879,7 @@
                         </div>
 
                         <button type="submit" class="popup__body-btn popup__review-form-btn popup__body-btn-short-arr">
-                            <span class="popup__body-btn__text button">Записаться</span>
+                            <span class="popup__body-btn__text button">Оставить отзыв</span>
                             <div class="hero__swiper-content-btn-svg-box">
                                 <svg viewBox="0 0 24 25" fill="none">
                                     <path
@@ -929,7 +922,7 @@
     </div>
 </div>
 
-            <div class="bottom-menu scrollingMeny scrollingMenyBottom">
+                <div class="bottom-menu scrollingMeny scrollingMenyBottom">
 <a href="#" class="bottom-menu__btn-home">
     <div class="bottom-menu__btn-home-svg-box">
         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 18 17" fill="none">
@@ -983,7 +976,7 @@
         <span>1</span>
       </div>
     </button>
-    <button  class="bottom-menu__btn-link button-circle">
+    <button data-popup="#popup__entrys-personal-area" class="bottom-menu__btn-link button-circle">
       <div class="bottom-menu__btn-svg-box">
         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.1429 18.3571C18.5098 18.3571 20.4286 16.4383 20.4286 14.0714C20.4286 11.7044 18.5098 9.78564 16.1429 9.78564C13.7759 9.78564 11.8571 11.7044 11.8571 14.0714C11.8571 16.4383 13.7759 18.3571 16.1429 18.3571Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -993,7 +986,33 @@
       </div>
     </button>
   </div>
-            <div class="ribbon">
+
+                <section class="about-hero">
+                    <div class="container">
+                        <div class="about-hero__inner">
+                            <div class="about-hero__img-wrapper">
+                                <div class="about-hero__img-box">
+                                    <img src="assets/images/about-hero.webp" alt="" />
+                                </div>
+                                <p class="about-hero__text title-h1">
+                                    Путешественники <span class="title-span">в мире духовности</span>, помогающие обрести гармонию в жизни
+                                </p>
+                            </div>
+
+                            <a href="#" class="about-hero__btn-link button-circle">
+                                <div class="about-hero__btn-svg-box">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            class="fill"
+                                            stroke="none"
+                                            d="M4 27.9999L5.687 21.837C4.646 20.033 4.099 17.988 4.1 15.891C4.103 9.33499 9.43799 4 15.993 4C19.174 4.001 22.16 5.24 24.406 7.48799C26.6509 9.73599 27.8869 12.724 27.8859 15.902C27.8829 22.459 22.548 27.7939 15.993 27.7939C14.003 27.7929 12.042 27.2939 10.305 26.346L4 27.9999ZM10.597 24.193C12.273 25.188 13.873 25.784 15.989 25.785C21.437 25.785 25.875 21.351 25.878 15.9C25.88 10.438 21.463 6.01 15.997 6.008C10.545 6.008 6.11 10.442 6.108 15.892C6.107 18.117 6.75899 19.783 7.85399 21.526L6.85499 25.174L10.597 24.193ZM21.984 18.729C21.91 18.605 21.712 18.531 21.414 18.382C21.117 18.233 19.656 17.514 19.383 17.415C19.111 17.316 18.913 17.266 18.714 17.564C18.516 17.861 17.946 18.531 17.773 18.729C17.6 18.927 17.426 18.952 17.129 18.803C16.832 18.654 15.874 18.341 14.739 17.328C13.856 16.54 13.259 15.567 13.086 15.269C12.913 14.972 13.068 14.811 13.216 14.663C13.35 14.53 13.513 14.316 13.662 14.142C13.813 13.97 13.862 13.846 13.962 13.647C14.061 13.449 14.012 13.275 13.937 13.126C13.862 12.978 13.268 11.515 13.021 10.92C12.779 10.341 12.534 10.419 12.352 10.41L11.782 10.4C11.584 10.4 11.262 10.474 10.99 10.772C10.718 11.07 9.94999 11.788 9.94999 13.251C9.94999 14.714 11.015 16.127 11.163 16.325C11.312 16.523 13.258 19.525 16.239 20.812C16.948 21.118 17.502 21.301 17.933 21.438C18.645 21.664 19.293 21.632 19.805 21.556C20.376 21.471 21.563 20.837 21.811 20.143C22.059 19.448 22.059 18.853 21.984 18.729Z"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ribbon">
     <div class="ribbon__row">
       <div class="ribbon__swiper swiper-ribbon swiper">
         <ul class="ribbon__list swiper-wrapper swiper-wrapper">
@@ -1175,13 +1194,115 @@
       </div>
     </div>
 </div>
-            <section class="reviews">
+                </section>
+
+                <section class="about-content">
+                    <div class="container">
+                        <div class="about-content__inner">
+                            <div class="about-content__title-box">
+                                <p class="about-content__title title-h5">О нас</p>
+                                <p class="about-content__desk title-h2">
+                                    <span>Если вы – человек ищущий, </span>и видите вокруг чуть больше, чем видят все другие, то нам с вами по пути. Мы очень рады быть
+                                    вашими проводниками в мир духовности
+                                </p>
+                            </div>
+                            <div class="about-content__desk-box">
+                                <div class="about-content__desk-img-box">
+                                    <img src="assets/images/about-desk.webp" alt="" />
+                                </div>
+                                <div class="about-content__desk-wrapper">
+                                    <p class="about-content__desk-text text">
+                                        Мы путешественники в мире духовности, которые помогают людям обрести гармонию и равновесие в жизни. Наша продукция - это ключ к
+                                        внутреннему вашему миру. Приглашаем в увлекательное путешествие, где вы сможете обрести новые ощущения и открыть в себе
+                                        неизведанные ресурсы. Духовный мир намного тоньше материального, и его способен познать далеко не каждый человек. Чаще всего,
+                                        таких людей называют «вечными искателями», но это лишь кажется. На самом деле человек в течение жизни проходит длинный и сложный
+                                        путь, чтобы постичь невидимое глазу.
+                                    </p>
+                                    <button class="about-content__desk-btn button button-link">
+                                        <span class="isActive">Показать еще</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+<section class="about-accordeon">
+<div class="container">
+    <div class="about-accordeon__inner">
+        <div class="about-accordeon__link hovered">
+            <div class="about-accordeon__prev">
+                <span class="about-accordeon__prev-title title-h3">Подход к своей работе1</span>
+            </div>
+            <div class="about-accordeon__full-content">
+              <div class="about-accordeon__full">
+               
+              </div>
+            </div>
+          </div>
+          <div class="about-accordeon__link">
+            <div class="about-accordeon__prev">
+              <span class="about-accordeon__prev-title title-h3">Подход к своей работе2</span>
+            </div>
+            <div class="about-accordeon__full-content">
+             
+              <div class="about-accordeon__full">
+
+              </div>
+            </div>
+          </div>
+          <div class="about-accordeon__link">
+            <div class="about-accordeon__prev">
+                <span class="about-accordeon__prev-title title-h3">Подход к своей работе3</span>
+            </div>
+            <div class="about-accordeon__full-content">
+              <div class="about-accordeon__full">
+               
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="about-numbers">
+    <div class="container">
+        <div class="about-numbers__inner">
+            <span class="text animated-value" id="value1">10000</span>
+            <span class="text animated-value" id="value2">20</span>
+            <span class="text animated-value" id="value3">5</span>
+        <span class="text animated-value" id="value4">3</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+                <section class="reviews">
     <div class="container reviews__container">
       <div class="reviews__inner">
         <div class="reviews__wrapper">
           <div class="reviews__header-box">
             <p class="reviews__title title-h2">Что о нас говорят</p>
-            <a href="#" class="reviews__btn button button-long-arr">
+            <button data-popup="#popup__review" class="reviews__btn button button-long-arr">
               <span class="reviews__btn-text button">Оставить отзыв</span>
               <div class="reviews__btn-svg-box">
                 <svg
@@ -1194,7 +1315,7 @@
                   />
                 </svg>
               </div>
-            </a>
+            </button>
           </div>
 
           <div class="reviews__swiper-box">
@@ -1824,48 +1945,82 @@
     </div>
   </div>
 
-         
-            
-            <section class="record">
-                <div class="container">
-                    <div class="record__inner">
-                        <div class="record__photo-box">
-                            <img src="assets/images/record.webp" alt="" />
-                        </div>
-                        <div class="record__content-wrapper">
-                            <p class="record__title title-h2">Запишитесь на бесплатную консультацию к нашему психологу</p>
-                            <form data-popup-message="#popup__success" class="record__form form">
 
-                                <div class="record_input-group input-group">
-                                    <input  class="record__input input--name text" type="text" placeholder="Введите имя" pattern="\D+"/>
-                                    <span class="error-span subscription"></span>
-                                  </div>
-
-                                  <div class="record_input-group input-group" >
-                                    <input
-                                    class="record__input input--tel text" type="tel" placeholder="+7(900) 000-00-00" pattern="[0-9]+"/>
-                                    
-                                    <span class="error-span subscription"></span>
-                                  </div> 
-
-                                <button class="record__btn button-long-arr" type="submit">
-                                    <span class="record__btn-text button">Записаться</span>
-                                    <div class="record__btn-svg-box">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
-                                            <path
-                                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
-                                            />
-                                        </svg>
+                <section class="record">
+                    <div class="container">
+                        <div class="record__inner">
+                            <div class="record__photo-box">
+                                <img src="assets/images/record.webp" alt="" />
+                            </div>
+                            <div class="record__content-wrapper">
+                                <p class="record__title title-h2">Запишитесь на бесплатную консультацию к нашему психологу</p>
+                                <form data-popup-message="#popup__success" action="#" data-dev class="record__form form">
+                                    <!-- <div class="record_input-group input-group">
+                                        <input class="record__input input--name text" type="text" placeholder="Введите имя" pattern="\D+" />
+                                        <span class="error-span subscription"></span>
                                     </div>
-                                </button>
-                            </form>
+
+                                    <div class="record_input-group input-group">
+                                        <input class="record__input input--tel text" type="tel" placeholder="+7(900) 000-00-00" pattern="[0-9]+" />
+
+                                        <span class="error-span subscription"></span>
+                                    </div>
+
+                                    <button class="record__btn button-long-arr" type="submit">
+                                        <span class="record__btn-text button">Записаться</span>
+                                        <div class="record__btn-svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                                <path
+                                                    d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </button> -->
+
+                                    <div class="record_input-group input-group">
+                                        <input
+                                            class="record__input input--name text"
+                                            data-validate
+                                            data-required="text"
+                                            autocomplete="off"
+                                            name="form[]"
+                                            type="text"
+                                            placeholder="Введите имя"
+                                            pattern="\D+"
+                                        />
+                                        <span class="error-span subscription"></span>
+                                    </div>
+                                    <div class="record_input-group input-group">
+                                        <input
+                                            class="record__input input--tel text"
+                                            data-validate
+                                            autocomplete="off"
+                                            name="form[]"
+                                            data-required="tel"
+                                            type="tel"
+                                            placeholder="+7(900) 000-00-00"
+                                            pattern="[0-9]+"
+                                        />
+
+                                        <span class="error-span subscription"></span>
+                                    </div>
+                                    <button class="record__btn button-long-arr" type="submit">
+                                        <span class="record__btn-text button">Записаться</span>
+                                        <div class="record__btn-svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                                <path
+                                                    d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-
-            <section class="map">
+                <section class="map">
     <div class="container">
         <div class="map__inner">
             <div class="map__title-box">
@@ -1955,9 +2110,8 @@
         </div>
     </div>
 </section>
-
-        </main>
-        <footer class="footer">
+            </main>
+            <footer class="footer">
 
     <div class="footer-top">
       <div class="container">
@@ -2042,7 +2196,7 @@
     </div>
 
 </footer>
-    </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script>
             Fancybox.bind('[data-fancybox]', {

@@ -13,7 +13,7 @@ const map = () => {
       let placemark = new ymaps.Placemark( [55.86773756887682,37.66713250000002], 
         {}, {
           iconLayout: 'default#image',
-          iconImageHref: './assets/images/icons/place-mark.svg',
+          iconImageHref: './assets/images/place-mark.svg',
           iconImageSize: [30, 35],
           iconImageOffset: [-15, -35],
       })
