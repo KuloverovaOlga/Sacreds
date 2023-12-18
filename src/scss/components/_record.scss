@@ -38,12 +38,14 @@ gap: 0.8rem;
     &__title {
     }
 
+ 
+
     // .record__form
 
     &__form {
         display: flex;
         flex-direction: column;
-        gap: 1.4rem;
+        gap: 2rem;
     }
 
     // .record__input
@@ -121,7 +123,7 @@ gap: 0.8rem;
         // .record__form
     
         &__form {
-            gap: 2.4rem;
+            gap: 2.8rem;
         }
     
         // .record__input
