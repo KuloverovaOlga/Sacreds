@@ -16,17 +16,19 @@ import productCardHeroSwiper from "./swiper/productCardHeroSwiper";
 
 import header from "./header";
 import form from "./form";
-import formModal from "./formModal";
 import questions from "./questions";
 import paginationBlock from "./paginationBlock";
 import productCardMin from "./productCardMin";
 import heroMenuMob from "./heroMenusMob";
-import harmonyBtnShowMore from "./harmonyBtnShowMore";
+import showMore from "./showMore";
 import burgerMenu from "./burger";
 import productCardHero from "./productCardHero";
 import productCardTabs from "./productCardTabs";
 import map from "./map";
 import popup from "./popup";
+import aboutGorTabs from "./aboutGorTabs";
+import animNumbers from "./animNumbers";
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -97,7 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     heroMenuMob();
   } catch {}
   try {
-    harmonyBtnShowMore();
+    showMore('.harmony-top__desk-btn', '.harmony-top__desk-box');
+  } catch {}
+  try {
+    showMore('.about-content__desk-btn', '.about-content__desk-text');
   } catch {}
   try {
     burgerMenu();
@@ -115,27 +120,15 @@ document.addEventListener("DOMContentLoaded", () => {
     popup();
   } catch {}
 
+  try {
+    animNumbers();
+  } catch {}
+  try {
+    aboutGorTabs();
+  } catch {}
+
 });
 
 
 
 
-// document.querySelector('#review_modal').addEventListener('click', () => {
-//     document.querySelector('.modal.form-bill').classList.add("active")
-// const closeBtn = document.querySelectorAll('.modal__close')
-
-// })
-
-// // $('#review_modal').on('click', function () {
-// //     $(".modal.form-bill").addClass("active");
-// //     openModal();
-// //   })
-
-// //   if ($(".modal__close").length) {
-// //     $(".modal__close").on("click", function () {
-// //       if ($(this).closest(".modal").hasClass("active")) {
-// //         $(this).closest(".modal").removeClass('active');
-// //         closeModal();
-// //       }
-// //     });
-// //   }

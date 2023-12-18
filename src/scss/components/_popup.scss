@@ -39,6 +39,11 @@ body::before {
     visibility: hidden;
     // pointer-events: none;
     transition: visibility 0.8s ease 0s;
+
+
+
+
+    
     ._loaded & {
         display: block;
     }
@@ -371,7 +376,8 @@ body::before {
 
     // .popup__sign-up-button-row
 
-    &__sign-up-button-row {
+    &__sign-up-button-row,
+    &__review-button-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -384,7 +390,8 @@ body::before {
 
     // .popup__sign-up-form-checkbox
 
-    &__sign-up-label-checkbox-text {
+    &__sign-up-label-checkbox-text,
+    &__review-label-checkbox-text {
         width: 35rem;
         @media (max-width: 48em) {
             width: 100%;
@@ -393,7 +400,9 @@ body::before {
 
     // .popup__sign-up-form-btn
 
-    &__sign-up-form-btn {
+    &__sign-up-form-btn,
+    &__review-form-btn{
+        width: fit-content;
     }
 
     &__sign-up-form-text,
@@ -753,6 +762,11 @@ justify-content: center;
 border-radius: 1.2rem;
 padding: 0;
 text-align: center;
+@media (max-width: 48em) {
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 1.6rem;
+}
 }
 & .popup__input-group {
   width: 5.2rem;
@@ -760,11 +774,20 @@ text-align: center;
   display: flex;
 align-items: center;
 justify-content: center;
-
+@media (max-width: 48em) {
+  width: 8.8rem;
+  height: 8.8rem;
+}
 }
 
 & .popup__link {
   align-self: center;
+}
+& .popup__body-btn__text-timer {
+  @media (max-width: 48em) {
+    display: none;
+}
+
 }
 
 
@@ -775,6 +798,9 @@ justify-content: center;
           align-items: center;
           justify-content: center;
           margin-top: 3.2rem;
+          @media (max-width: 48em) {
+            margin-top: 8rem;
+        }
         }
       }
   }
