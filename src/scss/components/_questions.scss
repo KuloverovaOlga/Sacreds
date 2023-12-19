@@ -50,6 +50,7 @@
     top: -1rem;
     left: 3.2rem;
     transition: color 0.3s;
+    pointer-events: none;
   }
 
   // .questions__accordion-item-header
@@ -235,3 +236,4 @@ overflow: hidden;
     }
   }
 }
+

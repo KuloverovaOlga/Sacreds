@@ -84,7 +84,40 @@ main {
   
 // }
 
+.input-group {
+  position: relative;
+}
+.input-group input,
+.input-group textarea {
+  outline: 1px solid transparent;
+  transition: outline 0.3s;
+}
 
+._form-error input,
+._form-error textarea {
+  outline: 1px solid #c22f2f;
+}
+
+.error-span {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  color: #C22F2F;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (max-width: 48em) {
+      bottom: -3rem;
+  }
+  }
+
+  
+// }
 //text
 .title-h1 {
   font-family: "MontserratAlternates";
@@ -241,6 +274,7 @@ main {
     & svg {
       object-fit: contain;
       transition: fill 0.3s;
+      width: 100%;
     }
   }
 
@@ -837,6 +871,7 @@ main {
   }
   .text {
     font-size: 2.8rem;
+    letter-spacing: 0.56px;
   }
   .subscription {
     font-size: 2.4rem;

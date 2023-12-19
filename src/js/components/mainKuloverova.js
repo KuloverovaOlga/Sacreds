@@ -27,7 +27,9 @@ import productCardTabs from "./productCardTabs";
 import map from "./map";
 import popup from "./popup";
 import aboutGorTabs from "./aboutGorTabs";
+import aboutVertTabs from "./aboutVertTabs";
 import animNumbers from "./animNumbers";
+import headerModal from "./headerModal";
 
 
 
@@ -125,6 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch {}
   try {
     aboutGorTabs();
+  } catch {}
+  try {
+    aboutVertTabs();
+  } catch {}
+  try {
+    headerModal();
   } catch {}
 
 });

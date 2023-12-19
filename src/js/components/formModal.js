@@ -101,7 +101,17 @@ export let formValidate = {
       } else {
         this.removeError(formRequiredItem);
       }
-    } else if (
+    } 
+    else if (formRequiredItem.dataset.required === 'tel') {
+      formRequiredItem.value = formRequiredItem.value.replace(/[^0-9]/g, ''); // Оставить только цифры и символы +()
+      if (!/^\d{11,}$/.test(formRequiredItem.value)) {
+          this.addError(formRequiredItem);
+          error++;
+      } else {
+          this.removeError(formRequiredItem);
+      }
+    } 
+    else if (
       formRequiredItem.type === 'checkbox' &&
       !formRequiredItem.checked
     ) {

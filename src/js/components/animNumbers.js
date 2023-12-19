@@ -33,7 +33,7 @@ const animNumbers = () => {
         animatedElements.forEach((el) => {
             if (isElementInViewport(el) && !el.classList.contains('animated')) {
                 el.classList.add('animated');
-                animateValue(el, 0, parseInt(el.innerText.replace(/\s/g, '')), 3000); // Убираем пробелы перед парсингом
+                animateValue(el, 0, parseInt(el.innerText.replace(/\s/g, '')), 1500); // Убираем пробелы перед парсингом
             }
         });
     }
