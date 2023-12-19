@@ -1,0 +1,178 @@
+.about-numbers {
+padding: 11rem 0;
+    // .about-numbers__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        height: 80rem;
+        width: 182rem;
+        position: relative;
+    }
+
+    // .about-numbers__title
+
+    &__title {
+    }
+
+    // .about-numbers__desk
+
+    &__desk {
+        width: 76.3rem;
+    }
+
+    // .about-numbers__num-wrapper
+
+    &__num-block {
+        position: absolute;
+        border-radius: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   gap: 1.2rem;
+      
+        &:nth-child(1){
+            width: 50rem;
+            height: 50rem;
+            bottom: 5.8rem;
+            left:0rem;
+border: 1px dashed $black-50;
+        }
+        &:nth-child(2){
+            width: 42.3rem;
+            height: 42.3rem;
+            background-color: $light-grey;
+            bottom: 0;
+            left: 61.2rem;
+        }
+        &:nth-child(3){
+            border: 1px dashed $black-50;
+            width: 42rem;
+            height: 42rem;
+            bottom: 38.3rem;
+            left:100rem;
+        }
+        &:nth-child(4){
+            width: 25rem;
+            height: 25rem;
+            right: 0;
+            background-color: $orange;
+            bottom: 15rem;
+            color: $white;
+        }
+    }
+
+
+    // .about-numbers__num-box
+
+    &__num-box {
+    }
+
+    // .about-numbers__num
+
+    &__num {
+    }
+
+    // .about-numbers__num-num
+
+    &__num-num {
+    }
+
+    // .about-numbers__num-text
+
+    &__num-text {
+        width: 20rem;
+    }
+}
+@media (max-width: 48em) {
+
+
+    .about-numbers {
+        padding: 10rem 0;
+            // .about-numbers__inner
+        
+            &__inner {
+                height: fit-content;
+                width: 100%;
+                position: static;
+                gap:0;
+            }
+        
+            // .about-numbers__title
+        
+            &__title {
+                margin-bottom: 1.6rem;
+            }
+        
+            // .about-numbers__desk
+        
+            &__desk {
+                width: 100%;
+            }
+        
+            &__num-wrapper{
+             margin-top: 8rem;
+            position: relative;
+            width: 100%;
+            height: 104.4rem;
+            }
+            // .about-numbers__num-wrapper
+        
+            &__num-block {
+           gap: 0.8rem;
+              
+                &:nth-child(1){
+                    width: 48.8rem;
+                    height: 48.8rem;
+                    bottom: 55.6rem;
+                    left:0rem;
+                }
+                &:nth-child(2){
+                    width: 36.8rem;
+                    height: 36.8rem;
+                    bottom: 14.8rem;
+                    left:0;
+                }
+                &:nth-child(3){
+                    width: 34.4rem;
+                    height: 34.4rem;
+                    bottom: 0;
+                    left:auto;
+                    right:0;
+                }
+                &:nth-child(4){
+                    width: 29.6rem;
+                    height: 29.6rem;
+                    right: 0;
+                    bottom: 38.4rem;
+                }
+            }
+        
+        
+            // .about-numbers__num-box
+        
+            &__num-box {
+            }
+        
+            // .about-numbers__num
+        
+            &__num {
+            }
+        
+            // .about-numbers__num-num
+        
+            &__num-num {
+            }
+        
+            // .about-numbers__num-text
+        
+            &__num-text {
+                width: 20rem;
+            }
+        }
+
+        
+    }

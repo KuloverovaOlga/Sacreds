@@ -172,7 +172,6 @@ const form = () => {
   formSubmit();
 
     const codeInputs = document.querySelectorAll('.popup__fields-num');
-
     // Функция для обработки ввода в каждом поле
     function handleInput(index) {
         if (codeInputs[index - 1].value && index < codeInputs.length) {
@@ -180,22 +179,116 @@ const form = () => {
             codeInputs[index].focus();
         }
     }
-  
     // Функция для проверки, введены ли все цифры
     function isCodeComplete() {
         return Array.from(codeInputs).every(input => input.value !== '');
     }
-  
     // Функция для получения кода
     function getCode() {
         return Array.from(codeInputs).map(input => input.value).join('');
     }
-  
     codeInputs.forEach((item, i) => {
       item.addEventListener('input', ()=> {
         handleInput(i+1)})
     })
 
+
+    const tel = document.querySelectorAll('.input--tel')
+
+    tel.forEach(item => {
+        item.addEventListener('input', () => {
+            const inputValue = item.value.trim();
+            const span = item.nextElementSibling;
+            const parent = item.parentElement;
+
+            if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='') {
+                span.classList.add('active');
+                parent.classList.add('_form-error');
+            }  else  {
+                span.classList.remove('active');
+                parent.classList.remove('_form-error');
+            }
+        })
+    })
+    const mail = document.querySelectorAll('.input--mail')
+
+    mail.forEach(item => {
+        item.addEventListener('input', () => {
+            const inputValue = item.value.trim();
+            const parent = item.parentElement;
+
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(inputValue) && inputValue !='') {
+                parent.classList.add('_form-error');
+            }  else  {
+                parent.classList.remove('_form-error');
+            }
+        })
+    })
+
+    const required = document.querySelectorAll('.popup__label--required input, .popup__label--required textarea')
+
+    required.forEach(item => {
+        item.addEventListener('blur', () => {
+            const inputValue = item.value.trim();
+            if (inputValue === '' || item.parentElement.classList.contains('_form-error')) {
+                item.parentElement.classList.add('popup__label--star');
+            }  else  {
+                item.parentElement.classList.remove('popup__label--star');
+            }
+        })
+        item.addEventListener('input', () => {
+            const inputValue = item.value.trim();
+            if (inputValue === '' || item.parentElement.classList.contains('_form-error')) {
+                item.parentElement.classList.add('popup__label--star');
+            }  else  {
+                item.parentElement.classList.remove('popup__label--star');
+            }
+        })
+    })
+
+     
+
+    function setupFormListener(formSelector, submitButtonSelector) {
+        const form = document.querySelector(formSelector);
+        const submitButton = document.querySelector(submitButtonSelector);
+    
+        const formElements = form.querySelectorAll('input, textarea');
+        const formElementsParents = form.querySelectorAll('.input-group')
+        const formElementsLabel = form.querySelectorAll('.popup__label')
+    
+        console.log(formElementsParents)
+        function updateSubmitButtonState() {
+            const isEmpty = Array.from(formElements).some(element => {
+                return element.value.trim() === '';
+            });
+            const formError = Array.from(formElementsParents).some(element => {
+           
+                return element.classList.contains('_form-error');
+            });
+            const formErrorLabel = Array.from(formElementsLabel).some(element => {
+                console.log(element)
+                return element.classList.contains('_form-error');
+            });
+         
+            // Устанавливаем или удаляем атрибут disabled в зависимости от условия
+            if (isEmpty || (formError || formErrorLabel)) {
+                submitButton.setAttribute('disabled', 'disabled');
+            } else {
+                submitButton.removeAttribute('disabled');
+            }
+        }
+    
+        formElements.forEach(element => {
+            element.addEventListener('input', updateSubmitButtonState);
+        });
+    
+        updateSubmitButtonState();
+    }
+    
+    // Использование:
+    setupFormListener('.popup__entrys-personal-area-form', '.popup__body-btn-personal-area-button');
+    setupFormListener('.popup__password-recovery-form', '.popup__password-recovery-body-btn');
+    setupFormListener('.popup__body-registration-form', '.popup__body-btn-registration-form');
 
 }
 
