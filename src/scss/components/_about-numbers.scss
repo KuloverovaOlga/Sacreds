@@ -123,7 +123,7 @@ border: 1px dashed $black-50;
         
             &__num-block {
            gap: 0.8rem;
-              
+              padding: 4rem;
                 &:nth-child(1){
                     width: 48.8rem;
                     height: 48.8rem;
@@ -170,7 +170,7 @@ border: 1px dashed $black-50;
             // .about-numbers__num-text
         
             &__num-text {
-                width: 20rem;
+                width: 100%;
             }
         }
 

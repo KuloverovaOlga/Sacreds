@@ -256,7 +256,7 @@ const form = () => {
         const formElementsParents = form.querySelectorAll('.input-group')
         const formElementsLabel = form.querySelectorAll('.popup__label')
     
-        console.log(formElementsParents)
+     
         function updateSubmitButtonState() {
             const isEmpty = Array.from(formElements).some(element => {
                 return element.value.trim() === '';
@@ -266,7 +266,7 @@ const form = () => {
                 return element.classList.contains('_form-error');
             });
             const formErrorLabel = Array.from(formElementsLabel).some(element => {
-                console.log(element)
+         
                 return element.classList.contains('_form-error');
             });
          
