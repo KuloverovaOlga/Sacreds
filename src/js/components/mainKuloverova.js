@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     paginationBlock('.review-wrapper__item', 6, '.review-content__pagination-wpapper');
   } catch {}
+
   try {
     reviewsPageSwiper();
   } catch {}

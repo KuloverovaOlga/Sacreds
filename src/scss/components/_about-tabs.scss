@@ -18,7 +18,7 @@
     height: 100%;
     overflow: hidden;
     cursor: pointer;
-    transition: width 0.5s;
+    transition: width 0.6s;
     // margin-right: 0.8rem;
 }
 .about-accordeon__inner .about-accordeon__link:not(:first-child) .about-accordeon__full-content {
@@ -27,7 +27,7 @@
 /* Taille des onglets ouverts */
 .about-accordeon__inner .about-accordeon__link.hovered {
     width: 141rem;
-    transition: width 0.5s;
+
     // background-color: $light-grey;
 }
 
@@ -49,6 +49,7 @@
     gap: 13.8rem;
     transition: opacity 0.3s;
     opacity: 1;
+    
 }
 
 .about-accordeon__full-text-box {
@@ -73,21 +74,26 @@
 .about-accordeon__inner .about-accordeon__link .about-accordeon__prev {
     height: 100%;
     width: 100%;
-    transition: width 0.3s, opacity 0.3s, height 0.3s;
+    transition: width 0.55s 0.4s, height 0.55s, opacity 0.55s 0.2s;
     border-radius: 2.4rem;
     border: 1px solid $black-50;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     padding: 4.4rem 4rem;
+    position: relative;
+    background-color: $light-grey;
 }
 
 .about-accordeon__inner .about-accordeon__link .about-accordeon__prev > span {
     display: block;
     height: 41.5rem;
-    width: 100%;
-    transition: 0.3s ease;
+    // transition: 0.55s;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
 }
 
 @media (max-width: 48em) {

@@ -13,6 +13,7 @@ const devMode = mode === "development";
 const target = devMode ? "web" : "browserslist";
 const devtool = devMode ? "source-map" : undefined;
 
+
 const entryPoints = {
   index: path.resolve(__dirname, "src", "index.js"),
   main: path.resolve(__dirname, "src", "index.js"),
@@ -23,6 +24,7 @@ const entryPoints = {
   about: path.resolve(__dirname, "src", "index.js"),
   detailed_article: path.resolve(__dirname, "src", "index.js"),
   contacts: path.resolve(__dirname, "src", "index.js"),
+  articles: path.resolve(__dirname, "src", "index.js"),
 
   
 };
