@@ -70,20 +70,8 @@
   &__btn {
     margin-top: 1.6rem;
     width: fit-content;
-    padding: 1.4rem 2.4rem;
-    display: flex;
-    gap: 0.8rem;
-    align-items: center;
-    justify-content: center;
-    background-color: $orange;
-    color: $white;
-    border-radius: 3.2rem;
-    align-self: flex-start;
-    transition: background-color 0.3s;
+    @include btn-short-arr;
     align-self: center;
-    &:hover {
-      background-color: $black;
-    }
   }
 
   // .error__btn-text
@@ -94,12 +82,7 @@
   // .error__btn-svg-box
 
   &__btn-svg-box {
-    width: 2.4rem;
-    height: 2.4rem;
-    & svg {
-      fill: $white;
-      object-fit: contain;
-    }
+   
   }
 }
 

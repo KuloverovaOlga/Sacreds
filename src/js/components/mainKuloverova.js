@@ -30,6 +30,7 @@ import aboutGorTabs from "./aboutGorTabs";
 import aboutVertTabs from "./aboutVertTabs";
 import animNumbers from "./animNumbers";
 import headerModal from "./headerModal";
+import articleTabs from "./articlesTabs";
 
 
 
@@ -134,6 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch {}
   try {
     headerModal();
+  } catch {}
+  try {
+    articleTabs();
   } catch {}
 
 });

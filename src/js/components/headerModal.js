@@ -13,5 +13,26 @@ const headerModal = () => {
             modal.classList.remove('active');
         }
     });
+
+    if (window.innerWidth < 768) {
+        triger.dataset.popup="#popup__entrys"
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+    } 
+    else {
+        triger.dataset.popup=""
+        modal.style.display = 'block';
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            triger.dataset.popup="#popup__entrys"
+            modal.style.display = 'none';
+        } 
+        else {
+            triger.dataset.popup=""
+            modal.style.display = 'block';
+        }
+    })
 };
 export default headerModal;

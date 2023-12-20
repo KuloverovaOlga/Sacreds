@@ -305,15 +305,7 @@ right: 0;
         background-color: $black;
       }
     }
-    &__btn-modal-close-btn {
-      display: none;
-    }
-    &__btn-modal-title {
-      display: none;
-    }
-    &__btn-personal{
-      display: none;
-    }
+
 
 }
 
@@ -667,12 +659,6 @@ right: 0;
 
 
 
-    &__btn-modal-box {
-      display: none;
-    }
 
-    &__btn-personal{
-      display: flex;
-    }
   }
 }
