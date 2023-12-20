@@ -160,6 +160,9 @@
         &:not(:first-of-type) {
             margin-left: -5rem;
             padding-left: 3.5rem;
+            span {
+                padding-left: 3.5rem;  
+            }
         }
         // &:after {
         //     content: '';
@@ -196,6 +199,9 @@ transition:   box-shadow 0.3s;
             background-color: #EAEBEB;
             transition:   background-color 0.3s;
             z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             
             // &:after {
             //     content: '';

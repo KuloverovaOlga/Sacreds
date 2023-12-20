@@ -14,6 +14,30 @@ $grey: #848c88;
 //   outline:1px solid #E33C18;
 // }
 
+@mixin btn-short-arr {
+  padding: 1.4rem 2.4rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  background-color: $orange;
+  color: $white;
+  border-radius: 3.2rem;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $black;
+  }
+  & div {
+    width: 2.4rem;
+    height: 2.4rem;
+    & svg {
+      fill: $white;
+      object-fit: contain;
+    }
+  }
+}
+
 body {
   color: $black;
   display: flex;
@@ -55,6 +79,7 @@ main {
     width: 100%;
   }
 }
+
 
 
 // form  {
@@ -331,7 +356,12 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  
+  font-family: "CeraPro";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.72px;
 }
 .content__pagination-btn {
   width: 2.2rem;
@@ -342,13 +372,6 @@ main {
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  font-family: "CeraPro";
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 25.2px */
-  letter-spacing: 0.72px;
-
 
 
   &.active,
@@ -831,8 +854,12 @@ main {
 }
 
 
-// --------------------------------------media------------------------------------
-// --------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
+// -------------------------------------------------------------------------------media------------------------------------
 
 
 @media (max-width: 48em) {
