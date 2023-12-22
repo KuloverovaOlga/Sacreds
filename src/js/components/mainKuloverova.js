@@ -129,52 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articleTabs();
     } catch {}
 
-    // document.querySelectorAll('[data-fancybox]').forEach(item => {
 
-    //   item.addEventListener('click', () => {
-    //       const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
-    //       let scrollWith = getScrollbarWidth();
-    //       document.querySelector('header').style.paddingRight = `${scrollWith}px`
-    //   })
-
-    // })
-
-    // document.querySelector('.fancybox__container.is-idle').addEventListener('click', () => {
-    //   document.querySelector('header').style.paddingRight = ``
-    //   console.log('sefefzes')
-    // })
-
-
-
-    const body = document.querySelector('body');
-    const header = document.querySelector('.header'); // Замените селектор на ваш
-    const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
-      let scrollWith = getScrollbarWidth();
-    const addPaddingToHeader = () => {
-
-        header.style.paddingRight = `${scrollWith}px`;
-    };
-    
-    const removePaddingFromHeader = () => {
-        header.style.paddingRight = '';
-    };
-    
-    let mutationCallback = (mutationsList, observer) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                const isScrollbarHidden = body.classList.contains('hide-scrollbar') && window.innerWidth > 768;
-                if (isScrollbarHidden) {
-                    addPaddingToHeader();
-                } else {
-                    removePaddingFromHeader();
-                }
-            }
-        }
-    };
-    
-    const observer = new MutationObserver(mutationCallback);
-    const observerConfig = { attributes: true, attributeFilter: ['class'] };
-    observer.observe(body, observerConfig);
     
 
 });
