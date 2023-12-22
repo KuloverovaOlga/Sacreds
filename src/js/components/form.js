@@ -179,17 +179,48 @@ const form = () => {
             codeInputs[index].focus();
         }
     }
-    // Функция для проверки, введены ли все цифры
-    function isCodeComplete() {
-        return Array.from(codeInputs).every(input => input.value !== '');
-    }
-    // Функция для получения кода
-    function getCode() {
-        return Array.from(codeInputs).map(input => input.value).join('');
-    }
+    // // Функция для проверки, введены ли все цифры
+    // function isCodeComplete() {
+    //     return Array.from(codeInputs).every(input => input.value !== '');
+    // }
+    // // Функция для получения кода
+    // function getCode() {
+    //     return Array.from(codeInputs).map(input => input.value).join('');
+    // }
     codeInputs.forEach((item, i) => {
       item.addEventListener('input', ()=> {
         handleInput(i+1)})
+    })
+
+    const passFirst = document.querySelector('.popup__label--pass-first input')
+    const passRepeat = document.querySelector('.popup__label--pass-repeat input')
+
+    function pass () {
+        const inputValue = passRepeat.value.trim();
+        const inputFirstValue = passFirst.value.trim();
+        const parent = passRepeat.parentElement;
+        const span = parent.nextElementSibling;
+
+            if (inputValue !== inputFirstValue) {
+                span.classList.add('active');
+                parent.classList.add('_form-error');
+            }  else  {
+                span.classList.remove('active');
+                parent.classList.remove('_form-error');
+            }
+    }
+
+    passFirst.addEventListener('input', () => {
+        pass()
+    })
+    passFirst.addEventListener('blur', () => {
+        pass()
+    })
+    passRepeat.addEventListener('input', () => {
+        pass()
+    })
+    passRepeat.addEventListener('blur', () => {
+        pass()
     })
 
 

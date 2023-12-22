@@ -32,6 +32,7 @@ const headerModal = () => {
         else {
             triger.dataset.popup=""
             modal.style.display = 'block';
+            modal.classList.remove('active');
         }
     })
 };
