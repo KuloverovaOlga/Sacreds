@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <title>Детальная статья</title>
     </head>
     <body>
@@ -11,6 +12,17 @@
             <main class="main">
                 <include src="./components/bottom-menu.html"></include>
                 <include src="./components/popup.html"></include>
+
+                <div class="article-links">
+                    <div class="container">
+                        <div class="article-links__inner">
+                            <a href="" class="article-links__link text">Главная</a>
+                            <a href="" class="article-links__link text">Статьи</a>
+                            <a href="" class="article-links__link text">Саморазвитие</a>
+                            <a href="" class="article-links__link article-links__link--last text">Медитация с рапэ для успокоения нервной системы: советы и практики</a>
+                        </div>
+                    </div>
+                </div>
 
                 <section class="article-hero">
                     <div class="container">
@@ -24,7 +36,7 @@
                             </div>
                             <div class="article-hero__video-box">
                                 <img src="./assets/images/article-hero.webp" alt="" />
-                                <a href="#" class="article-hero__link-img-box-video-link">
+                                <a  href="./assets/mainpage-hero-vid.mp4" data-fancybox="gallery" class="article-hero__link-img-box-video-link">
                                     <div class="article-hero__link-img-box-video-link-btn">
                                         <div class="article-hero__link-img-box-video-link-btn-svg-box">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="none">
@@ -96,7 +108,7 @@
                                     </div>
                                     <div class="article-info__item-info-box">
                                         <p class="article-info__item-info-text text">
-                                            еремония рапе представляет собой медитацию для успокоения нервной системы, проводимую под чутким присмотром наставника.
+                                            Церемония рапе представляет собой медитацию для успокоения нервной системы, проводимую под чутким присмотром наставника.
                                             Присутствие специалиста помогает найти внутреннее равновесие, почувствовать в себе источник энергии и научиться контролировать
                                             эмоции. Чтобы проводить такие занятия, наставник заранее заботится о том, чтобы купить рапэ у оригинальных производителей из
                                             Перу или Бразилии.
@@ -112,7 +124,9 @@
                                             Современные медитативные практики с рапе для успокоения нервной системы оказывают следующее влияние:
                                         </p>
                                         <ul class="article-info__item-info-list">
-                                            <li class="article-info__item-info-item text">ум перестает генерировать большое количество идей в короткий промежуток времени;</li>
+                                            <li class="article-info__item-info-item text">
+                                                ум перестает генерировать большое количество идей в короткий промежуток времени;
+                                            </li>
                                             <li class="article-info__item-info-item text">
                                                 отсутствие фонового шума в виде мыслей будто сбрасывает пелену с глаз человека, позволяя по-новому увидеть положение вещей
                                                 в жизни;
@@ -125,7 +139,7 @@
                                                 отсутствие бурного потока мыслей также можно использовать для расслабления и погружения в глубокую медитацию с целью
                                                 восстановить силы;
                                             </li>
-                                            <li class="article-info__item-info-item text" >
+                                            <li class="article-info__item-info-item text">
                                                 во время занятия человек может услышать свой внутренний голос, который обычно заглушают посторонние мысли, и разобраться в
                                                 своих истинных целях и желаниях, чтобы наконец приступить к переменам в жизни.
                                             </li>
@@ -141,29 +155,35 @@
                     <div class="container">
                         <div class="article-sign-up__inner">
                             <div class="article-sign-up__photo-wrapper">
-                                <p class="article-sign-up__photo-text text">Получите новый опыт и откройте 
-                                    в себе новые горизонты с рапэ</p>
+                                <p class="article-sign-up__photo-text text">Получите новый опыт и откройте в себе новые горизонты с рапэ</p>
                                 <div class="article-sign-up__photo-box">
                                     <img src="./assets/images/article-sign-up.webp" alt="" />
                                 </div>
                             </div>
                             <div class="article-sign-up__content-wrapper">
-                                <p class="article-sign-up__title title-h2">Запишитесь на сакральную
-                                    церемонию рапэ</p>
+                                <p class="article-sign-up__title title-h2">Запишитесь на сакральную церемонию рапэ</p>
                                 <form data-popup-message="#popup__success" action="#" data-dev class="article-sign-up__form form">
                                     <div class="article-sign-up_input-group input-group">
-                                        <input class="article-sign-up__input input--name text" type="text" placeholder="Введите имя"   data-validate
-                                        data-required="text"
-                                        autocomplete="off"
-                                        name="form[]" />
-                               
+                                        <input
+                                            class="article-sign-up__input input--name text"
+                                            type="text"
+                                            placeholder="Введите имя"
+                                            data-validate
+                                            data-required="text"
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
                                     </div>
                                     <div class="article-sign-up_input-group input-group">
-                                        <input class="article-sign-up__input input--tel text" 
-                                        type="tel" placeholder="+7(900) 000-00-00"    
-                                        data-validate
-                                        autocomplete="off"
-                                        name="form[]" data-required='tel'/>
+                                        <input
+                                            class="article-sign-up__input input--tel text"
+                                            type="tel"
+                                            placeholder="+7(900) 000-00-00"
+                                            data-validate
+                                            autocomplete="off"
+                                            name="form[]"
+                                            data-required="tel"
+                                        />
 
                                         <span class="error-span subscription">Введите числовое значение</span>
                                     </div>
@@ -185,21 +205,22 @@
 
                 <section class="article-quote">
                     <div class="container">
-                        <div class="article-quote__quote-box">
-                            <p class="article-quote__quote title-h3">
-                                <span>Медитация для успокоения улучшает </span>психическое здоровье человека, возвращая ему самоконтроль и позитивное отношение к жизни.
-                                Во время занятия и по его окончании люди всегда чувствуют некое расслабление, окутывающее любовью к людям и обществу в целом. После
-                                церемонии гораздо легче быть доброжелательным и принимать трудные ситуации с юмором вместо того, чтобы расстраиваться.
-                            </p>
-                        </div>
-
-
-                        <div class="article-quote__img-wrapper">
-                            <div class="article-quote__img-box">
-                                <img src="./assets/images/article-img-block1.webp" alt="" />
+                        <div class="article-quote__inner">
+                            <div class="article-quote__quote-box">
+                                <p class="article-quote__quote title-h3">
+                                    <span>Медитация для успокоения улучшает </span>психическое здоровье человека, возвращая ему самоконтроль и позитивное отношение к
+                                    жизни. Во время занятия и по его окончании люди всегда чувствуют некое расслабление, окутывающее любовью к людям и обществу в целом.
+                                    После церемонии гораздо легче быть доброжелательным и принимать трудные ситуации с юмором вместо того, чтобы расстраиваться.
+                                </p>
                             </div>
-                            <div class="article-quote__img-box">
-                                <img src="./assets/images/article-img-block2.webp" alt="" />
+
+                            <div class="article-quote__img-wrapper">
+                                <div class="article-quote__img-box">
+                                    <img src="./assets/images/article-img-block1.webp" alt="" />
+                                </div>
+                                <div class="article-quote__img-box">
+                                    <img src="./assets/images/article-img-block2.webp" alt="" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -393,9 +414,384 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="article-desk">
+                    <div class="container">
+                        <div class="article-desk__inner">
+                            <div class="article-desk__btn-box">
+                                <div class="article-desk__swiper-button-box">
+                                    <div class="article-desk__swiper-button-prev swiper-button-prev button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    stroke="none"
+                                                    d="M23.74 12.4264H24.74V10.4264H23.74V12.4264ZM2.52682 10.4264C1.97454 10.4264 1.52682 10.8741 1.52682 11.4264C1.52682 11.9787 1.97454 12.4264 2.52682 12.4264L2.52682 10.4264ZM23.74 10.4264H2.52682L2.52682 12.4264H23.74V10.4264Z"
+                                                />
+                                                <path
+                                                    d="M10.3049 20.6188L1.11254 11.4264L10.3049 2.23399"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="article-desk__swiper-button-next swiper-button-next button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23" fill="none">
+                                                <path
+                                                    stroke="none"
+                                                    d="M1.11264 10.4264L0.112637 10.4264L0.112637 12.4264L1.11264 12.4264L1.11264 10.4264ZM22.3258 12.4264C22.8781 12.4264 23.3258 11.9787 23.3258 11.4264C23.3258 10.8741 22.8781 10.4264 22.3258 10.4264L22.3258 12.4264ZM1.11264 12.4264H22.3258L22.3258 10.4264H1.11264L1.11264 12.4264Z"
+                                                />
+                                                <path
+                                                    d="M14.5477 2.23402L23.7401 11.4264L14.5477 20.6188"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="article-desk__share-button-box">
+                                    <p class="article-desk__share-title title-h5">Поделиться:</p>
+                                    <div class="article-desk__share-button-wrapper">
+                                        <a href="#" class="article-desk__btn-link button-circle">
+                                            <div class="article-desk__btn-svg-box">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4 16C4 9.40228 9.40228 4 16 4C22.5977 4 28 9.40228 28 16C28 22.5977 22.5977 28 16 28C9.40228 28 4 22.5977 4 16Z"
+                                                        stroke-width="2"
+                                                    />
+                                                    <path
+                                                        class="fill"
+                                                        d="M16.1328 20.3334C11.2765 20.3334 8.52454 17.1098 8.41663 11.6667H10.8448C10.8987 15.6302 12.7334 17.3212 14.1363 17.6383V11.6667H16.4026V15.1017C17.8055 14.9432 19.2624 13.4107 19.748 11.6667H22.0143C21.6366 13.7806 20.0178 15.3659 18.8847 16.0001C20.0178 16.5285 21.8524 17.9025 22.5 20.3334H19.9639C19.4243 18.6952 18.0753 17.4269 16.2947 17.2155V20.3334H16.1328Z"
+                                                        stroke="none"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="article-desk__btn-link button-circle">
+                                            <div class="article-desk__btn-svg-box">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1002_152)">
+                                                        <path
+                                                            class="fill"
+                                                            stroke="none"
+                                                            d="M16 6.16094C19.2063 6.16094 19.5859 6.175 20.8469 6.23125C22.0188 6.28281 22.6516 6.47969 23.0734 6.64375C23.6313 6.85938 24.0344 7.12188 24.4516 7.53906C24.8734 7.96094 25.1313 8.35938 25.3469 8.91719C25.5109 9.33906 25.7078 9.97656 25.7594 11.1437C25.8156 12.4094 25.8297 12.7891 25.8297 15.9906C25.8297 19.1969 25.8156 19.5766 25.7594 20.8375C25.7078 22.0094 25.5109 22.6422 25.3469 23.0641C25.1313 23.6219 24.8687 24.025 24.4516 24.4422C24.0297 24.8641 23.6313 25.1219 23.0734 25.3375C22.6516 25.5016 22.0141 25.6984 20.8469 25.75C19.5813 25.8062 19.2016 25.8203 16 25.8203C12.7938 25.8203 12.4141 25.8062 11.1531 25.75C9.98125 25.6984 9.34844 25.5016 8.92656 25.3375C8.36875 25.1219 7.96563 24.8594 7.54844 24.4422C7.12656 24.0203 6.86875 23.6219 6.65313 23.0641C6.48906 22.6422 6.29219 22.0047 6.24063 20.8375C6.18438 19.5719 6.17031 19.1922 6.17031 15.9906C6.17031 12.7844 6.18438 12.4047 6.24063 11.1437C6.29219 9.97187 6.48906 9.33906 6.65313 8.91719C6.86875 8.35938 7.13125 7.95625 7.54844 7.53906C7.97031 7.11719 8.36875 6.85938 8.92656 6.64375C9.34844 6.47969 9.98594 6.28281 11.1531 6.23125C12.4141 6.175 12.7938 6.16094 16 6.16094ZM16 4C12.7422 4 12.3344 4.01406 11.0547 4.07031C9.77969 4.12656 8.90313 4.33281 8.14375 4.62812C7.35156 4.9375 6.68125 5.34531 6.01563 6.01562C5.34531 6.68125 4.9375 7.35156 4.62813 8.13906C4.33281 8.90313 4.12656 9.775 4.07031 11.05C4.01406 12.3344 4 12.7422 4 16C4 19.2578 4.01406 19.6656 4.07031 20.9453C4.12656 22.2203 4.33281 23.0969 4.62813 23.8563C4.9375 24.6484 5.34531 25.3188 6.01563 25.9844C6.68125 26.65 7.35156 27.0625 8.13906 27.3672C8.90313 27.6625 9.775 27.8687 11.05 27.925C12.3297 27.9812 12.7375 27.9953 15.9953 27.9953C19.2531 27.9953 19.6609 27.9812 20.9406 27.925C22.2156 27.8687 23.0922 27.6625 23.8516 27.3672C24.6391 27.0625 25.3094 26.65 25.975 25.9844C26.6406 25.3188 27.0531 24.6484 27.3578 23.8609C27.6531 23.0969 27.8594 22.225 27.9156 20.95C27.9719 19.6703 27.9859 19.2625 27.9859 16.0047C27.9859 12.7469 27.9719 12.3391 27.9156 11.0594C27.8594 9.78438 27.6531 8.90781 27.3578 8.14844C27.0625 7.35156 26.6547 6.68125 25.9844 6.01562C25.3188 5.35 24.6484 4.9375 23.8609 4.63281C23.0969 4.3375 22.225 4.13125 20.95 4.075C19.6656 4.01406 19.2578 4 16 4Z"
+                                                        />
+                                                        <path
+                                                            class="fill"
+                                                            stroke="none"
+                                                            d="M16 9.83594C12.5969 9.83594 9.83594 12.5969 9.83594 16C9.83594 19.4031 12.5969 22.1641 16 22.1641C19.4031 22.1641 22.1641 19.4031 22.1641 16C22.1641 12.5969 19.4031 9.83594 16 9.83594ZM16 19.9984C13.7922 19.9984 12.0016 18.2078 12.0016 16C12.0016 13.7922 13.7922 12.0016 16 12.0016C18.2078 12.0016 19.9984 13.7922 19.9984 16C19.9984 18.2078 18.2078 19.9984 16 19.9984Z"
+                                                        />
+                                                        <path
+                                                            class="fill"
+                                                            stroke="none"
+                                                            d="M23.8469 9.59214C23.8469 10.389 23.2 11.0312 22.4078 11.0312C21.6109 11.0312 20.9688 10.3843 20.9688 9.59214C20.9688 8.79526 21.6156 8.15308 22.4078 8.15308C23.2 8.15308 23.8469 8.79995 23.8469 9.59214Z"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1002_152">
+                                                            <rect width="24" height="24" fill="white" transform="translate(4 4)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article-desk__swiper-box">
+                                <div class="article-desk__swiper swiper">
+                                    <div class="article-desk__swiper-wrapper swiper-wrapper">
+                                        <div class="article-desk__swiper-slide swiper-slide">
+                                            <div class="article-desk__swiper-slide-inner">
+                                                <p class="article-desk__swiper-slide-text text">После принятия рапе каждый участник начинает осознавать себя в мире, что помогает ощутить единение с природой. Такое чувство посещало и древних шаманов Амазонии, поэтому церемонию рапе также часто называли «Лестницей в небеса».</p>
+                                                <p class="article-desk__swiper-slide-text text">Важно отметить, что достижение желаемой цели не всегда происходит во время церемонии. После занятия ум остается острым и незатуманенным в течение 1-2 дней, благодаря чему желаемая мысль может прийти в голову в абсолютно неожиданный момент. По этой причине важно прислушиваться к себе в течение двух суток после медитации. Иногда рапе может действовать на мыслительный процесс как фонарик на темноту, концентрируя внимание на самом важном объекте. Средство позволяет по-новому проанализировать имеющуюся информацию, благодаря чему и получится найти ответ на волнующий вопрос.</p>
+                                            </div>
+                                        </div>
+                                        <div class="article-desk__swiper-slide swiper-slide">
+                                            <div class="article-desk__swiper-slide-inner">
+                                                <p class="article-desk__swiper-slide-text text">После принятия рапе каждый участник начинает осознавать себя в мире, что помогает ощутить единение с природой. Такое чувство посещало и древних шаманов Амазонии, поэтому церемонию рапе также часто называли «Лестницей в небеса».</p>
+                                                <p class="article-desk__swiper-slide-text text">Важно отметить, что достижение желаемой цели не всегда происходит во время церемонии. После занятия ум остается острым и незатуманенным в течение 1-2 дней, благодаря чему желаемая мысль может прийти в голову в абсолютно неожиданный момент. По этой причине важно прислушиваться к себе в течение двух суток после медитации. Иногда рапе может действовать на мыслительный процесс как фонарик на темноту, концентрируя внимание на самом важном объекте. Средство позволяет по-новому проанализировать имеющуюся информацию, благодаря чему и получится найти ответ на волнующий вопрос.</p>
+                                                <p class="article-desk__swiper-slide-text text">Важно отметить, что достижение желаемой цели не всегда происходит во время церемонии. После занятия ум остается острым и незатуманенным в течение 1-2 дней, благодаря чему желаемая мысль может прийти в голову в абсолютно неожиданный момент. По этой причине важно прислушиваться к себе в течение двух суток после медитации. Иногда рапе может действовать на мыслительный процесс как фонарик на темноту, концентрируя внимание на самом важном объекте. Средство позволяет по-новому проанализировать имеющуюся информацию, благодаря чему и получится найти ответ на волнующий вопрос.</p>
+                                                <p class="article-desk__swiper-slide-text text">Важно отметить, что достижение желаемой цели не всегда происходит во время церемонии. После занятия ум остается острым и незатуманенным в течение 1-2 дней, благодаря чему желаемая мысль может прийти в голову в абсолютно неожиданный момент. По этой причине важно прислушиваться к себе в течение двух суток после медитации. Иногда рапе может действовать на мыслительный процесс как фонарик на темноту, концентрируя внимание на самом важном объекте. Средство позволяет по-новому проанализировать имеющуюся информацию, благодаря чему и получится найти ответ на волнующий вопрос.</p>
+                                            </div>
+                                        </div>
+                                        <div class="article-desk__swiper-slide swiper-slide">
+                                            <div class="article-desk__swiper-slide-inner">
+                                                <p class="article-desk__swiper-slide-text text">После принятия рапе каждый участник начинает осознавать себя в мире, что помогает ощутить единение с природой. Такое чувство посещало и древних шаманов Амазонии, поэтому церемонию рапе также часто называли «Лестницей в небеса».</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-blog">
+                    <div class="container">
+                        <div class="article-blog__inner">
+                            <div class="article-blog__header-box">
+                                <p class="article-blog__header-title title-h2">Вам понравится</p>
+                            </div>
+                            <div class="article-blog__swiper-box">
+                                <div class="article-blog__swiper swiper">
+                                    <div class="article-blog__swiper-wrapper swiper-wrapper">
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article">
+                                            <div class="article-blog__swiper-slide-inner">
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/articles6.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+
+                                                <p class="article-blog__swiper-slide-title title-h3">Скручивания в йоге. Польза и противопоказания</p>
+                                            </div>
+                                        </div>
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article-reverse">
+                                            <div class="article-blog__swiper-slide-inner ">
+                                                <p class="article-blog__swiper-slide-title title-h3">Исцеление в сердце Амазонки: мудрость и практика Курандеро</p>
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/articles5.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Амазония </span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article-min">
+                                            <div class="article-blog__swiper-slide-inner article-blog__swiper-slide-inner--article-min">
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/article-img-block1.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+
+                                                <p class="article-blog__swiper-slide-title title-h3">Контакт души и тела. Вслушайтесь в него</p>
+                                            </div>
+                                        </div>
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article">
+                                            <div class="article-blog__swiper-slide-inner">
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/articles6.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+
+                                                <p class="article-blog__swiper-slide-title title-h3">Ритуал, дарующий силы и наполнение человеку</p>
+                                            </div>
+                                        </div>
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article-reverse">
+                                            <div class="article-blog__swiper-slide-inner ">
+                                                <p class="article-blog__swiper-slide-title title-h3">Исцеление в сердце Амазонки: мудрость и практика Курандеро</p>
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/articles5.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Амазония </span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="article-blog__swiper-slide swiper-slide article-blog__swiper-slide--article-min">
+                                            <div class="article-blog__swiper-slide-inner article-blog__swiper-slide-inner--article-min">
+                                                <div class="article-blog__swiper-slide-img-box">
+                                                    <img src="./assets/images/article-img-block1.webp" alt="" />
+                                                    <a href="#" class="article-blog__swiper-slide-img-box-link">
+                                                        <div class="article-blog__swiper-slide-img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+
+                                                    <p class="article-blog__swiper-slide-img-box-data text">21 октября 2023</p>
+                                                    <p class="article-blog__swiper-slide-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+
+                                                <p class="article-blog__swiper-slide-title title-h3">Контакт души и тела. Вслушайтесь в него</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="article-blog__swiper-button-prev swiper-button-prev button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    stroke="none"
+                                                    d="M23.74 12.4264H24.74V10.4264H23.74V12.4264ZM2.52682 10.4264C1.97454 10.4264 1.52682 10.8741 1.52682 11.4264C1.52682 11.9787 1.97454 12.4264 2.52682 12.4264L2.52682 10.4264ZM23.74 10.4264H2.52682L2.52682 12.4264H23.74V10.4264Z"
+                                                />
+                                                <path
+                                                    d="M10.3049 20.6188L1.11254 11.4264L10.3049 2.23399"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="article-blog__swiper-button-next swiper-button-next button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23" fill="none">
+                                                <path
+                                                    stroke="none"
+                                                    d="M1.11264 10.4264L0.112637 10.4264L0.112637 12.4264L1.11264 12.4264L1.11264 10.4264ZM22.3258 12.4264C22.8781 12.4264 23.3258 11.9787 23.3258 11.4264C23.3258 10.8741 22.8781 10.4264 22.3258 10.4264L22.3258 12.4264ZM1.11264 12.4264H22.3258L22.3258 10.4264H1.11264L1.11264 12.4264Z"
+                                                />
+                                                <path
+                                                    d="M14.5477 2.23402L23.7401 11.4264L14.5477 20.6188"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <include src="./components/footer.html"></include>
+
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind('[data-fancybox]', {
+                closeButton: true,
+                Thumbs: false,
+                Carousel: {
+                    center: true,
+                    Dots: {
+                        minCount: 2,
+                        classes: {
+                            list: 'f-carousel__dots',
+                            isDynamic: 'is-dynamic',
+                            hasDots: 'has-dots',
+                            dot: 'f-carousel__dot',
+                            isBeforePrev: 'is-before-prev',
+                            isPrev: 'is-prev',
+                            isCurrent: 'is-current',
+                            isNext: 'is-next',
+                            isAfterNext: 'is-after-next',
+                        },
+                        dotTpl: `<button type="button" data-carousel-page="%i" aria-label="{{GOTO}}"><span class="f-carousel__dot" aria-hidden="true"></span></button>`,
+                    },
+                    Navigation: {
+                        prevTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.377315 32.4077C0.377315 32.7519 0.656371 33.031 1.0006 33.031L33.4776 33.031C33.8219 33.031 34.1009 32.752 34.1009 32.4077C34.1009 32.0635 33.8219 31.7844 33.4776 31.7844L1.0006 31.7844C0.656371 31.7844 0.377315 32.0635 0.377315 32.4077Z" fill="#292929"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.559872 31.967C0.316463 32.2104 0.316463 32.605 0.559872 32.8484L14.9668 47.2554C15.2102 47.4988 15.6049 47.4988 15.8483 47.2554C16.0917 47.012 16.0917 46.6173 15.8483 46.3739L1.88207 32.4077L15.8483 18.4415C16.0917 18.1981 16.0917 17.8034 15.8483 17.56C15.6049 17.3166 15.2102 17.3166 14.9668 17.56L0.559872 31.967Z" fill="#292929"/>
+  </svg>`,
+                        nextTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.0992 32.4077C34.0992 32.0635 33.8202 31.7844 33.476 31.7844L0.998929 31.7844C0.654696 31.7844 0.375641 32.0635 0.37564 32.4077C0.375641 32.7519 0.654696 33.031 0.998929 33.031L33.476 33.031C33.8202 33.031 34.0992 32.7519 34.0992 32.4077Z" fill="#292929"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9167 32.8484C34.1601 32.605 34.1601 32.2104 33.9167 31.967L19.5097 17.56C19.2663 17.3166 18.8717 17.3166 18.6283 17.56C18.3849 17.8034 18.3849 18.1981 18.6283 18.4415L32.5945 32.4077L18.6283 46.3739C18.3849 46.6173 18.3849 47.012 18.6283 47.2554C18.8717 47.4988 19.2663 47.4988 19.5097 47.2554L33.9167 32.8484Z" fill="#292929"/>
+  </svg>`,
+                    },
+                },
+            });
+        </script>
     </body>
 </html>
