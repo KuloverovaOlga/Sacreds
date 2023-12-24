@@ -16,8 +16,9 @@ import productCardHeroSwiper from "./swiper/productCardHeroSwiper";
 
 import header from "./header";
 import form from "./form";
+import formModal from "./formModal";
 import questions from "./questions";
-import reviewsPageReviews from "./reviewsPageReviews";
+import paginationBlock from "./paginationBlock";
 import productCardMin from "./productCardMin";
 import heroMenuMob from "./heroMenusMob";
 import harmonyBtnShowMore from "./harmonyBtnShowMore";
@@ -71,12 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   try {
-    form('.sign-up__form');
-  } catch {}
-  try {
-    form('.record__form');
+    form();
   } catch {}
 
+  
 
 
   try {
@@ -86,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header();
   } catch {}
   try {
-    reviewsPageReviews();
+    paginationBlock('.review-wrapper__item', 6, '.review-content__pagination-wpapper');
   } catch {}
   try {
     reviewsPageSwiper();
@@ -117,6 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch {}
 
 });
+
+
+
 
 // document.querySelector('#review_modal').addEventListener('click', () => {
 //     document.querySelector('.modal.form-bill').classList.add("active")

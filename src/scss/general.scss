@@ -24,9 +24,66 @@ body {
     background-color: $white;
 }
 
+
+body {
+  // scroll is blocked
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+  // site is loaded
+  .loaded & {
+  }
+}
+
+
 main {
     flex-grow: 1;
 }
+
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 192rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @media (max-width: 48em) {
+    width: 100%;
+  }
+}
+
+
+// form  {
+
+//  & .input-group {
+//   position: relative;
+//   & input {
+//     transition: border 0.3s;
+//     border: 1px solid transparent;
+//   }
+// & .invalid {
+//  border: 1px solid #C22F2F;
+// }
+
+// & span {
+//   position: absolute;
+//   left: 0;
+//   bottom: -2rem;
+//   color: #C22F2F;
+//   visibility: hidden;
+//   opacity: 0;
+//   &.active {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }
+//  }
+  
+// }
+
 
 //text
 .title-h1 {
@@ -706,38 +763,68 @@ main {
 // --------------------------------------media------------------------------------
 
 @media (max-width: 48em) {
-    .title-h1 {
-        font-size: 5.6rem;
+
+
+  // form  {
+
+  //   & .input-group {
+  //    position: relative;
+  //    & input {
+  //      transition: border 0.3s;
+  //      border: 1px solid transparent;
+  //    }
+  //  & .invalid {
+  //   border: 1px solid #C22F2F;
+  //  }
+   
+  //  & span {
+  //    position: absolute;
+  //    left: 0;
+  //    bottom: -3rem;
+  //    color: #C22F2F;
+  //    visibility: hidden;
+  //    opacity: 0;
+  //    &.active {
+  //      visibility: visible;
+  //      opacity: 1;
+  //    }
+  //  }
+  //   }
+     
+  //  }
+
+  .title-h1 {
+    font-size: 5.6rem;
+  }
+  .title-h3 {
+    font-size: 4rem;
+  }
+  .title-h4 {
+    font-size: 3.6rem;
+  }
+  .title-h5 {
+    font-size: 3.2rem;
+  }
+  .text {
+    font-size: 2.8rem;
+  }
+  .subscription {
+    font-size: 2.4rem;
+  }
+  .logo {
+    font-size: 4rem;
+  }
+  .button {
+    font-size: 2.8rem;
+  }
+  .button-long-arr {
+    padding: 2.5rem 4rem 2.5rem 4.8rem;
+    border-radius: 6.4rem;
+    & div {
+      width: 8rem;
+      height: 1.6rem;
     }
-    .title-h3 {
-        font-size: 4rem;
-    }
-    .title-h4 {
-        font-size: 3.6rem;
-    }
-    .title-h5 {
-        font-size: 3.2rem;
-    }
-    .text {
-        font-size: 2.8rem;
-    }
-    .subscription {
-        font-size: 2.4rem;
-    }
-    .logo {
-        font-size: 4rem;
-    }
-    .button {
-        font-size: 2.8rem;
-    }
-    .button-long-arr {
-        padding: 2.5rem 4rem 2.5rem 4.8rem;
-        border-radius: 6.4rem;
-        & div {
-            width: 8rem;
-            height: 1.6rem;
-        }
-    }
+  }
 
     .button-circle {
         width: 10rem;

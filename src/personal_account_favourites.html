@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+        <title>Личный кабинет</title>
+    </head>
+    <body class="personal-account-page">
+        <include src="./components/header.html"></include>
+
+        <main class="main">
+            <include src="./components/popup.html"></include>
+            <section class="personal-account">
+                <div class="personal-account__container container">
+                    <div class="personal-account__heading">
+                        <div class="personal-account__tabs">
+                            <div class="tab personal-account__tab">
+                                <div class="content-icon">
+                                    <img src="./assets/images/icons/personalAccount1.svg" alt="" />
+                                </div>
+                                <p class="content-text text">Личные<br />данные</p>
+                            </div>
+                            <div class="tab personal-account__tab">
+                                <div class="content-icon">
+                                    <img src="./assets/images/icons/personalAccount2.svg" alt="" />
+                                </div>
+                                <p class="content-text text">Заказы</p>
+                            </div>
+                            <div class="tab personal-account__tab _active">
+                                <div class="content-icon">
+                                    <img src="./assets/images/icons/personalAccount3.svg" alt="" />
+                                </div>
+                                <p class="content-text text">Избранное</p>
+                            </div>
+                            <div class="tab personal-account__tab">
+                                <div class="content-icon">
+                                    <img src="./assets/images/icons/personalAccount4.svg" alt="" />
+                                </div>
+                                <p class="content-text text">Реферальная программа</p>
+                            </div>
+                            <div class="tab personal-account__tab">
+                                <div class="content-icon">
+                                    <img src="./assets/images/icons/personalAccount5.svg" alt="" />
+                                </div>
+                                <p class="content-text text">Бонусы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account__content">
+                        <div class="personal-account__tabs-contents">
+                            <div class="favourites tab-content personal-account__tab-content">
+                                <div class="favourites__list">
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                    <include src="./components/productCardsCoinDiscount.html"></include>
+                                </div>
+                                <div class="favourites__pagination">
+                                    <div class="content__pagination-wpapper">
+                                        <button class="content__pagination-btn-prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" fill="none" stroke="none">
+                                                <path
+                                                    d="M23.8136 13.0011L24.8136 13.0011L24.8136 11.0011L23.8136 11.0011L23.8136 13.0011ZM2.60043 11.0011C2.04815 11.0011 1.60043 11.4488 1.60043 12.0011C1.60043 12.5534 2.04814 13.0011 2.60043 13.0011L2.60043 11.0011ZM23.8136 11.0011H2.60043L2.60043 13.0011H23.8136L23.8136 11.0011Z"
+                                                    stroke="none"
+                                                />
+                                                <path
+                                                    d="M10.3789 21.1934L1.18652 12.001L10.3789 2.80859"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </button>
+                                        <div class="content__pagination"></div>
+                                        <button class="content__pagination-btn-next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" fill="none" stroke="none">
+                                                <path
+                                                    d="M1.18832 10.9989L0.188321 10.9989L0.18832 12.9989L1.18832 12.9989L1.18832 10.9989ZM22.4015 12.9989C22.9538 12.9989 23.4015 12.5512 23.4015 11.9989C23.4015 11.4466 22.9538 10.9989 22.4015 10.9989L22.4015 12.9989ZM1.18832 12.9989H22.4015L22.4015 10.9989H1.18832L1.18832 12.9989Z"
+                                                    stroke="none"
+                                                />
+                                                <path
+                                                    d="M14.623 2.80663L23.8154 11.999L14.623 21.1914"
+                                                    fill="none"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="similar-products">
+                                    <div class="container">
+                                        <div class="similar-products__inner">
+                                            <p class="similar-products__title title-h2">Похожие товары</p>
+
+                                            <div class="similar-products__swiper swiper product-card__swiper">
+                                                <div class="similar-products__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="similar-products__swiper-slide-swiper-slide swiper-slide">
+                                                        <include src="./components/productCardsCoinDiscount.html"></include>
+                                                    </div>
+                                                    <div class="similar-products__swiper-slide-swiper-slide swiper-slide">
+                                                        <include src="./components/productCardsCoin.html"></include>
+                                                    </div>
+                                                    <div class="similar-products__swiper-slide-swiper-slide swiper-slide">
+                                                        <include src="./components/productCards.html"></include>
+                                                    </div>
+                                                    <div class="similar-products__swiper-slide-swiper-slide swiper-slide">
+                                                        <include src="./components/productCardsDiscount.html"></include>
+                                                    </div>
+                                                    <div class="similar-products__swiper-slide-swiper-slide swiper-slide">
+                                                        <include src="./components/productCardsCoin.html"></include>
+                                                    </div>
+                                                </div>
+                                                <div class="similar-products__swiper-slide-swiper-button-prev swiper-button-prev button-swiper">
+                                                    <div class="button-swiper__svg-box">
+                                                        <svg viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                stroke="none"
+                                                                d="M23.74 12.4264H24.74V10.4264H23.74V12.4264ZM2.52682 10.4264C1.97454 10.4264 1.52682 10.8741 1.52682 11.4264C1.52682 11.9787 1.97454 12.4264 2.52682 12.4264L2.52682 10.4264ZM23.74 10.4264H2.52682L2.52682 12.4264H23.74V10.4264Z"
+                                                            />
+                                                            <path
+                                                                d="M10.3049 20.6188L1.11254 11.4264L10.3049 2.23399"
+                                                                fill="none"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="similar-products__swiper-slide-swiper-button-next swiper-button-next button-swiper">
+                                                    <div class="button-swiper__svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23" fill="none">
+                                                            <path
+                                                                stroke="none"
+                                                                d="M1.11264 10.4264L0.112637 10.4264L0.112637 12.4264L1.11264 12.4264L1.11264 10.4264ZM22.3258 12.4264C22.8781 12.4264 23.3258 11.9787 23.3258 11.4264C23.3258 10.8741 22.8781 10.4264 22.3258 10.4264L22.3258 12.4264ZM1.11264 12.4264H22.3258L22.3258 10.4264H1.11264L1.11264 12.4264Z"
+                                                            />
+                                                            <path
+                                                                d="M14.5477 2.23402L23.7401 11.4264L14.5477 20.6188"
+                                                                fill="none"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <include src="./components/footer.html"></include>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind('[data-fancybox]', {
+                closeButton: true,
+                Thumbs: false,
+                Carousel: {
+                    center: true,
+                    Dots: {
+                        minCount: 2,
+                        classes: {
+                            list: 'f-carousel__dots',
+                            isDynamic: 'is-dynamic',
+                            hasDots: 'has-dots',
+                            dot: 'f-carousel__dot',
+                            isBeforePrev: 'is-before-prev',
+                            isPrev: 'is-prev',
+                            isCurrent: 'is-current',
+                            isNext: 'is-next',
+                            isAfterNext: 'is-after-next',
+                        },
+                        dotTpl: `<button type="button" data-carousel-page="%i" aria-label="{{GOTO}}"><span class="f-carousel__dot" aria-hidden="true"></span></button>`,
+                    },
+                    Navigation: {
+                        prevTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.377315 32.4077C0.377315 32.7519 0.656371 33.031 1.0006 33.031L33.4776 33.031C33.8219 33.031 34.1009 32.752 34.1009 32.4077C34.1009 32.0635 33.8219 31.7844 33.4776 31.7844L1.0006 31.7844C0.656371 31.7844 0.377315 32.0635 0.377315 32.4077Z" fill="#292929"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.559872 31.967C0.316463 32.2104 0.316463 32.605 0.559872 32.8484L14.9668 47.2554C15.2102 47.4988 15.6049 47.4988 15.8483 47.2554C16.0917 47.012 16.0917 46.6173 15.8483 46.3739L1.88207 32.4077L15.8483 18.4415C16.0917 18.1981 16.0917 17.8034 15.8483 17.56C15.6049 17.3166 15.2102 17.3166 14.9668 17.56L0.559872 31.967Z" fill="#292929"/>
+  </svg>`,
+                        nextTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.0992 32.4077C34.0992 32.0635 33.8202 31.7844 33.476 31.7844L0.998929 31.7844C0.654696 31.7844 0.375641 32.0635 0.37564 32.4077C0.375641 32.7519 0.654696 33.031 0.998929 33.031L33.476 33.031C33.8202 33.031 34.0992 32.7519 34.0992 32.4077Z" fill="#292929"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9167 32.8484C34.1601 32.605 34.1601 32.2104 33.9167 31.967L19.5097 17.56C19.2663 17.3166 18.8717 17.3166 18.6283 17.56C18.3849 17.8034 18.3849 18.1981 18.6283 18.4415L32.5945 32.4077L18.6283 46.3739C18.3849 46.6173 18.3849 47.012 18.6283 47.2554C18.8717 47.4988 19.2663 47.4988 19.5097 47.2554L33.9167 32.8484Z" fill="#292929"/>
+  </svg>`,
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

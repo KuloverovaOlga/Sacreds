@@ -1,0 +1,21 @@
+.bottom-menu {
+    &__filter {
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 50%;
+        background-color: #fdfdfd;
+        box-shadow: 0 0 4rem 0 rgba(52, 52, 52, 0.15);
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 0.8rem);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+        & > svg {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+}

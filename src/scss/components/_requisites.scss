@@ -51,7 +51,7 @@
     &__list {
         display: flex;
         flex-direction: column;
-    gap: 4rem;
+        gap: 4rem;
     }
 
     // .requisites__item
@@ -63,15 +63,15 @@
         position: relative;
         gap: 4rem;
         &:not(:first-child) {
-&::before {
-    position: absolute;
-    content:"";
-    left: 0;
-    right: 0;
-    top: -2rem;
-    height: 2px;
-    background-color: $line;
-}
+        &::before {
+            position: absolute;
+            content:"";
+            left: 0;
+            right: 0;
+            top: -2rem;
+            height: 2px;
+            background-color: $line;
+        }
         }
     }
 

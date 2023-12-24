@@ -1,58 +1,797 @@
-body::after {
-  content: '';
-  position: fixed;
-  z-index: 149;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(27, 66, 85, 0.2);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.8s ease 0s;
+body::before {
+    content: '';
+    position: fixed;
+    z-index: 250;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $black;
+    pointer-events: none;
+    transition: opacity 0.8s ease 0s;
+    background: rgba(106, 106, 106, 0.2);
+    backdrop-filter: blur(1.9rem);
 }
-.popup-show body::after {
-  opacity: 1;
-}
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 3rem 1rem;
-  visibility: hidden;
-  pointer-events: none;
-  transition: visibility 0.8s ease 0s;
+.popup-show body::before {
+    opacity: 1;
 }
 .popup_show {
-  z-index: 150;
-  visibility: visible;
-  overflow: auto;
-  pointer-events: auto;
+    z-index: 300;
+    visibility: visible !important;
+    overflow: auto;
+    pointer-events: auto;
 }
 .popup_show .popup__content {
-  visibility: visible;
-  transform: scale(1);
-}
-.popup__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 1 auto;
-  min-height: 100%;
-  width: 100%;
-}
-.popup__content {
-  padding: 2rem;
-  width: 100%;
-  max-width: 900px;
-  border-radius: 2rem;
-  background-color: #eee;
-  visibility: hidden;
-  transform: scale(0);
-  transition: transform 0.3s ease 0s;
-  .lock & {
     visibility: visible;
-  }
+    transform: scale(1);
+}
+
+// --------------------------------------------------------------------------
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 3rem 2rem;
+    visibility: hidden;
+    // pointer-events: none;
+    transition: visibility 0.8s ease 0s;
+    ._loaded & {
+        display: block;
+    }
+
+    &--long {
+        @media (max-width: 48em) {
+            padding: 0;
+            & .popup__body {
+                width: 100vw;
+                height: 100vh;
+                padding: 22rem 2rem 2rem;
+            }
+            & .popup__content {
+                border-radius: 0;
+            }
+            & .popup__body-close-btn {
+                top: 4rem;
+                right: 2rem;
+            }
+        }
+    }
+
+    // .popup__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    // .popup__content
+
+    &__content {
+        width: 100%;
+        // max-width: 127.8rem;
+        max-width: fit-content;
+        background-color: $white;
+        border-radius: 4rem;
+        visibility: hidden;
+        transform: scale(0);
+        transition: transform 0.3s ease 0s;
+        position: relative;
+        .lock & {
+            visibility: visible;
+        }
+    }
+
+    // .popup__body
+
+    &__body {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @media (max-width: 48em) {
+            gap: 8rem;
+        }
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        @media (max-width: 48em) {
+            gap: 2.4rem;
+        }
+    }
+
+    // .popup__body-close-btn
+
+    &__body-close-btn {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        top: 1.2rem;
+        right: 1.2rem;
+        background-color: $green;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            object-fit: contain;
+            pointer-events: none;
+        }
+        @media (max-width: 48em) {
+            width: 10rem;
+            height: 10rem;
+            & svg {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+        &--short {
+            @media (max-width: 48em) {
+                top: -11.6rem;
+                right: 0;
+            }
+        }
+    }
+
+    // .popup__body-title
+
+    &__body-title {
+        @media (max-width: 48em) {
+            letter-spacing: 0.96px;
+        }
+    }
+
+    // .popup__body-form
+
+    &__body-form {
+    }
+
+    // .popup__body-btn
+
+    &__body-btn {
+        background-color: $orange;
+        color: $white;
+
+        width: 100%;
+        margin-top: 2.4rem;
+        padding: 1.3rem 2.4rem;
+        @media (max-width: 48em) {
+            // margin-top: 2.4rem;
+            padding: 2rem 4.8rem;
+        }
+
+        & div,
+        & span {
+            pointer-events: none;
+        }
+        & svg {
+            stroke: $white;
+        }
+    }
+
+    &__link {
+        color: $orange;
+        font-family: 'CeraPro';
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 0.72px;
+        text-decoration-line: underline;
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__body-btn-short-arr {
+        padding: 1.4rem 2.4rem;
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        background-color: $orange;
+        color: $white;
+        border-radius: 3.2rem;
+        align-self: flex-start;
+        transition: background-color 0.3s;
+        & div {
+            width: 2.4rem;
+            height: 2.4rem;
+            & svg {
+                fill: $white;
+                object-fit: contain;
+            }
+        }
+        &:hover {
+            background-color: $black;
+        }
+        @media (max-width: 48em) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__form-input {
+        width: 100%;
+        padding: 1.3rem 10rem 1.3rem 2.4rem;
+        border-radius: 3.2rem;
+        background-color: $light-grey;
+        color: $black;
+
+        &[type='password'] {
+            letter-spacing: 0.4rem;
+            &::placeholder {
+                letter-spacing: 0.72px;
+            }
+        }
+
+        &::placeholder {
+            color: $black-50;
+            @media (max-width: 48em) {
+                letter-spacing: 0.56px;
+            }
+        }
+
+        &--white {
+            background-color: $white;
+        }
+
+        @media (max-width: 48em) {
+            padding: 2.6rem 10rem 2.6rem 4rem;
+        }
+    }
+    &__input-checkbox {
+        display: none;
+    }
+    &__input-checkbox:checked + .popup__label-checkbox svg {
+        stroke: $orange;
+        stroke-opacity: 1;
+        fill: $orange;
+        & .svg-center {
+            opacity: 1;
+        }
+    }
+    &__label-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        cursor: pointer;
+    }
+
+    &__label-checkbox-svg-box {
+        width: 3.2rem;
+        height: 3.2rem;
+        flex-shrink: 0;
+        & svg {
+            stroke: $black;
+            stroke-opacity: 0.3;
+            fill: transparent;
+            transition: stroke 0.3s, stroke-opacity 0.3s, fill 0.3s;
+            & .svg-center {
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+        }
+
+        @media (max-width: 48em) {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    &__label-checkbox-text {
+        color: $black-50;
+    }
+
+    // .popup__label
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        color: $black-50;
+    }
+
+    // .popup__label-text
+
+    &__label-text {
+        display: block;
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    // ---------------------------------------sign-up---------------------------------------------------------
+
+    // .popup__sign-up-form
+
+    &__sign-up-form,
+    &__review-form {
+        position: relative;
+        width: 97rem;
+        padding: 8.9rem 3.2rem 3.2rem;
+        background-color: $light-grey;
+        border-radius: 0 2.4rem 2.4rem 2.4rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            padding: 13.4rem 4rem 4rem;
+        }
+    }
+
+    // .popup__sign-up-form-fields
+
+    &__sign-up-form-fields,
+    &__review-form-fields {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 4rem;
+        }
+    }
+
+    // .popup__sign-up-form-input-group
+
+    &__sign-up-form-input-group {
+    }
+
+    // .popup__sign-up-form-input
+
+    &__sign-up-form-input {
+    }
+
+    // .popup__sign-up-form-input--name
+
+    &__sign-up-form-input--name {
+    }
+
+    // .popup__sign-up-form-input--tel
+
+    &__sign-up-form-input--tel {
+    }
+
+    // .popup__sign-up-button-row
+
+    &__sign-up-button-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.8rem;
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+    }
+
+    // .popup__sign-up-form-checkbox
+
+    &__sign-up-label-checkbox-text {
+        width: 35rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // .popup__sign-up-form-btn
+
+    &__sign-up-form-btn {
+    }
+
+    &__sign-up-form-text,
+    &__review-form-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        border-radius: 0 0 2.4rem 0;
+        padding: 1.6rem 1rem 2rem 0.7rem;
+        width: 15rem;
+        color: $black-50;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 5rem 0 0 0;
+            box-shadow: -1rem -1rem 0 0.5rem $white;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 5rem 0 0 0;
+            box-shadow: -1rem -1rem 0 0.5rem $white;
+        }
+
+        @media (max-width: 48em) {
+            width: 22rem;
+        }
+    }
+
+    // ---------------------------------------success----------------------------
+
+    // .popup__success
+
+    &__success {
+    }
+
+    // .popup__body--success
+
+    &__body--success {
+        padding: 6rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        @media (max-width: 48em) {
+            padding: 8rem 3rem;
+        }
+        &-review {
+            @media (max-width: 48em) {
+                padding: 8rem 4rem;
+            }
+        }
+    }
+
+    // .popup__body--success-title
+
+    &__body--success-title {
+        width: 61.9rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+    &__body--success-title-review {
+        width: 56.7rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // .popup__body--success-btn
+
+    &__body--success-btn {
+    }
+
+    // ---------------------------------------password-recovery-end----------------------------
+
+    // .popup__password-recovery-end
+
+    &__password-recovery-end {
+    }
+
+    // .popup__body-password-recovery-end
+
+    &__body-password-recovery-end {
+        padding: 4rem 10.8rem 8rem 4rem;
+        gap: 3.2rem;
+    }
+
+    // .popup__body-close-btn
+
+    &__body-close-btn {
+    }
+
+    // .popup__body-title
+
+    &__body-title {
+    }
+
+    // .popup__body-desk
+
+    &__body-desk--password-recovery-end {
+        width: 70.2rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // ---------------------------------letter-does-not-arriv---------------------
+
+    // .popup__letter-does-not-arrive
+
+    &__letter-does-not-arriv {
+    }
+
+    // .popup__body-letter-does-not-arrivepopup
+
+    &__body-letter-does-not-arrive {
+        padding: 4rem 13.5rem 4rem 4rem;
+        gap: 3.2rem;
+
+        @media (max-width: 48em) {
+            gap: 3.2rem;
+            padding: 0;
+        }
+    }
+
+    // .popup__letter-does-not-arrive title
+
+    &__letter-does-not-arrive-title {
+    }
+
+    // .popup__letter-does-not-arrive-list
+
+    &__letter-does-not-arrive-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        margin-bottom: 2.4rem;
+        width: 54.7rem;
+        padding-left: 3rem;
+        margin-top: 0;
+        @media (max-width: 48em) {
+            width: 100%;
+            margin-bottom: 3.2rem;
+            padding-left: 5rem;
+        }
+    }
+
+    // .popup__letter-does-not-arrive-item
+
+    &__letter-does-not-arrive-item {
+    }
+
+    // .popup__letter-does-not-arrive-item-title
+
+    &__letter-does-not-arrive-item-title {
+    }
+
+    // .popup__letter-does-not-arrive-item-desk
+
+    &__letter-does-not-arrive-item-desk {
+        color: $black-50;
+    }
+
+    // .popup__link
+
+    &__link {
+    }
+
+    // .popup__body-desk
+
+    &__body-letter-does-not-arrive-desk {
+        width: 54.7rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // --------------------------------------entrys-personal-area--------------
+
+    // .popup__entrys-personal-area
+
+    &__entrys-personal-area {
+        & .popup__form-input {
+            width: 77rem;
+
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+        }
+    }
+
+    // .popup__body-btn
+
+    &__body-btn-personal-area-button {
+    }
+
+    // .popup__entrys-personal-area-button-box
+
+    &__entrys-personal-area-button-box {
+        display: flex;
+        flex-direction: column;
+        gap: 4.4rem;
+        margin-top: 3.6rem;
+        @media (max-width: 48em) {
+            margin-top: 4.8rem;
+            gap: 8rem;
+        }
+    }
+
+    // .popup__entrys-personal-area-button-row
+
+    &__entrys-personal-area-button-row {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        justify-content: center;
+    }
+
+    // .popup__entrys-personal-area-button-social-wrapper
+
+    &__entrys-personal-area-button-social-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        justify-content: center;
+        @media (max-width: 48em) {
+            gap: 4rem;
+        }
+    }
+
+    // .popup__entrys-personal-area-button-social-title
+
+    &__entrys-personal-area-button-social-title {
+        align-self: center;
+        position: relative;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 6rem;
+            height: 1px;
+            background-color: $black-50;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before {
+            left: -9.2rem;
+        }
+
+        &::after {
+            right: -9.2rem;
+        }
+    }
+
+    // .popup__entrys-personal-area-button-social-btn-box
+
+    &__entrys-personal-area-button-social-btn-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    // .popup__entrys-personal-area-button-social-btn
+
+    &__entrys-personal-area-button-social-btn {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background-color: $light-grey;
+        border-radius: 3.2rem;
+        padding: 1.5rem 2.4rem;
+        @media (max-width: 48em) {
+            border-radius: 6.4rem;
+        }
+    }
+
+    // .popup__entrys-personal-area-button-social-btn-svg-box
+
+    &__entrys-personal-area-button-social-btn-svg-box {
+        width: 2.4rem;
+        height: 2.4rem;
+        & svg {
+            object-fit: contain;
+        }
+        @media (max-width: 48em) {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    // .popup__entrys-personal-area-button-social-btn-text
+
+    &__entrys-personal-area-button-social-btn-text {
+        font-weight: 500;
+    }
+
+    // ---------------------------------------------popup__password-recovery
+
+    &__password-recovery {
+        & .popup__form-input {
+            width: 77rem;
+
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+        }
+    }
+    // ---------------------------------------------popup__registration
+
+    &__registration {
+        & .popup__form-input {
+            width: 77rem;
+
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+        }
+    }
+
+    // ---------------------------------------------popup__registration-enter-code
+
+    &__registration-enter-code {
+        & .popup__fields {
+            width: 63rem;
+
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+        }
+        & .popup__body-form-text {
+            width: 55rem;
+        }
+        & .popup__fields-num {
+            width: 5.2rem;
+            height: 5.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.2rem;
+            padding: 0;
+            text-align: center;
+        }
+        & .popup__input-group {
+            width: 5.2rem;
+            height: 5.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & .popup__link {
+            align-self: center;
+        }
+
+        & .popup__input-group-num-box {
+            display: flex;
+            gap: 0.8rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3.2rem;
+        }
+    }
+
+    // ---------------------------------------delete-account----------------------------
+    &__delete-account {
+        &-body {
+            padding: 6rem;
+            align-items: center;
+            @media (max-width: 48em) {
+                padding: 8rem 4rem;
+                gap: 4.8rem;
+            }
+        }
+        &-text {
+            text-align: center;
+            @media (max-width: 48em) {
+                margin-bottom: 3.2rem;
+            }
+        }
+        &-btn {
+            width: fit-content;
+        }
+    }
+    // ---------------------------------------leave-account----------------------------
+    &__leave-account {
+        &-text {
+            max-width: 61rem;
+            text-align: center;
+            @media (max-width: 48em) {
+                max-width: 100%;
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
 }

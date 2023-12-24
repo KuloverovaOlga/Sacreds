@@ -25,7 +25,8 @@
                                     <div class="hero__swiper-header-box">
                                         <div class="hero__swiper-content-btn-box">
                                             <p class="hero__swiper-content-count">01</p>
-                                            <button data-popup=".popup" class="hero__swiper-content-btn">
+                                            <button 
+                                            data-popup="#popup__sign-up" class="hero__swiper-content-btn">
                                                 <span class="hero__swiper-content-btn-text button">Получить консультацию</span>
                                                 <div class="hero__swiper-content-btn-svg-box">
                                                     <svg viewBox="0 0 24 25" fill="none">
@@ -74,7 +75,7 @@
                                     <div class="hero__swiper-header-box">
                                         <div class="hero__swiper-content-btn-box">
                                             <p class="hero__swiper-content-count">02</p>
-                                            <a href="#" class="hero__swiper-content-btn">
+                                            <a href="#" cаlass="hero__swiper-content-btn">
                                                 <span class="hero__swiper-content-btn-text button">Получить консультацию</span>
                                                 <div class="hero__swiper-content-btn-svg-box">
                                                     <svg viewBox="0 0 24 25" fill="none">
@@ -1100,9 +1101,19 @@
                         </div>
                         <div class="sign-up__content-wrapper">
                             <p class="sign-up__title title-h2">Запишитесь <br />на бесплатную консультацию к нашему психологу</p>
-                            <form class="sign-up__form">
-                                <input class="sign-up__input input--name text" type="text" placeholder="Введите имя" required />
-                                <input class="sign-up__input input--tel text" type="tel" placeholder="+7(900) 000-00-00" required />
+                            <form data-popup-message="#popup__success" action="#" data-dev class="sign-up__form form">
+                                <div class="sign-up_input-group input-group">
+                                    <input class="sign-up__input input--name text" type="text" placeholder="Введите имя" pattern="\D+"/>
+                                    <span class="error-span subscription"></span>
+                                  </div>
+                                  <div class="sign-up_input-group input-group" >
+                                    <input
+                                    class="sign-up__input input--tel text"
+                                    type="tel"
+                                    placeholder="+7(900) 000-00-00" pattern="[0-9]+"/>
+                                    
+                                    <span class="error-span subscription"></span>
+                                  </div>                           
                                 <button class="sign-up__btn button-long-arr" type="submit">
                                     <span class="sign-up__btn-text button">Записаться</span>
                                     <div class="sign-up__btn-svg-box">

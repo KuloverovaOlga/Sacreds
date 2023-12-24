@@ -22,9 +22,16 @@ const entryPoints = {
     detailed_article: path.resolve(__dirname, 'src', 'index.js'),
     contacts: path.resolve(__dirname, 'src', 'index.js'),
     personal_account: path.resolve(__dirname, 'src', 'index.js'),
+    personal_account_orders: path.resolve(__dirname, 'src', 'index.js'),
+    personal_account_favourites: path.resolve(__dirname, 'src', 'index.js'),
+    personal_account_referral: path.resolve(__dirname, 'src', 'index.js'),
+    personal_account_bonuses: path.resolve(__dirname, 'src', 'index.js'),
+    personal_account_empty: path.resolve(__dirname, 'src', 'index.js'),
     catalog: path.resolve(__dirname, 'src', 'index.js'),
     favourites: path.resolve(__dirname, 'src', 'index.js'),
-    personal_account_registration: path.resolve(__dirname, 'src', 'index.js'),
+    favourites_empty: path.resolve(__dirname, 'src', 'index.js'),
+    order_detail: path.resolve(__dirname, 'src', 'index.js'),
+    cart: path.resolve(__dirname, 'src', 'index.js'),
 };
 
 // Создаем экземпляры HtmlWebpackPlugin для каждой страницы

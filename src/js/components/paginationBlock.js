@@ -1,13 +1,12 @@
-const reviewsPageReviews = () => {
-    
+const paginationBlock = (item, count, paginationWrap) => {
 
-
-    const itemsPerPage = 6;
-    const items = document.querySelectorAll('.review-wrapper__item');
+    const itemsPerPage = count;
+    const items = document.querySelectorAll(item);
     const totalPages = Math.ceil(items.length / itemsPerPage);
-    const paginationContainer = document.querySelector('.review-content__pagination');
-    const prevButton = document.querySelector('.review-content__pagination-btn-prev');
-    const nextButton = document.querySelector('.review-content__pagination-btn-next');
+    const paginationWrapper = document.querySelector(paginationWrap);
+    const paginationContainer = paginationWrapper.querySelector('.content__pagination');
+    const prevButton = paginationWrapper.querySelector('.content__pagination-btn-prev');
+    const nextButton = paginationWrapper.querySelector('.content__pagination-btn-next');
     let currentPage = 1;
     
     function showPage(page) {
@@ -84,4 +83,4 @@ const reviewsPageReviews = () => {
     showPage(1);
 }
 
-export default reviewsPageReviews
+export default paginationBlock
