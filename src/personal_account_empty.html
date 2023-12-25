@@ -16,7 +16,7 @@
                 <div class="personal-account__container container">
                     <div class="personal-account__heading">
                         <div class="personal-account__tabs">
-                            <div class="tab personal-account__tab _active" data-tab="tab-1">
+                            <div class="tab personal-account__tab _active">
                                 <div class="content-icon">
                                     <img src="./assets/images/icons/personalAccount1.svg" alt="" />
                                 </div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="personal-account__content">
                         <div class="personal-account__tabs-contents">
-                            <div class="account tab-content personal-account__tab-content" data-content="tab-1">
+                            <div class="account tab-content personal-account__tab-content">
                                 <div class="account__table personal-account__table">
                                     <div class="account__table-user">
                                         <div class="account__table-user-data">
@@ -74,38 +74,78 @@
                                     <form class="account__table-data _form">
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Фамилия</p>
-                                            <div class="account__table-field-input _necessarily">
-                                                <input type="text" autocomplete="off" class="text" />
-                                            </div>
+                                            <label for="" class="account__table-field-label">
+                                                <input
+                                                    class="input__field text input--name account__table-field-input"
+                                                    type="text"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </label>
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Имя</p>
-                                            <div class="account__table-field-input _necessarily">
-                                                <input type="text" autocomplete="off" class="text" />
-                                            </div>
+                                            <label for="" class="account__table-field-label">
+                                                <input
+                                                    class="input__field text input--name account__table-field-input"
+                                                    type="text"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </label>
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Отчество</p>
-                                            <div class="account__table-field-input _necessarily">
-                                                <input type="text" autocomplete="off" class="text" />
-                                            </div>
+                                            <label for="" class="account__table-field-label">
+                                                <input
+                                                    class="input__field text input--name account__table-field-input"
+                                                    type="text"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </label>
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Дата рождения</p>
-                                            <div class="account__table-field-input _necessarily">
-                                                <input type="text" autocomplete="off" class="text" />
-                                            </div>
+                                            <label for="" class="account__table-field-label _date">
+                                                <input
+                                                    class="input__field input--tel text account__table-field-input"
+                                                    type="date"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required="date"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </label>
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Номер телефона</p>
-                                            <div class="account__table-field-input _necessarily">
-                                                <input type="tel" autocomplete="off" class="text" />
-                                            </div>
+                                            <label for="" class="account__table-field-label">
+                                                <input
+                                                    class="input__field input--tel text account__table-field-input"
+                                                    type="tel"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required="tel"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </label>
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">E-mail</p>
                                             <div class="account__table-field-input _necessarily">
-                                                <input type="email" autocomplete="off" class="text" />
+                                                <input readonly type="email" autocomplete="off" class="text" />
                                             </div>
                                         </div>
                                     </form>
@@ -154,7 +194,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="orders tab-content personal-account__tab-content" data-content="tab-2">
+                            <!-- <div class="orders tab-content personal-account__tab-content" data-content="tab-2">
                                 <div class="personal-account__table">
                                     <div class="range__swiper-box">
                                         <div class="range__swiper-nav-menu">
@@ -167,7 +207,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- Swiper -->
+                                       
                                         <div class="range__swiper swiper orders-card__swiper">
                                             <div class="range__swiper-wrapper swiper-wrapper">
                                                 <div class="range__swiper-slide swiper-slide">
@@ -459,7 +499,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

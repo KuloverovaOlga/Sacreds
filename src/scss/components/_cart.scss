@@ -192,6 +192,14 @@
             }
         }
     }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        @media (max-width: 48em) {
+            gap: 1.6rem;
+        }
+    }
     &__element {
         padding: 4rem;
         background-color: #f6f6f6;

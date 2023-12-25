@@ -3,17 +3,15 @@ const cartAccordion = () => {
 
     accordionItemHeaders.forEach((accordionItemHeader) => {
         accordionItemHeader.addEventListener('click', () => {
-            const currentlyActiveAccordionItemHeader = document.querySelector('.cart__other-accordion-heading.active');
-            if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
-                currentlyActiveAccordionItemHeader.classList.toggle('active');
-                currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-            }
-            accordionItemHeader.classList.toggle('active');
+            const isActive = accordionItemHeader.classList.contains('active');
             const accordionItemBody = accordionItemHeader.nextElementSibling;
-            if (accordionItemHeader.classList.contains('active')) {
+
+            if (!isActive) {
+                accordionItemHeader.classList.add('active');
                 accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
                 accordionItemBody.style.marginTop = '2.4rem';
             } else {
+                accordionItemHeader.classList.remove('active');
                 accordionItemBody.style.maxHeight = 0;
                 accordionItemBody.style.marginTop = '0';
             }

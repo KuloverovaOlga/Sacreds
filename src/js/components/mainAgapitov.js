@@ -3,6 +3,7 @@ import catalog from './catalog';
 import catalogFilter from './catalogFilter';
 import cartHeader from './cartHeader';
 import cartAccordion from './cartAccordion';
+import cartCheckboxes from './cartCheckboxes';
 import makingOrderAccordion from './makingOrderAccordion';
 import makingOrderDelivery from './makingOrderDelivery';
 import makingOrderTabs from './makingOrderTabs';
@@ -34,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         cartAccordion();
+    } catch {}
+    try {
+        cartCheckboxes();
     } catch {}
     try {
         makingOrderAccordion();
