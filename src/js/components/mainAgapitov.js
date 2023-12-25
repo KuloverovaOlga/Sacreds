@@ -3,6 +3,9 @@ import catalog from './catalog';
 import catalogFilter from './catalogFilter';
 import cartHeader from './cartHeader';
 import cartAccordion from './cartAccordion';
+import makingOrderAccordion from './makingOrderAccordion';
+import makingOrderDelivery from './makingOrderDelivery';
+import makingOrderTabs from './makingOrderTabs';
 import notification from './notification';
 
 import cartSwiper from './swiper/cartSwiper';
@@ -31,5 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         cartAccordion();
+    } catch {}
+    try {
+        makingOrderAccordion();
+    } catch {}
+    try {
+        makingOrderDelivery();
+    } catch {}
+    try {
+        makingOrderTabs();
     } catch {}
 });

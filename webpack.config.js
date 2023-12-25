@@ -32,6 +32,20 @@ const entryPoints = {
     favourites_empty: path.resolve(__dirname, 'src', 'index.js'),
     order_detail: path.resolve(__dirname, 'src', 'index.js'),
     cart: path.resolve(__dirname, 'src', 'index.js'),
+    making_order: path.resolve(__dirname, 'src', 'index.js'),
+    making_order_other: path.resolve(__dirname, 'src', 'index.js'),
+    making_order_dostavista: path.resolve(__dirname, 'src', 'index.js'),
+    making_order_yandex: path.resolve(__dirname, 'src', 'index.js'),
+    index: path.resolve(__dirname, 'src', 'index.js'),
+    main: path.resolve(__dirname, 'src', 'index.js'),
+    404: path.resolve(__dirname, 'src', 'index.js'),
+    reviews: path.resolve(__dirname, 'src', 'index.js'),
+    delivery: path.resolve(__dirname, 'src', 'index.js'),
+    card_product: path.resolve(__dirname, 'src', 'index.js'),
+    about: path.resolve(__dirname, 'src', 'index.js'),
+    detailed_article: path.resolve(__dirname, 'src', 'index.js'),
+    contacts: path.resolve(__dirname, 'src', 'index.js'),
+    articles: path.resolve(__dirname, 'src', 'index.js'),
 };
 
 // Создаем экземпляры HtmlWebpackPlugin для каждой страницы

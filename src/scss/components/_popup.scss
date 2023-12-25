@@ -39,6 +39,7 @@ body::before {
     visibility: hidden;
     // pointer-events: none;
     transition: visibility 0.8s ease 0s;
+
     ._loaded & {
         display: block;
     }
@@ -71,6 +72,9 @@ body::before {
         flex: 1 1 auto;
         min-height: 100%;
         width: 100%;
+        // @media (max-width: 48em) {
+        //     overflow-y: scroll;
+        // }
     }
 
     // .popup__content
@@ -85,6 +89,7 @@ body::before {
         transform: scale(0);
         transition: transform 0.3s ease 0s;
         position: relative;
+
         .lock & {
             visibility: visible;
         }
@@ -110,6 +115,14 @@ body::before {
             gap: 2.4rem;
         }
     }
+
+    // ._form-error .popup__label--star,
+    // ._form-error.popup__label--star {
+    //     &:after {
+    //         opacity: 1;
+    //         visibility: visible;
+    //     }
+    // }
 
     // .popup__body-close-btn
 
@@ -164,13 +177,17 @@ body::before {
     &__body-btn {
         background-color: $orange;
         color: $white;
-
+        transition: background-color 0.3s;
         width: 100%;
         margin-top: 2.4rem;
         padding: 1.3rem 2.4rem;
         @media (max-width: 48em) {
             // margin-top: 2.4rem;
             padding: 2rem 4.8rem;
+        }
+
+        &[disabled] {
+            background-color: #d5d5d5;
         }
 
         & div,
@@ -254,7 +271,9 @@ body::before {
         }
     }
     &__input-checkbox {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
     }
     &__input-checkbox:checked + .popup__label-checkbox svg {
         stroke: $orange;
@@ -269,6 +288,7 @@ body::before {
         align-items: center;
         gap: 1.6rem;
         cursor: pointer;
+        position: relative;
     }
 
     &__label-checkbox-svg-box {
@@ -303,6 +323,38 @@ body::before {
         flex-direction: column;
         gap: 0.4rem;
         color: $black-50;
+        &--star {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 1rem;
+                height: 1rem;
+                color: $orange;
+                right: 2.4rem;
+                bottom: 2.25rem;
+                font-size: 1.4rem;
+                background-image: url(./assets/images/icons/star.svg);
+                // opacity: 0;
+                // visibility: hidden;
+            }
+            @media (max-width: 48em) {
+                &:after {
+                    right: 4rem;
+                    bottom: 3.6rem;
+                }
+            }
+        }
+        &--star--textarea {
+            &:after {
+                top: 2.25rem;
+            }
+            @media (max-width: 48em) {
+                &:after {
+                    top: 3.6rem;
+                }
+            }
+        }
     }
 
     // .popup__label-text
@@ -337,10 +389,10 @@ body::before {
     &__review-form-fields {
         display: flex;
         flex-direction: column;
-        row-gap: 2rem;
+        row-gap: 3rem;
 
         @media (max-width: 48em) {
-            row-gap: 4rem;
+            row-gap: 3rem;
         }
     }
 
@@ -366,7 +418,8 @@ body::before {
 
     // .popup__sign-up-button-row
 
-    &__sign-up-button-row {
+    &__sign-up-button-row,
+    &__review-button-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -379,7 +432,8 @@ body::before {
 
     // .popup__sign-up-form-checkbox
 
-    &__sign-up-label-checkbox-text {
+    &__sign-up-label-checkbox-text,
+    &__review-label-checkbox-text {
         width: 35rem;
         @media (max-width: 48em) {
             width: 100%;
@@ -388,7 +442,13 @@ body::before {
 
     // .popup__sign-up-form-btn
 
-    &__sign-up-form-btn {
+    &__sign-up-form-btn,
+    &__review-form-btn {
+        width: fit-content;
+        @media (max-width: 48em) {
+            width: 100%;
+            margin-top: 0;
+        }
     }
 
     &__sign-up-form-text,
@@ -426,7 +486,24 @@ body::before {
             width: 22rem;
         }
     }
-
+    &__review-form-textarea {
+        width: 100%;
+        padding: 1.3rem 10rem 1.3rem 2.4rem;
+        border-radius: 3.2rem;
+        resize: none;
+        background-color: $white;
+        color: $black;
+        height: 17.5rem;
+        &::placeholder {
+            color: $black-50;
+            @media (max-width: 48em) {
+                letter-spacing: 0.56px;
+            }
+        }
+        @media (max-width: 48em) {
+            height: 22rem;
+        }
+    }
     // ---------------------------------------success----------------------------
 
     // .popup__success
@@ -740,6 +817,11 @@ body::before {
             border-radius: 1.2rem;
             padding: 0;
             text-align: center;
+            @media (max-width: 48em) {
+                width: 8.8rem;
+                height: 8.8rem;
+                border-radius: 1.6rem;
+            }
         }
         & .popup__input-group {
             width: 5.2rem;
@@ -747,10 +829,29 @@ body::before {
             display: flex;
             align-items: center;
             justify-content: center;
+            @media (max-width: 48em) {
+                width: 8.8rem;
+                height: 8.8rem;
+            }
         }
 
         & .popup__link {
             align-self: center;
+        }
+        & .popup__body-btn__text-timer {
+            @media (max-width: 48em) {
+                display: none;
+            }
+        }
+        & .popup__body-btn {
+            &[disabled] {
+                & .popup__body-btn__text-timer-wrapper {
+                    display: inline-block;
+                }
+            }
+        }
+        & .popup__body-btn__text-timer-wrapper {
+            display: none;
         }
 
         & .popup__input-group-num-box {
@@ -760,37 +861,74 @@ body::before {
             align-items: center;
             justify-content: center;
             margin-top: 3.2rem;
+            @media (max-width: 48em) {
+                margin-top: 8rem;
+            }
         }
     }
+    // ---------------------------------------------popup__entrys
+    &__body-entrys {
+        @media (min-width: 48em) {
+            & .popup__body-title {
+                margin-top: 1rem;
+            }
+        }
 
-    // ---------------------------------------delete-account----------------------------
-    &__delete-account {
-        &-body {
-            padding: 6rem;
-            align-items: center;
-            @media (max-width: 48em) {
-                padding: 8rem 4rem;
-                gap: 4.8rem;
-            }
-        }
-        &-text {
-            text-align: center;
-            @media (max-width: 48em) {
-                margin-bottom: 3.2rem;
-            }
-        }
-        &-btn {
-            width: fit-content;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 3.2rem;
+        & .popup__body-btn {
+            margin-top: 4.8rem;
+            text-align: left;
+            white-space: nowrap;
+            gap: 0;
+            justify-content: space-between;
+            padding: 2rem 3rem;
         }
     }
-    // ---------------------------------------leave-account----------------------------
+}
+
+.popup {
+    &__delete-account {
+        .popup {
+            &__body {
+                padding: 6rem;
+                align-items: center;
+                text-align: center;
+                @media (max-width: 48em) {
+                    padding: 8rem 6rem;
+                }
+                &-btn {
+                    width: fit-content;
+                    @media (max-width: 48em) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
     &__leave-account {
-        &-text {
-            max-width: 61rem;
-            text-align: center;
-            @media (max-width: 48em) {
-                max-width: 100%;
-                margin-bottom: 3.2rem;
+        .popup {
+            &__body {
+                padding: 6rem;
+                align-items: center;
+                text-align: center;
+                @media (max-width: 48em) {
+                    padding: 8rem 6rem;
+                }
+                &-text {
+                    width: 61rem;
+                    @media (max-width: 48em) {
+                        width: 100%;
+                    }
+                }
+                &-btn {
+                    width: fit-content;
+                    @media (max-width: 48em) {
+                        width: 100%;
+                    }
+                }
             }
         }
     }

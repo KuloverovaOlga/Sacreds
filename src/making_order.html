@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Оформление заказа</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main class="main">
+                <include src="./components/bottom-menu.html"></include>
+                <include src="./components/popup.html"></include>
+
+                <section class="making-order">
+                    <div class="container">
+                        <p class="making-order__title title-h1">Оформление заказа</p>
+                        <div class="making-order__content">
+                            <div class="making-order__content-left">
+                                <div class="making-order__accordion">
+                                    <div class="making-order__accordion-element">
+                                        <div class="making-order__accordion-heading">
+                                            <div class="making-order__accordion-number">
+                                                <p class="title-h4">1</p>
+                                            </div>
+                                            <p class="making-order__accordion-title title-h4">Получатель</p>
+                                            <div class="making-order__accordion-swapper">
+                                                <img src="./assets/images/icons/makingOrder3.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="making-order__accordion-content">
+                                            <div class="making-order__menu range__swiper-box">
+                                                <div class="range__swiper-nav-menu">
+                                                    <div class="range__swiper-nav-item title-h4 isActive">себе</div>
+                                                    <div class="range__swiper-nav-item title-h4">другому человеку</div>
+                                                    <div class="range__swiper-scrollbar">
+                                                        <div class="range__swiper-scrollbar-drag"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="range__swiper swiper making-order__swiper">
+                                                    <div class="range__swiper-wrapper swiper-wrapper">
+                                                        <div class="range__swiper-slide swiper-slide"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="making-order__form">
+                                                <div class="making-order__form-box">
+                                                    <p class="making-order__form-title text">Данные получателя</p>
+                                                    <div class="making-order__form-inputs">
+                                                        <label for="" class="making-order__form-label">
+                                                            <input
+                                                                class="input__field text input--name making-order__form-input"
+                                                                type="text"
+                                                                placeholder="Фамилия"
+                                                                data-validate
+                                                                data-required
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                        </label>
+                                                        <label for="" class="making-order__form-label">
+                                                            <input
+                                                                class="input__field text input--name making-order__form-input"
+                                                                type="text"
+                                                                placeholder="Имя"
+                                                                data-validate
+                                                                data-required
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="making-order__form-box">
+                                                    <p class="making-order__form-title text">Контакты</p>
+                                                    <div class="making-order__form-inputs">
+                                                        <label for="" class="making-order__form-label">
+                                                            <input
+                                                                class="input__field text input--mail making-order__form-input"
+                                                                type="text"
+                                                                placeholder="E-mail"
+                                                                data-validate
+                                                                data-required="email"
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                        </label>
+                                                        <label for="" class="making-order__form-label">
+                                                            <input
+                                                                class="input__field input--tel text making-order__form-input"
+                                                                type="tel"
+                                                                placeholder="Телефон"
+                                                                data-validate
+                                                                data-required="tel"
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="making-order__form-box">
+                                                    <p class="making-order__form-title text">Примечание к заказу</p>
+                                                    <textarea
+                                                        class="input__field input--textarea text making-order__form-textarea"
+                                                        placeholder="Ваш комментарий..."
+                                                        data-validate
+                                                        data-required="text"
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="making-order__accordion-element">
+                                        <div class="making-order__accordion-heading">
+                                            <div class="making-order__accordion-number">
+                                                <p class="title-h4">2</p>
+                                            </div>
+                                            <p class="making-order__accordion-title title-h4">Доставка</p>
+                                            <div class="making-order__accordion-swapper">
+                                                <img src="./assets/images/icons/makingOrder3.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="making-order__accordion-content _delivery">
+                                            <div class="making-order__delivery-types">
+                                                <div class="making-order__delivery-types-element _active">
+                                                    <p class="making-order__delivery-types-title text">Самовывоз (Москва)</p>
+                                                    <p class="making-order__delivery-types-price subscription">Бесплатно</p>
+                                                </div>
+                                                <div class="making-order__delivery-types-element">
+                                                    <p class="making-order__delivery-types-title text">Доставка Достависта</p>
+                                                    <p class="making-order__delivery-types-price subscription">от 490₽</p>
+                                                </div>
+                                                <div class="making-order__delivery-types-element">
+                                                    <p class="making-order__delivery-types-title text">Доставка Яндекс Такси</p>
+                                                    <p class="making-order__delivery-types-price subscription">от 490₽</p>
+                                                </div>
+                                                <div class="making-order__delivery-types-element">
+                                                    <p class="making-order__delivery-types-title text">Доставка почтой России</p>
+                                                    <p class="making-order__delivery-types-price subscription">290₽</p>
+                                                </div>
+                                                <div class="making-order__delivery-types-element">
+                                                    <p class="making-order__delivery-types-title text">Яндекс Маркет (постамат)</p>
+                                                    <p class="making-order__delivery-types-price subscription">290₽</p>
+                                                </div>
+                                                <div class="making-order__delivery-types-element">
+                                                    <p class="making-order__delivery-types-title text">Доставка в другие страны</p>
+                                                    <p class="making-order__delivery-types-price subscription">от 490₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="making-order__delivery-content">
+                                                <p class="making-order__delivery-first-text text">Адрес магазина:</p>
+                                                <div class="making-order__delivery-first-address">
+                                                    <p class="title-h5">Москва, улица Ленская 10к1</p>
+                                                    <p class="making-order__delivery-first-time text">(10:00 - 18:00)</p>
+                                                </div>
+                                                <div class="making-order__delivery-first-result">
+                                                    <p class="text">Стоимость доставки:</p>
+                                                    <p class="title-h4">Бесплатно</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="making-order__accordion-element">
+                                        <div class="making-order__accordion-heading">
+                                            <div class="making-order__accordion-number">
+                                                <p class="title-h4">3</p>
+                                            </div>
+                                            <p class="making-order__accordion-title title-h4">Оплата</p>
+                                            <div class="making-order__accordion-swapper">
+                                                <img src="./assets/images/icons/makingOrder3.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="making-order__accordion-content _options">
+                                            <label class="making-order__option">
+                                                <input hidden type="radio" value="2" class="making-order__option-input" name="option" />
+                                                <div class="making-order__option-box _payment">
+                                                    <p class="making-order__option-text text">Оплата картой</p>
+                                                    <div class="making-order__option-icon">
+                                                        <img src="./assets/images/icons/makingOrder4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="making-order__option">
+                                                <input hidden type="radio" value="2" class="making-order__option-input" name="option" />
+                                                <div class="making-order__option-box _payment">
+                                                    <p class="making-order__option-text text">Оплата переводом</p>
+                                                    <div class="making-order__option-icon">
+                                                        <img src="./assets/images/icons/makingOrder5.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="making-order__option">
+                                                <input hidden type="radio" value="2" class="making-order__option-input" name="option" />
+                                                <div class="making-order__option-box _payment">
+                                                    <p class="making-order__option-text text">Наличные</p>
+                                                    <div class="making-order__option-icon">
+                                                        <img src="./assets/images/icons/makingOrder6.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="making-order__content-right">
+                                <div class="making-order__write-off-bonuses">
+                                    <div class="write-off-bonuses__deduct-points">
+                                        <img src="./assets/images/icons/makingOrder1.svg" alt="" />
+                                    </div>
+                                    <div class="write-off-bonuses__texts">
+                                        <p class="write-off-bonuses__title title-h3">Списать бонусы</p>
+                                        <p class="write-off-bonuses__text title-h5">Доступно: 250 из 250</p>
+                                    </div>
+                                    <div class="write-off-bonuses__question">
+                                        <img src="./assets/images/icons/makingOrder2.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cart__cheque">
+                                    <div class="cart__cheque-title">
+                                        <p class="title-h3">Ваш заказ</p>
+                                        <p class="text">4 товара</p>
+                                    </div>
+                                    <div class="cart__cheque-list">
+                                        <div class="cart__cheque-item">
+                                            <p class="text">Товары на сумму</p>
+                                            <p class="title-h5">3600₽</p>
+                                        </div>
+                                        <div class="cart__cheque-item">
+                                            <p class="text">Скидка</p>
+                                            <p class="title-h5">-200₽</p>
+                                        </div>
+                                    </div>
+                                    <div class="cart__cheque-result">
+                                        <p class="text">Итого</p>
+                                        <p class="title-h4">3400₽</p>
+                                    </div>
+                                    <div class="cart__cheque-promocode">
+                                        <p class="text">Введите промокод</p>
+                                        <input
+                                            class="input__field text input--name popup__form-input"
+                                            type="text"
+                                            placeholder="Промокод"
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
+                                    </div>
+                                    <button type="submit" class="cart__cheque-btn button button-long-arr popup__body-btn">
+                                        <span class="popup__body-btn__text button">Оформить заказ</span>
+                                        <div class="hero__swiper-content-btn-svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                                <path
+                                                    d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="cart__bonuses">
+                                    <div class="cart__bonuses-texts">
+                                        <p class="title-h3">Начислим бонусы</p>
+                                        <p class="text">За данный заказ вам будут начислены бонусы (5% от суммы заказа)</p>
+                                    </div>
+                                    <div class="cart__bonuses-count">
+                                        <div class="cart__bonuses-count-icon">
+                                            <img src="./assets/images/icons/cart1.svg" alt="" />
+                                        </div>
+                                        <p class="title-h3">185</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <include src="./components/footer.html"></include>
+        </div>
+    </body>
+</html>

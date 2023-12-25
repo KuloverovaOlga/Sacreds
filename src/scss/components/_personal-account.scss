@@ -147,6 +147,12 @@
                         }
                     }
                 }
+                &__pagination {
+                    margin-top: 5rem;
+                    @media(max-width: 48em) {
+                        
+                    }
+                }
             }
         }
         &.account {
