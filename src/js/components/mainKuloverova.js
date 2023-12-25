@@ -29,6 +29,7 @@ import aboutTabs from './aboutTabs';
 import animNumbers from './animNumbers';
 import headerModal from './headerModal';
 import articleTabs from './articlesTabs';
+import modalRange from './modalRange';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -128,9 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         articleTabs();
     } catch {}
+    try {
+      modalRange();
+    } catch {}
 
-
-    
 
 });
 

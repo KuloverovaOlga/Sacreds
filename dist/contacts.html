@@ -1102,6 +1102,129 @@
     </div>
 </div>
 
+<div id="popup__accumulate-bonuses" aria-hidden="true" class="popup popup__accumulate-bonuses">
+    <div class="popup__wrapper popup__accumulate-bonuses-wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short success-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h2 popup__body--success-title">Копите бонусы, <br />а затем тратьте при оплате заказа</p>
+
+                <p class="popup__body-desk text">
+                    Эти бонусы вы сможете потратить на будущие покупки и сэкономить до 20% стоимости заказа. Найти информацию о своем бонусном балансе вы можете в личном
+                    кабинете.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__write-off-bonuses" aria-hidden="true" class="popup popup__write-off-bonuses">
+    <div class="popup__wrapper popup__write-off-bonuses-wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short success-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h2 popup__body--success-title">Списать баллы</p>
+
+                <p class="popup__body-desk text">У вас 250 баллов. Вы можете списать их для оплаты вашего заказа (для оплаты доставки бонусы не списываются)</p>
+
+                <div class="popup__body-range-slider">
+                    <input type="range" min="0" max="250" value="80" class="popup__body-slider" />
+                    <p class="popup__body-slider-text-min text">0</p>
+                    <p class="popup__body-slider-text-max text">250</p>
+                    <div class="popup__body-slider-thumb">
+                        <div class="popup__body-tooltip text"></div>
+                    </div>
+                    <div class="popup__body-progress"></div>
+                </div>
+                <button data-close class="popup__body-btn close-btn popup__body--success-btn button-long-arr success-close-btn">
+                    <span class="popup__body-btn-text button">Списать</span>
+                    <div class="popup__body-btn-svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                            <path
+                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                            />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__thanks-for-order" aria-hidden="true" class="popup popup__thanks-for-order">
+    <div class="popup__wrapper popup__thanks-for-order-wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--success popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short success-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h2 popup__body--success-title">Спасибо за заказ!</p>
+                <div class="popup__body-desk-box">
+                    <p class="popup__body-desk text">Номер заказа — 1111</p>
+                    <p class="popup__body-desk text">В ближайшее время с вами свяжется наш менеджер для уточнения деталей.</p>
+                </div>
+
+                <button data-close class="popup__body-btn close-btn popup__body--success-btn button-long-arr success-close-btn">
+                    <span class="popup__body-btn-text button">В личный кабинет</span>
+                    <div class="popup__body-btn-svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                            <path
+                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                            />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__thanks-for-order--2" aria-hidden="true" class="popup popup__thanks-for-order">
+    <div class="popup__wrapper popup__thanks-for-order-wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--success popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short success-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h2 popup__body--success-title">Спасибо за заказ!</p>
+                <div class="popup__body-desk-box">
+                    <p class="popup__body-desk text">Номер заказа — 1111</p>
+                    <p class="popup__body-desk text">
+                        Для уточнения стоимости доставки свяжитесь с нашим оператором <br />в <a href="#" class="popup__link">WhatsApp</a>
+                    </p>
+                </div>
+
+                <button data-close class="popup__body-btn close-btn popup__body--success-btn button-long-arr success-close-btn">
+                    <span class="popup__body-btn-text button">В личный кабинет</span>
+                    <div class="popup__body-btn-svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                            <path
+                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                            />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="popup__delete-account" aria-hidden="true" class="popup popup__delete-account">
     <div class="popup__wrapper success-wrapper">
         <div class="popup__content">
@@ -1180,6 +1303,57 @@
                         </svg>
                     </div>
                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__email-recovery" aria-hidden="true" class="popup popup--long popup__password-recovery">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body">
+                <button data-close type="button" class="popup__body-close-btn close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h2">Укажите новую почту</p>
+                <p class="popup__body-text text">Укажите свою новую электронную почту и на нее придет письмо с кодом</p>
+                <form data-popup-message="#popup__password-recovery-end" data-dev action="#" class="popup__body-form form popup__password-recovery-form">
+                    <div class="popup__fields">
+                        <div class="popup__input-group input-group">
+                            <label class="popup__label">
+                                <input
+                                    class="input__field text input--mail popup__form-input"
+                                    type="text"
+                                    placeholder="Введите электронную почту"
+                                    data-validate
+                                    data-required="email"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+                            </label>
+
+                            <span class="error-span subscription"></span>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="popup__body-btn button button-long-arr popup__password-recovery-body-btn"
+                            data-popup="#popup__registration-enter-code"
+                        >
+                            <span class="popup__body-btn__text button">Отправить</span>
+                            <div class="popup__body-content-btn-svg-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                    <path
+                                        d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                    />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

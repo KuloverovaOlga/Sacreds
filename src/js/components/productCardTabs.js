@@ -15,7 +15,7 @@ const productCardTabs = () => {
 
         const activeTab = document.querySelector(`.product-content__tab[data-tab="${tabIndex}"]`);
         const activeTabContent = document.querySelector(`.product-content__tab-content-inner[data-tab="${tabIndex}"]`);
-        const activeContent = activeTabContent.querySelector(`.product-content__tab-content`);
+        const activeContent = activeTabContent.querySelector(`.product-content__tab-info`);
         const btn = activeTabContent.querySelector(`.product-content__tab-content-button`);
 
         if (activeTab && activeTabContent) {
@@ -70,7 +70,7 @@ const productCardTabs = () => {
         
             if (target.classList.contains("product-content__tab-content-button")) {
             //   let parent = target.parentElement.parentElement;
-              let content = target.parentElement.querySelector('.product-content__tab-content');
+              let content = target.parentElement.querySelector('.product-content__tab-info') ;
             //   parent.classList.toggle("isActive");
     
               if ( item.classList.contains("isActive")){
@@ -78,7 +78,14 @@ const productCardTabs = () => {
                     top: 0,
                     behavior: 'smooth'
                 });
-                setTimeout(()=> {item.classList.remove("isActive")},500)
+                if (content.scrollTop === 0) {
+                  item.classList.remove("isActive");
+              }  
+                content.addEventListener('scroll', function () {
+                  if (content.scrollTop === 0) {
+                      item.classList.remove("isActive");
+                  }  })
+                // setTimeout(()=> {item.classList.remove("isActive")},500)
               ;
               } else {
                 item.classList.add("isActive");

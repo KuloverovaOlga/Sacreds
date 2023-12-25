@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <title>Карточка товара</title>
     </head>
     <body>
@@ -414,15 +415,16 @@
                             <div class="product-content__tabs-wrap">
                                 <div class="product-content__tabs">
                                     <div class="product-content__tabs-wrapper">
-                                        <div class="product-content__tab subscription active" data-tab="1"> <span>Описание</span></div>
+                                        <div class="product-content__tab subscription active" data-tab="1"><span>Описание</span></div>
                                         <div class="product-content__tab subscription" data-tab="2"><span>Детали</span></div>
-                                        <div class="product-content__tab subscription" data-tab="3"><span>Отзывы</span></div>
+                                        <div class="product-content__tab subscription" data-tab="3"><span>Инструкция</span></div>
+                                        <div class="product-content__tab subscription" data-tab="4"><span>Отзывы</span></div>
                                     </div>
                                 </div>
 
                                 <div class="product-content__tab-content-wrap">
                                     <div class="product-content__tab-content-inner" data-tab="1">
-                                        <div class="product-content__tab-content">
+                                        <div class="product-content__tab-description product-content__tab-info">
                                             <p class="product-content__tab-content-text text">
                                                 Этот сорт рапэ отлично подойдет как начинающим, так и опытным искателям, которые жаждут пробуждения внутренней энергии. Вы
                                                 ощутите мягкое действие этой смеси: она легко и нежно воздействует на физическом уровне и делает основной акцент на
@@ -455,68 +457,231 @@
                                             </p>
                                         </div>
                                         <button class="product-content__tab-content-button button button-link">
-                                            <span class="isActive">Показать полностью</span>
+                                            <span class="isActive">Показать все</span>
                                             <span>Свернуть</span>
                                         </button>
                                     </div>
 
                                     <div class="product-content__tab-content-inner" data-tab="2">
-                                        <div class="product-content__tab-content">
-                                            <p class="product-content__tab-content-text text">
-                                                Этот сорт рапэ отлично подойдет как начинающим, так и опытным искателям, которые жаждут пробуждения внутренней энергии. Вы
-                                                ощутите мягкое действие этой смеси: она легко и нежно воздействует на физическом уровне и делает основной акцент на
-                                                расслаблении и сосредоточении.Этот эффект достигается благодаря наличию в его составе корней и коры растения «Pau Mulata»,
-                                                известного в Амазонии как одно из целебных растений. С древних времен его используют в медицине шаманы племени Катукини
-                                                для восстановления потоков энергии.
-                                            </p>
+                                        <div class="product-content__tab-details product-content__tab-info">
+                                            <ul class="product-content__tab-details-list">
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Страна происхождения</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">Африка</p>
+                                                </li>
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Вес, г</p>
+                                                    <span></span><p class="product-content__tab-details-item-desk text">3,6,10</p>
+                                                </li>
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Крепость</p>
+                                                    <span></span>  <p class="product-content__tab-details-item-desk text">легкий</p>
+                                                </li>
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Страна происхождения</p>
+                                                    <span></span>    <p class="product-content__tab-details-item-desk text">Африка</p>
+                                                </li>
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Вес, г</p>
+                                                    <span></span>   <p class="product-content__tab-details-item-desk text">3,6,10</p>
+                                                </li>
+                                                <li class="product-content__tab-details-item">
+                                                    <p class="product-content__tab-details-item-title title-h4">Крепость</p>
+                                                    <span></span>   <p class="product-content__tab-details-item-desk text">легкий</p>
+                                                </li>
+
+                                                
+                                            </ul>
                                         </div>
-                                        <button class="product-content__tab-content-button button">
-                                            <span class="isActive">Показать полностью</span>
+                                        <button class="product-content__tab-content-button button button-link">
+                                            <span class="isActive">Показать все</span>
                                             <span>Свернуть</span>
                                         </button>
                                     </div>
                                     <div class="product-content__tab-content-inner" data-tab="3">
-                                        <div class="product-content__tab-content">
-                                            <p class="product-content__tab-content-text text">
-                                                Этот сорт рапэ отлично подойдет как начинающим, так и опытным искателям, которые жаждут пробуждения внутренней энергии. Вы
-                                                ощутите мягкое действие этой смеси: она легко и нежно воздействует на физическом уровне и делает основной акцент на
-                                                расслаблении и сосредоточении.Этот эффект достигается благодаря наличию в его составе корней и коры растения «Pau Mulata»,
-                                                известного в Амазонии как одно из целебных растений. С древних времен его используют в медицине шаманы племени Катукини
-                                                для восстановления потоков энергии.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Этот сорт рапэ отлично подойдет как начинающим, так и опытным искателям, которые жаждут пробуждения внутренней энергии. Вы
-                                                ощутите мягкое действие этой смеси: она легко и нежно воздействует на физическом уровне и делает основной акцент на
-                                                расслаблении и сосредоточении.Этот эффект достигается благодаря наличию в его составе корней и коры растения «Pau Mulata»,
-                                                известного в Амазонии как одно из целебных растений. С древних времен его используют в медицине шаманы племени Катукини
-                                                для восстановления потоков энергии.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Этот сорт рапэ отлично подойдет как начинающим, так и опытным искателям, которые жаждут пробуждения внутренней энергии. Вы
-                                                ощутите мягкое действие этой смеси: она легко и нежно воздействует на физическом уровне и делает основной акцент на
-                                                расслаблении и сосредоточении.Этот эффект достигается благодаря наличию в его составе корней и коры растения «Pau Mulata»,
-                                                известного в Амазонии как одно из целебных растений. С древних времен его используют в медицине шаманы племени Катукини
-                                                для восстановления потоков энергии.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Состав рапэ больше влияет на астральное тело и балансирует частоты, мягко погружая в спокойствие. Действие ощущается сразу
-                                                же после применения. Нервная система расслабляется, приходит в равновесие, а мозг сосредотачивается на мыслях.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Данный сорт рапэ хорошо применять для релаксации, медитации, за несколько дней до важных событий. Это позволит осмыслить
-                                                ситуацию, найти правильное решение. Вы сможете сконцентрироваться на важных вещах, ничто не будет вас отвлекать.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Церемония рапэ с «Pau Mulata» особенно рекомендуется в холодное время года, так как сорт оказывает согревающее воздействие
-                                                на ментальное и физическое тело. Несмотря на высокие целебные свойства растения, его влияние на физическое тело
-                                                минимально. В народной медицине его применяют как регенерирующее, омолаживающее и дезинфицирующее средство.
-                                            </p>
-                                            <p class="product-content__tab-content-text text">
-                                                Результат применения – спокойствие, ясный ум, активизация мыслей и концентрация внимания.
-                                            </p>
+                                        <div class="product-content__tab-instructions product-content__tab-info">
+                                            <ul class="product-content__tab-instructions-list">
+                                                <li class="product-content__tab-instructions-item">
+                                                    <p class="product-content__tab-instructions-item-title title-h4">Применение</p>
+                                                    <p class="product-content__tab-instructions-item-desk text">Для приема Рапэ Katukina Pau Mulata необходимо смешать порцию напитка 1.5-2.5 г (1 ч.л. без горки = 2 г) с горячей водой и размешать до полного растворения. Можно добавлять в другие безалкогольные напитки (смузи, сок, какао). Применять 1 раз в первой половине дня.Не рекомендуется превышать указанную дозировку.</p>
+                                                </li>
+                                                <li class="product-content__tab-instructions-item">
+                                                    <p class="product-content__tab-instructions-item-title title-h4">Курс приема</p>
+                                                    <p class="product-content__tab-instructions-item-desk text">Рапэ Katukina Pau Mulata можно применять по желанию и необходимости, либо курсом до 3х недель, после чего необходимо сделать перерыв.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button class="product-content__tab-content-button button button-link">
+                                            <span class="isActive">Показать все</span>
+                                            <span>Свернуть</span>
+                                        </button>
+                                    </div>
+                                    <div class="product-content__tab-content-inner" data-tab="4">
+                                        <div class="product-content__tab-review product-content__tab-info">
+
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/photo.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Авторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/unSignUpPhoto.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Неавторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/photo.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Авторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/unSignUpPhoto.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Неавторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/photo.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Авторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+                                            <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
+                                                <div class="product-content__review-item-header">
+                                                    <p class="product-content__review-item-title title-h3">
+                                                        Чувствую себя
+                                                        <span class="title-span">спокойно </span>
+                                                        <span class="title-span">и хорошо</span> ! Спасибо!
+                                                    </p>
+                                                </div>
+            
+                                                <p class="product-content__review-item-text text">
+                                                    В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                                    спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                                </p>
+                                                <div class="product-content__review-item-footer">
+                                                    <div class="product-content__review-item-footer-info">
+                                                        <div class="product-content__review-item-photo-box">
+                                                            <img src="./assets/images/unSignUpPhoto.webp" alt="" />
+                                                        </div>
+                                                        <div class="product-content__review-item-footer-info-box">
+                                                            <p class="product-content__review-item-name title-h5">Иванова Ольга</p>
+                                                            <p class="product-content__review-item-status subscription">Неавторизованный пользователь</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="review__data subscription">13 октября 2023</p>
+                                                </div>
+                                            </a>
+
+                                            
+
                                         </div>
                                         <button class="product-content__tab-content-button button">
-                                            <span class="isActive">Показать полностью</span>
+                                            <span class="isActive">Показать все</span>
                                             <span>Свернуть</span>
                                         </button>
                                     </div>
@@ -525,7 +690,43 @@
                         </div>
                     </div>
                 </section>
+                <div class="review-text-modal" id="text-modal">
+                    <div class="review-item__content">
+                        <div class="review-item__header">
+                            <p class="review-item__title title-h3">
+                                Чувствую себя
+                                <span class="title-span">спокойно </span>
+                                <span class="title-span">и хорошо</span> ! Спасибо!
+                            </p>
+                        </div>
+                        <div class="review-item__text-wrapper">
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                        </div>
 
+                        <div class="review-item__footer">
+                            <div class="review-item__footer-info">
+                                <div class="review-item__photo-box">
+                                    <img src="./assets/images/photo.webp" alt="" />
+                                </div>
+                                <div class="review-item__footer-info-box">
+                                    <p class="review-item__name title-h5">Иванова Ольга</p>
+                                </div>
+                            </div>
+                            <p class="review__data subscription">13 октября 2023</p>
+                        </div>
+                    </div>
+                </div>
                 <include src="./components/ribbon.html"></include>
                 <section class="disclaimer">
                     <div class="container">
@@ -609,6 +810,41 @@
                 </section>
             </main>
             <include src="./components/footer.html"></include>
+            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+            <script>
+                Fancybox.bind('[data-fancybox]', {
+                    closeButton: true,
+                    Thumbs: false,
+                    Carousel: {
+                        center: true,
+                        Dots: {
+                            minCount: 2,
+                            classes: {
+                                list: 'f-carousel__dots',
+                                isDynamic: 'is-dynamic',
+                                hasDots: 'has-dots',
+                                dot: 'f-carousel__dot',
+                                isBeforePrev: 'is-before-prev',
+                                isPrev: 'is-prev',
+                                isCurrent: 'is-current',
+                                isNext: 'is-next',
+                                isAfterNext: 'is-after-next',
+                            },
+                            dotTpl: `<button type="button" data-carousel-page="%i" aria-label="{{GOTO}}"><span class="f-carousel__dot" aria-hidden="true"></span></button>`,
+                        },
+                        Navigation: {
+                            prevTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.377315 32.4077C0.377315 32.7519 0.656371 33.031 1.0006 33.031L33.4776 33.031C33.8219 33.031 34.1009 32.752 34.1009 32.4077C34.1009 32.0635 33.8219 31.7844 33.4776 31.7844L1.0006 31.7844C0.656371 31.7844 0.377315 32.0635 0.377315 32.4077Z" fill="#292929"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.559872 31.967C0.316463 32.2104 0.316463 32.605 0.559872 32.8484L14.9668 47.2554C15.2102 47.4988 15.6049 47.4988 15.8483 47.2554C16.0917 47.012 16.0917 46.6173 15.8483 46.3739L1.88207 32.4077L15.8483 18.4415C16.0917 18.1981 16.0917 17.8034 15.8483 17.56C15.6049 17.3166 15.2102 17.3166 14.9668 17.56L0.559872 31.967Z" fill="#292929"/>
+      </svg>`,
+                            nextTpl: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="65" viewBox="0 0 35 65" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.0992 32.4077C34.0992 32.0635 33.8202 31.7844 33.476 31.7844L0.998929 31.7844C0.654696 31.7844 0.375641 32.0635 0.37564 32.4077C0.375641 32.7519 0.654696 33.031 0.998929 33.031L33.476 33.031C33.8202 33.031 34.0992 32.7519 34.0992 32.4077Z" fill="#292929"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9167 32.8484C34.1601 32.605 34.1601 32.2104 33.9167 31.967L19.5097 17.56C19.2663 17.3166 18.8717 17.3166 18.6283 17.56C18.3849 17.8034 18.3849 18.1981 18.6283 18.4415L32.5945 32.4077L18.6283 46.3739C18.3849 46.6173 18.3849 47.012 18.6283 47.2554C18.8717 47.4988 19.2663 47.4988 19.5097 47.2554L33.9167 32.8484Z" fill="#292929"/>
+      </svg>`,
+                        },
+                    },
+                });
+            </script>
         </div>
     </body>
 </html>
