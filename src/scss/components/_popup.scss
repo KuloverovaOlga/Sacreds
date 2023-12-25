@@ -1,3 +1,5 @@
+
+
 body::before {
     content: '';
     position: fixed;
@@ -868,12 +870,12 @@ body::before {
     }
     // ---------------------------------------------popup__entrys
     &__body-entrys {
-        @media(min-width:  48em) {
-& .popup__body-title {
-    margin-top: 1rem;
-}
+        @media (min-width: 48em) {
+            & .popup__body-title {
+                margin-top: 1rem;
+            }
         }
-    
+
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -887,4 +889,176 @@ body::before {
             padding: 2rem 3rem;
         }
     }
+
+    // --------------------------------------------------popup__accumulate-bonuses
+
+    &__accumulate-bonuses {
+        & .popup__body {
+            width: 72.9rem;
+            padding: 6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            text-align: center;
+            @media (max-width: 48em) {
+                width: 100%;
+                padding: 8rem;
+            }
+        }
+    }
+
+    // --------------------------------------------------------popup__thanks-for-order
+
+    &__thanks-for-order {
+        & .popup__body {
+            & br {
+                display: none;
+            }
+            @media (max-width: 48em) {
+                gap: 4.8rem;
+                padding: 8rem;
+                & br {
+                    display: block;
+                }
+            }
+        }
+
+        & .popup__body-desk-box {
+            width: 60.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            @media (max-width: 48em) {
+                width: 100%;
+                gap: 2.4rem;
+            }
+        }
+        & .popup__body-btn {
+            margin-top: 0;
+            width: fit-content;
+            align-self: center;
+            @media (max-width: 48em) {
+                margin-top: 3.2rem;
+            }
+        }
+    }
+
+   // -------------------------------------------------------popup__write-off-bonuses
+
+
+   &__write-off-bonuses {
+
+    & .popup__body {
+        width: 72.9rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            padding: 8rem;
+            gap: 4.8rem;
+        }
+    }
+
+    & .popup__body-range-slider {
+        position: relative;
+        width: 42.7rem;
+        margin-bottom: 4rem;
+        margin-top: 0.8rem;
+        display: flex;
+        @media (max-width: 48em) {
+            margin-bottom: 6rem;
+        }
+
+        & .popup__body-slider-text-min,
+        & .popup__body-slider-text-max {
+            position: absolute;
+            bottom:  -1.5rem;
+            transform: translateY( 100%);
+            color: #B3B3B3;
+            transition: opacity 0.3s;
+
+        }
+        & .popup__body-slider-text-max {
+            right: -0.8rem;
+       
+        }
+        & .popup__body-slider-text-min {
+            left: 0;
+
+        }
+    
+        & .popup__body-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 0.2rem;
+            outline: none;
+            border-radius: 3px;
+            background: $line;
+            // position: absolute;
+            // left: 0;
+            // right: 0
+            // ;
+            // top: 50%;
+            // transform: translateY(-50%);
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+                z-index: 3;
+                position: relative;
+            }
+    
+          
+        }
+        & .popup__body-slider-thumb {
+            position: absolute;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: $green;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            pointer-events: none;
+        }
+    
+        & .popup__body-tooltip {
+            position: absolute;
+            bottom:  -0.8rem;
+            transform: translate(-50%, 100%);
+            left: 50%;
+            right: auto;
+            text-align: center;
+            color: $black;
+            @media (max-width: 48em) {
+                bottom:  -0.8rem;
+            }
+        }
+    
+        & .popup__body-progress {
+            width: 50%;
+            height: 0.2rem;
+            background-color: $green;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        
+    }
+    & .popup__body-btn {
+        margin-top: 0;
+        width: fit-content;
+        align-self: center;
+        @media (max-width: 48em) {
+            margin-top: 3.2rem;
+        }
+    }
+
+   }
+
 }
